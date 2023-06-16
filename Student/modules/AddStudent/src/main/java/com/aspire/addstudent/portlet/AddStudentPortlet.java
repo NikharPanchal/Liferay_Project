@@ -40,8 +40,10 @@ import org.osgi.service.component.annotations.Component;
 		"javax.portlet.name=" + AddStudentPortletKeys.ADDSTUDENT,
 		"javax.portlet.resource-bundle=content.Language",
 		"javax.portlet.security-role-ref=power-user,user",
-		"mvc.command.name=addStudent", 
-		"mvc.command.name=updateStudent" }, service = Portlet.class)
+		"mvc.command.name=addStudent",
+		"mvc.command.name=updateStudent"
+		}, 
+	service = Portlet.class)
 
 public class AddStudentPortlet extends MVCPortlet {
 
@@ -63,11 +65,10 @@ public class AddStudentPortlet extends MVCPortlet {
 //			e.printStackTrace();
 //		}
 		try {
-			student stud = studentLocalServiceUtil.getstudent(1);
 			List<student> studentList=studentLocalServiceUtil.getstudents(-1, -1);
 			System.out.println("custom list"+studentList.toString());
 //			System.out.println("---"+studentLocalServiceUtil.getstudentsCount());
-			renderRequest.setAttribute("studentList", stud);
+			renderRequest.setAttribute("studentList", studentList);
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -107,18 +108,15 @@ public class AddStudentPortlet extends MVCPortlet {
 
 	@ProcessAction(name = "deleteStudent")
 	public void deleteStudent(ActionRequest actionRequest, ActionResponse actionResponse) {
-		String cmd = ParamUtil.getString(actionRequest, "cmd");
-		System.out.println(cmd);
-		if (cmd.equals("delete")) {
+		
 			try {
 				long studentId = ParamUtil.getLong(actionRequest, "studentId");
-				System.out.println(studentId);
+				System.out.println("id for delete student"+studentId);
 				studentLocalServiceUtil.deletestudent(studentId);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}
-
+		
 	}
 
 	@ProcessAction(name = "updateStudent")

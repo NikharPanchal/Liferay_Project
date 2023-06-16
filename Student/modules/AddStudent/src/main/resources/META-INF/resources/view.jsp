@@ -58,7 +58,7 @@
 
 
 <%
-	student studentList = (student) request.getAttribute("studentList");
+	List<student> studentList = (List) request.getAttribute("studentList");
 %>
 <body>
 	<p>
@@ -102,21 +102,18 @@
             <portlet:param name="studentId" value="${student.getStudentId()}"/>
         </portlet:actionURL> !-->
 		<tbody>
+		 <c:forEach items="${studentList}" var="student">  
 			<tr>
-				<td>${studentList.getEnrollmentno()}</td>
-				<td>${studentList.getFname()}</td>
-				<td>${studentList.getLname()}</td>
-				<td>${studentList.getContactno()}</td>
-				<td>${studentList.getCity()}</td>
+				<td>${student.getEnrollmentno()}</td>
+				<td>${student.getFname()}</td>
+				<td>${student.getLname()}</td>
+				<td>${student.getContactno()}</td>
+				<td>${student.getCity()}</td>
 
-				 <portlet:actionURL var="updateStudentUrl" name="updateStudent">
+			 <portlet:actionURL var="updateStudentUrl" name="updateStudent">
 				<portlet:param name="mvcPath" value="/UpdateStudent.jsp" />
-					<portlet:param name="studentId" value="${studentList.getId()}" />
+					<portlet:param name="studentId" value="${student.getId()}" />
 				</portlet:actionURL> 
-
-				<%-- <portlet:renderURL var="updateStudentUrl">
-					<portlet:param name="mvcPath" value="/UpdateStudent.jsp" />
-				</portlet:renderURL> --%>
 
 				<td class="text-center" style="width: 50px"><a
 					href="<%=updateStudentUrl%>"
@@ -125,8 +122,7 @@
 				</a></td>
 
 				<portlet:actionURL var="deleteStudentUrl" name="deleteStudent">
-					<portlet:param name="cmd" value="delete" />
-					<portlet:param name="studentId" value="${studentList.getId()}" />
+					<portlet:param name="studentId" value="${student.getId()}" />
 				</portlet:actionURL>
 
 				<td class="text-center" style="width: 50px"><a
@@ -136,6 +132,7 @@
 				</a></td>
 
 			</tr>
+			</c:forEach>
 		</tbody>
 	</table>
 	<!-- Button trigger modal -->
