@@ -1,0 +1,13 @@
+Bundle-Name: StudentService-api
+Bundle-SymbolicName: com.aspire.studentservice.api
+Bundle-Version: 1.0.0
+Export-Package: \
+	com.aspire.studentservice.exception,\
+	com.aspire.studentservice.model,\
+	com.aspire.studentservice.service,\
+	com.aspire.studentservice.service,\
+	com.aspire.studentservice.service.persistence
+-check: EXPORTS
+-consumer-policy: ${replacestring;${range;[==,==]};.*,(.*)];$1}
+-includeresource: META-INF/service.xml=../StudentService-service/service.xml
+-provider-policy: ${replacestring;${range;[==,==]};.*,(.*)];$1}

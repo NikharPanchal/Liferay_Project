@@ -1,0 +1,29 @@
+package com.aspire.addstudent.portlet;
+
+import com.aspire.addstudent.constants.AddStudentPortletKeys;
+import com.liferay.portal.kernel.portlet.bridges.mvc.MVCRenderCommand;
+
+import javax.portlet.Portlet;
+import javax.portlet.PortletException;
+import javax.portlet.RenderRequest;
+import javax.portlet.RenderResponse;
+
+import org.osgi.service.component.annotations.Component;
+
+@Component(
+		immediate = true,
+		property = {
+			"javax.portlet.name=" + AddStudentPortletKeys.ADDSTUDENT,
+		
+		},
+		service = Portlet.class
+	)
+public class RedirectAddStudent implements MVCRenderCommand {
+
+	@Override
+	public String render(RenderRequest renderRequest, RenderResponse renderResponse) throws PortletException {
+		
+		return null;
+	}
+
+}

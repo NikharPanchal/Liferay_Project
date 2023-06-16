@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.aspire.studentservice.model.student">
+		<field name="id" type="long" />
+		<field name="enrollmentno" type="String" />
+		<field name="fname" type="String" />
+		<field name="lname" type="String" />
+		<field name="contactno" type="String" />
+		<field name="city" type="String" />
+	</model>
+</model-hints>

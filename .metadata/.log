@@ -1,0 +1,421 @@
+!SESSION 2023-06-15 10:08:46.657 -----------------------------------------------
+eclipse.buildId=3.9.7.202207131011-ga8
+java.version=1.8.0_362
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product com.liferay.ide.studio.ui.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.liferay.ide.studio.ui.product
+
+This is a continuation of log file /home/aspire/StudentRepo/.metadata/.bak_0.log
+Created Time: 2023-06-15 10:13:19.884
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:13:19.884
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:13:20.825
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:13:21.778
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:13:22.415
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:13:23.177
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:13:23.985
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.ui.editors 4 10001 2023-06-15 10:25:19.923
+!MESSAGE Ignoring template 'log' since it has no id.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:27:52.393
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:27:53.458
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:27:54.185
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:27:54.847
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:27:55.570
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:27:56.265
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.jface 2 0 2023-06-15 10:27:58.162
+!MESSAGE Ignored reentrant call while viewer is busy. This is only logged once per viewer instance, but similar calls will still be ignored.
+!STACK 0
+java.lang.RuntimeException
+	at org.eclipse.jface.viewers.ColumnViewer.checkBusy(ColumnViewer.java:764)
+	at org.eclipse.jface.viewers.ColumnViewer.update(ColumnViewer.java:543)
+	at org.eclipse.ui.navigator.CommonViewer.update(CommonViewer.java:515)
+	at org.eclipse.jface.viewers.StructuredViewer.update(StructuredViewer.java:1971)
+	at org.eclipse.ui.internal.navigator.resources.nested.NestedProjectsLabelProvider.lambda$2(NestedProjectsLabelProvider.java:87)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1609)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1596)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175)
+!SESSION 2023-06-15 10:47:09.758 -----------------------------------------------
+eclipse.buildId=3.9.7.202207131011-ga8
+java.version=1.8.0_362
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product com.liferay.ide.studio.ui.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.liferay.ide.studio.ui.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-06-15 10:47:15.872
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.core 1 0 2023-06-15 10:47:18.456
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.jst.jsp.core 4 4 2023-06-15 10:47:22.449
+!MESSAGE A workspace crash was detected. The previous session did not exit normally. Not using saved taglib indexes.
+
+!ENTRY org.eclipse.ui.editors 4 10001 2023-06-15 10:47:26.370
+!MESSAGE Ignoring template 'log' since it has no id.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:47:43.171
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:47:46.144
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.jface 2 0 2023-06-15 10:47:47.713
+!MESSAGE Ignored reentrant call while viewer is busy. This is only logged once per viewer instance, but similar calls will still be ignored.
+!STACK 0
+java.lang.RuntimeException
+	at org.eclipse.jface.viewers.ColumnViewer.checkBusy(ColumnViewer.java:764)
+	at org.eclipse.jface.viewers.ColumnViewer.update(ColumnViewer.java:543)
+	at org.eclipse.ui.navigator.CommonViewer.update(CommonViewer.java:512)
+	at org.eclipse.jface.viewers.StructuredViewer.update(StructuredViewer.java:1971)
+	at org.eclipse.ui.internal.navigator.resources.nested.NestedProjectsLabelProvider.lambda$2(NestedProjectsLabelProvider.java:87)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1609)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1596)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:47:48.578
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:47:48.589
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:47:50.435
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:47:51.576
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2023-06-15 10:47:52.055
+!MESSAGE starting IvyDE plugin
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2023-06-15 10:47:52.096
+!MESSAGE IvyDE plugin started
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:47:52.187
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:47:53.859
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:47:54.641
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:47:55.454
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:47:56.676
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:47:58.366
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:47:59.727
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:48:00.037
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:48:00.984
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:48:01.885
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:48:02.816
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:48:04.236
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:48:28.812
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:48:29.762
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:48:30.367
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:48:31.103
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:48:32.154
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:48:33.100
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:48:34.022
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:48:34.639
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.ui.editors 4 10001 2023-06-15 10:50:51.061
+!MESSAGE Ignoring template 'log' since it has no id.
+
+!ENTRY org.eclipse.ui.editors 4 10001 2023-06-15 10:50:51.154
+!MESSAGE Ignoring template 'log' since it has no id.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:56:11.142
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 10:56:11.838
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:29:34.960
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:29:35.845
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:29:36.555
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:29:37.129
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:29:37.693
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:29:38.299
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:32:36.476
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:32:37.414
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:32:37.973
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:32:38.645
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:32:39.257
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:32:39.830
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:44:46.308
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:44:46.913
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:44:47.721
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:44:48.473
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:49:25.232
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:49:26.053
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:49:26.831
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:49:27.414
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:49:27.952
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:49:28.527
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:52:05.091
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:52:05.779
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:52:06.554
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:52:07.136
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:52:07.797
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:52:08.490
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:52:09.099
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-15 11:52:09.675
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.ui.editors 4 10001 2023-06-15 14:45:10.133
+!MESSAGE Ignoring template 'log' since it has no id.
+
+!ENTRY org.eclipse.ui.editors 4 10001 2023-06-15 14:55:00.061
+!MESSAGE Ignoring template 'log' since it has no id.
+
+!ENTRY org.eclipse.jpt.jpa.core 4 0 2023-06-15 19:03:33.880
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.jpt.common.utility.internal.reference.SynchronizedBoolean.waitUntilValueIs_(SynchronizedBoolean.java:300)
+	at org.eclipse.jpt.common.utility.internal.reference.SynchronizedBoolean.waitUntilValueIs_(SynchronizedBoolean.java:405)
+	at org.eclipse.jpt.common.utility.internal.reference.SynchronizedBoolean.waitUntilValueIs(SynchronizedBoolean.java:396)
+	at org.eclipse.jpt.common.utility.internal.reference.SynchronizedBoolean.waitUntilTrue(SynchronizedBoolean.java:443)
+	at org.eclipse.jpt.common.core.internal.utility.command.SimpleJobCommandContext$JobChangeListener.waitUntilDone(SimpleJobCommandContext.java:207)
+	at org.eclipse.jpt.common.core.internal.utility.command.SimpleJobCommandContext.waitToExecute_(SimpleJobCommandContext.java:167)
+	at org.eclipse.jpt.common.core.internal.utility.command.SimpleJobCommandContext.waitToExecute(SimpleJobCommandContext.java:136)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.clearJpaProjects_(InternalJpaProjectManager.java:357)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.clearJpaProjects(InternalJpaProjectManager.java:346)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.dispose(InternalJpaProjectManager.java:331)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaWorkspace.dispose(InternalJpaWorkspace.java:113)
+	at org.eclipse.jpt.jpa.core.internal.plugin.JptJpaCorePlugin.disposeJpaWorkspaces(JptJpaCorePlugin.java:123)
+	at org.eclipse.jpt.jpa.core.internal.plugin.JptJpaCorePlugin.stop(JptJpaCorePlugin.java:54)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:899)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:891)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1027)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:370)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:653)
+	at org.eclipse.osgi.container.Module.stop(Module.java:515)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1861)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1753)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:202)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:653)
+	at org.eclipse.osgi.container.Module.stop(Module.java:515)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:220)
+	at java.lang.Thread.run(Thread.java:750)
+
+!ENTRY org.eclipse.rse.core 1 0 2023-06-15 19:03:34.182
+!MESSAGE Disconnect operation timed out after 120000 milliseconds.
+!SESSION 2023-06-16 10:03:42.185 -----------------------------------------------
+eclipse.buildId=3.9.7.202207131011-ga8
+java.version=1.8.0_362
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product com.liferay.ide.studio.ui.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.liferay.ide.studio.ui.product
+
+!ENTRY org.eclipse.egit.core 1 0 2023-06-16 10:04:37.708
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.ui.editors 4 10001 2023-06-16 10:05:15.653
+!MESSAGE Ignoring template 'log' since it has no id.
+!SESSION 2023-06-16 10:06:56.446 -----------------------------------------------
+eclipse.buildId=3.9.7.202207131011-ga8
+java.version=1.8.0_362
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product com.liferay.ide.studio.ui.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.liferay.ide.studio.ui.product
+
+!ENTRY org.eclipse.egit.core 1 0 2023-06-16 10:07:15.483
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.ui.editors 4 10001 2023-06-16 10:07:18.345
+!MESSAGE Ignoring template 'log' since it has no id.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-16 10:09:17.514
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-16 10:09:33.368
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-16 10:09:34.930
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-16 10:09:35.846
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-16 10:09:38.285
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-16 10:09:39.346
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-16 10:09:40.253
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-16 10:09:41.229
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-16 10:09:42.438
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-16 10:09:43.192
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-16 10:09:44.238
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-16 10:09:44.952
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-16 10:09:45.995
+!MESSAGE The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-06-16 10:09:46.860
+!MESSAGE Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+
+!ENTRY org.eclipse.ui.editors 4 10001 2023-06-16 10:13:45.792
+!MESSAGE Ignoring template 'log' since it has no id.
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2023-06-16 10:19:10.798
+!MESSAGE starting IvyDE plugin
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2023-06-16 10:19:10.841
+!MESSAGE IvyDE plugin started
+
+!ENTRY org.eclipse.jst.jsp.core 4 4 2023-06-16 10:24:07.401
+!MESSAGE A workspace crash was detected. The previous session did not exit normally. Not using saved taglib indexes.
+
+!ENTRY org.eclipse.ui.editors 4 10001 2023-06-16 11:04:06.577
+!MESSAGE Ignoring template 'log' since it has no id.

@@ -1,0 +1,34 @@
+<%@page import="com.liferay.taglib.portlet.ActionURLTag"%>
+<%@page import="javax.portlet.PortletURL"%>
+<%@ taglib uri="http://alloy.liferay.com/tld/aui" prefix="aui" %>
+<%@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %>
+<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
+<%@page import="java.util.List" %>
+<portlet:defineObjects />
+
+<portlet:actionURL var="addStudentURL" name="addStudentAction">
+  <portlet:param name="javax.portlet.action" value="addStudent" />
+</portlet:actionURL>
+
+<html>
+<head>
+  <title>Add Student</title>
+</head>
+<body>
+  <portlet:actionURL var="viewStudentsURL" name="viewStudentsAction">
+    <portlet:param name="javax.portlet.action" value="viewStudents" />
+  </portlet:actionURL>
+
+  <form action="<%= addStudentURL %>" method="post">
+    <label for="studentName">Student Name:</label>
+    <input type="text" id="studentName" name="studentName" required><br><br>
+    <label for="studentAge">Student Age:</label>
+    <input type="number" id="studentAge" name="studentAge" required><br><br>
+    <input type="submit" value="Add Student">
+  </form>
+
+  <br><br>
+
+  <a href="<%= viewStudentsURL %>">View Students</a>
+</body>
+</html>

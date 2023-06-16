@@ -1,0 +1,30 @@
+<%@ page import="javax.portlet.PortletURL" %>
+<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
+<portlet:defineObjects />
+
+<portlet:actionURL var="addStudentURL" name="addStudentAction">
+  <portlet:param name="javax.portlet.action" value="addStudent" />
+</portlet:actionURL>
+
+<html>
+<head>
+  <title>Add Student</title>
+</head>
+<body>
+  <portlet:actionURL var="viewStudentsURL" name="viewStudentsAction">
+    <portlet:param name="javax.portlet.action" value="viewStudents" />
+  </portlet:actionURL>
+
+   <aui:form action="<%=addStudentAction %>" method="post" name="name">
+      <aui:input name="name" type="text" value=""/>
+      <aui:input name="gender" type="text" value=""/>
+      <aui:input name="age" type="number" value="" />
+      <aui:input name="grade" type="number" value="" />
+      <aui:input name="" type="submit" value="Add Student" />
+   </aui:form>
+
+  <br><br>
+
+  <a href="<%= viewStudentsURL %>">View Students</a>
+</body>
+</html>

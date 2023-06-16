@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.jsoup.helper.Validate"/>
+<fullyQualifiedTypeName name="javax.ws.rs.QueryParam"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.dao.orm.QueryUtil"/>
+<fullyQualifiedTypeName name="com.aspire.studentservice.service.persistence.impl.studentPersistenceImpl"/>
+<fullyQualifiedTypeName name="com.aspire.studentservice.service.persistence.studentPersistence"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.aspire.studentservice.model.student"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.dao.orm.Session"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.dao.orm.SQLQuery"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.dao.orm.QueryPos"/>
+<fullyQualifiedTypeName name="com.aspire.studentservice.service.base.studentLocalServiceBaseImpl"/>
+<fullyQualifiedTypeName name="com.aspire.studentservice.service.impl.studentLocalServiceImpl"/>
+<fullyQualifiedTypeName name="com.aspire.studentservice.service.studentLocalService"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.GetterUtil"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.log.LogFactoryUtil"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.log.Log"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.PortalUtil"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.ParamUtil"/>
+<fullyQualifiedTypeName name="com.aspire.studentservice.service.studentLocalServiceUtil"/>
+</qualifiedTypeNameHistroy>
