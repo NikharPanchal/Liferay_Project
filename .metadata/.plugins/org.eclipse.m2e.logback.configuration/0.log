@@ -17112,3 +17112,1186 @@
 2023-06-16 18:52:40,677 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2023-06-16 18:52:40,677 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
 2023-06-16 18:52:40,712 [Worker-12: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:11:38,416 [Bnd-Executor,pool-3-thread-2] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-api: com.aspire.studentservice:StudentService-api:1.0.0 with classifier  to /StudentService-api/target/classes
+2023-06-19 10:11:38,460 [Worker-4: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-service: com.aspire.studentservice:StudentService-service:1.0.0 with classifier  to /StudentService-service/target/classes
+2023-06-19 10:11:38,469 [Worker-4: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-api: com.aspire.studentservice:StudentService-api:1.0.0 with classifier  to /StudentService-api/target/classes
+2023-06-19 10:11:58,206 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:11:58,214 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:11:58,443 [Worker-4: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-service: com.aspire.studentservice:StudentService-service:1.0.0 with classifier  to /StudentService-service/target/classes
+2023-06-19 10:11:58,444 [Worker-4: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-api: com.aspire.studentservice:StudentService-api:1.0.0 with classifier  to /StudentService-api/target/classes
+2023-06-19 10:12:09,630 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:12:09,630 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:12:11,375 [Worker-2: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-service: com.aspire.studentservice:StudentService-service:1.0.0 with classifier  to /StudentService-service/target/classes
+2023-06-19 10:12:11,375 [Worker-2: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-api: com.aspire.studentservice:StudentService-api:1.0.0 with classifier  to /StudentService-api/target/classes
+2023-06-19 10:12:11,747 [Worker-2: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:12:17,976 [Bnd-Executor,pool-3-thread-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+2023-06-19 10:12:22,163 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-06-19 10:12:23,986 [Bnd-Executor,pool-3-thread-1] WARN  a.b.m.l.resolve.DependencyResolver - Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+2023-06-19 10:12:24,196 [Bnd-Executor,pool-3-thread-1] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-api: com.aspire.studentservice:StudentService-api:1.0.0 with classifier  to /StudentService-api/target/classes
+2023-06-19 10:12:24,196 [Bnd-Executor,pool-3-thread-1] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-api: com.aspire.studentservice:StudentService-api:1.0.0 with classifier  to /StudentService-api/target/classes
+2023-06-19 10:12:26,802 [Bnd-Executor,pool-3-thread-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+2023-06-19 10:12:27,812 [Bnd-Executor,pool-3-thread-1] WARN  a.b.m.l.resolve.DependencyResolver - Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+2023-06-19 10:12:28,001 [Bnd-Executor,pool-3-thread-1] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-service: com.aspire.studentservice:StudentService-service:1.0.0 with classifier  to /StudentService-service/target/classes
+2023-06-19 10:12:28,001 [Bnd-Executor,pool-3-thread-1] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-api: com.aspire.studentservice:StudentService-api:1.0.0 with classifier  to /StudentService-api/target/classes
+2023-06-19 10:12:28,002 [Bnd-Executor,pool-3-thread-1] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-service: com.aspire.studentservice:StudentService-service:1.0.0 with classifier  to /StudentService-service/target/classes
+2023-06-19 10:12:28,002 [Bnd-Executor,pool-3-thread-1] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-api: com.aspire.studentservice:StudentService-api:1.0.0 with classifier  to /StudentService-api/target/classes
+2023-06-19 10:12:29,364 [Bnd-Executor,pool-3-thread-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+2023-06-19 10:12:30,236 [Bnd-Executor,pool-3-thread-1] WARN  a.b.m.l.resolve.DependencyResolver - Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+2023-06-19 10:12:31,625 [Bnd-Executor,pool-3-thread-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+2023-06-19 10:12:32,656 [Bnd-Executor,pool-3-thread-1] WARN  a.b.m.l.resolve.DependencyResolver - Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+2023-06-19 10:12:33,823 [Bnd-Executor,pool-3-thread-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+2023-06-19 10:12:34,549 [Bnd-Executor,pool-3-thread-1] WARN  a.b.m.l.resolve.DependencyResolver - Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+2023-06-19 10:12:35,527 [Bnd-Executor,pool-3-thread-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+2023-06-19 10:12:36,404 [Bnd-Executor,pool-3-thread-1] WARN  a.b.m.l.resolve.DependencyResolver - Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+2023-06-19 10:12:37,093 [Bnd-Executor,pool-3-thread-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+2023-06-19 10:12:37,697 [Bnd-Executor,pool-3-thread-1] WARN  a.b.m.l.resolve.DependencyResolver - Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+2023-06-19 10:19:05,201 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:19:05,229 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:19:05,408 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:19:05,409 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:19:05,513 [Worker-3: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:19:06,508 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:19:06,509 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:19:06,526 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:19:06,527 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:19:36,864 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:19:36,866 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:19:37,018 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:19:37,018 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:19:37,058 [Worker-9: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:19:38,101 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:19:38,102 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:19:38,118 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:19:38,119 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:19:47,983 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:19:47,985 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:19:48,124 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:19:48,124 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:19:48,164 [Worker-8: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:19:49,160 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:19:49,161 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:19:49,174 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:19:49,174 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:21:01,457 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:21:01,458 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:21:01,580 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:21:01,580 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:21:01,617 [Worker-9: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:21:02,667 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:21:02,668 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:21:02,679 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:21:02,679 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:21:24,221 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:21:24,222 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:21:24,366 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:21:24,366 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:21:24,411 [Worker-13: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:21:25,406 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:21:25,407 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:21:25,424 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:21:25,424 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:24:21,641 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:24:21,642 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:24:21,767 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:24:21,767 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:24:21,796 [Worker-15: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:24:22,846 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:24:22,847 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:24:22,859 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:24:22,859 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:24:40,393 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:24:40,394 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:24:40,563 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:24:40,563 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:24:40,591 [Worker-15: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:24:41,640 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:24:41,641 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:24:41,658 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:24:41,658 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:25:25,647 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:25:25,648 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:25:25,797 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:25:25,797 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:25:25,829 [Worker-15: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:25:26,824 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:25:26,828 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:25:26,841 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:25:26,841 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:26:48,289 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:26:48,290 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 10:26:48,460 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:26:48,460 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:26:48,484 [Worker-15: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:26:49,619 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:26:49,620 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:26:49,632 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:26:49,632 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:26:50,709 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:26:50,709 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/StudentService/StudentService-api/src/main/resources
+2023-06-19 10:26:50,993 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:26:50,993 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/StudentService/StudentService-api/src/test/resources
+2023-06-19 10:26:51,057 [Worker-12: Executing StudentService-api jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/StudentService/StudentService-api/target/StudentService-api-1.0.0.jar
+2023-06-19 10:26:51,237 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:26:51,246 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2023-06-19 10:26:51,281 [Worker-15: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-api: com.aspire.studentservice:StudentService-api:1.0.0 with classifier  to /StudentService-api/target/classes
+2023-06-19 10:26:51,824 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:26:51,825 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/StudentService/StudentService-service/src/test/resources
+2023-06-19 10:26:51,915 [Worker-15: Executing StudentService-service jar:jar goal] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-api: com.aspire.studentservice:StudentService-api:1.0.0 with classifier  to /StudentService-api/target/classes
+2023-06-19 10:26:51,947 [Worker-15: Executing StudentService-service jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/StudentService/StudentService-service/target/StudentService-service-1.0.0.jar
+2023-06-19 10:27:13,286 [Worker-18: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 10:27:13,288 [Worker-18: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 10:27:21,515 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:27:21,516 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:27:21,681 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:27:21,681 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:27:21,723 [Worker-13: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:30:02,080 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:30:02,081 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-06-19 10:30:02,222 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:30:02,222 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:30:02,246 [Worker-16: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:30:48,568 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:30:48,568 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:30:48,681 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:30:48,681 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:30:48,711 [Worker-12: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:30:49,758 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:30:49,759 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:30:49,777 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:30:49,777 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:30:51,889 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:30:51,890 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:30:52,000 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:30:52,000 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:30:52,033 [Worker-19: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:30:53,037 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:30:53,039 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:30:53,055 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:30:53,055 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:30:54,107 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:30:54,108 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:30:54,240 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:30:54,240 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:30:54,265 [Worker-16: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:30:55,266 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:30:55,266 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:30:55,275 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:30:55,275 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:31:10,442 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:31:10,443 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:31:10,632 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:31:10,632 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:31:10,691 [Worker-19: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:31:11,739 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:31:11,741 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:31:11,751 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:31:11,752 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:31:26,720 [Worker-22: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 10:31:26,721 [Worker-22: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 10:31:32,511 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:31:32,512 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:31:32,629 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:31:32,629 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:31:32,661 [Worker-15: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:34:27,778 [Worker-21: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 10:34:27,778 [Worker-21: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 10:34:33,665 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:34:33,667 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:34:33,834 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:34:33,834 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:34:33,870 [Worker-25: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:48:39,517 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:48:39,553 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:48:39,754 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:48:39,754 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:48:39,780 [Worker-28: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:48:40,783 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:48:40,784 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:48:40,793 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:48:40,793 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:48:53,071 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:48:53,072 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:48:53,223 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:48:53,223 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:49:25,914 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:49:25,915 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:49:26,038 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:49:26,038 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:50:44,847 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:50:44,848 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:50:44,969 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:50:44,970 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:50:44,988 [Worker-26: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:50:46,040 [Worker-27: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:50:46,041 [Worker-27: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:50:46,051 [Worker-27: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:50:46,051 [Worker-27: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:51:29,901 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:51:29,902 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:51:30,020 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:51:30,020 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:51:30,052 [Worker-28: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:51:31,052 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:51:31,053 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:51:31,066 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:51:31,066 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:51:47,039 [Worker-27: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 10:51:47,039 [Worker-27: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 10:51:53,811 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:51:53,813 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:51:53,991 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:51:53,991 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:51:54,041 [Worker-29: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:54:53,385 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:54:53,386 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:54:53,512 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:54:53,512 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:54:53,540 [Worker-25: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:54:54,540 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:54:54,541 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:54:54,551 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:54:54,552 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:55:08,265 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:55:08,266 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:55:08,375 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:55:08,376 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:55:36,257 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:55:36,258 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:55:36,396 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:55:36,396 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:55:54,290 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:55:54,292 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:55:54,413 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:55:54,413 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:55:59,977 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:55:59,985 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:56:00,171 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:56:00,172 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:56:14,553 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:56:14,554 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:56:14,698 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:56:14,698 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:56:14,717 [Worker-32: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:56:15,768 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:56:15,769 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:56:15,779 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:56:15,780 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:56:23,679 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:56:23,680 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:56:23,816 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:56:23,816 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:56:23,841 [Worker-30: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:56:24,890 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:56:24,891 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:56:24,900 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:56:24,900 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:56:28,567 [Worker-31: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 10:56:28,567 [Worker-31: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 10:56:34,307 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:56:34,308 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:56:34,438 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:56:34,438 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:56:34,465 [Worker-24: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:59:44,786 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:59:44,787 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:59:44,938 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:59:44,938 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:59:44,966 [Worker-34: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 10:59:46,015 [Worker-35: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:59:46,016 [Worker-35: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:59:46,026 [Worker-35: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:59:46,027 [Worker-35: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:59:52,059 [Worker-36: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 10:59:52,059 [Worker-36: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 10:59:58,980 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:59:58,981 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 10:59:59,125 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 10:59:59,126 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 10:59:59,177 [Worker-37: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 11:01:11,571 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:01:11,572 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 11:01:11,686 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:01:11,686 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:01:11,713 [Worker-36: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 11:01:12,719 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:01:12,720 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:01:12,734 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:01:12,734 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:15:02,842 [Worker-35: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 11:15:02,842 [Worker-35: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 11:15:08,788 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:15:08,789 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:15:08,919 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:15:08,919 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:15:08,957 [Worker-30: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 11:16:45,650 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:16:45,650 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:16:45,778 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:16:45,778 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:16:45,806 [Worker-30: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 11:16:46,854 [Worker-42: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:16:46,856 [Worker-42: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:16:46,865 [Worker-42: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:16:46,865 [Worker-42: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:16:49,795 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:16:49,796 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:16:49,908 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:16:49,909 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:16:49,938 [Worker-30: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 11:16:50,981 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:16:50,982 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:16:50,993 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:16:50,993 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:17:01,685 [Worker-44: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 11:17:01,686 [Worker-44: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 11:17:07,612 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:17:07,612 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:17:07,734 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:17:07,734 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:17:07,765 [Worker-43: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 11:18:00,249 [Worker-42: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:18:00,249 [Worker-42: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 11:18:00,366 [Worker-42: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:18:00,366 [Worker-42: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:18:00,385 [Worker-44: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 11:18:01,435 [Worker-44: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:18:01,436 [Worker-44: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:18:01,442 [Worker-44: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:18:01,442 [Worker-44: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:18:08,333 [Worker-43: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 11:18:08,333 [Worker-43: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 11:18:14,327 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:18:14,328 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:18:14,458 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:18:14,458 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:18:14,486 [Worker-30: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 11:18:46,785 [Worker-45: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:18:46,786 [Worker-45: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:18:46,905 [Worker-45: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:18:46,905 [Worker-45: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:18:46,927 [Worker-45: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 11:18:47,925 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:18:47,926 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:18:47,938 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:18:47,938 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:18:59,198 [Worker-46: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 11:18:59,198 [Worker-46: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 11:19:05,039 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:19:05,040 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:19:05,171 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:19:05,171 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:19:05,200 [Worker-30: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 11:23:18,971 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:23:18,972 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 11:23:19,119 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:23:19,120 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:23:19,135 [Worker-47: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 11:23:20,138 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:23:20,139 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:23:20,145 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:23:20,145 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:23:23,744 [Worker-43: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 11:23:23,745 [Worker-43: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 11:23:30,135 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:23:30,137 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:23:30,293 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:23:30,293 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:23:30,322 [Worker-50: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 11:39:50,748 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:39:50,749 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:39:50,899 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:39:50,899 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:39:50,925 [Worker-53: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 11:39:51,925 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:39:51,926 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:39:51,934 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:39:51,934 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:39:54,086 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:39:54,087 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:39:54,201 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:39:54,202 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:39:54,220 [Worker-47: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 11:39:55,273 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:39:55,274 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:39:55,279 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:39:55,279 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:42:14,801 [Worker-57: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:42:14,802 [Worker-57: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:42:14,919 [Worker-57: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:42:14,919 [Worker-57: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:42:14,941 [Worker-52: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 11:42:15,987 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:42:15,987 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:42:15,992 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:42:15,993 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:42:22,063 [Worker-53: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 11:42:22,063 [Worker-53: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 11:42:28,676 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:42:28,676 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:42:28,785 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:42:28,785 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:42:28,805 [Worker-56: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 11:44:10,931 [Worker-57: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 11:44:10,931 [Worker-57: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 11:44:17,142 [Worker-60: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:44:17,143 [Worker-60: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:44:17,281 [Worker-60: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:44:17,281 [Worker-60: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:44:17,310 [Worker-56: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 11:46:20,430 [Worker-64: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:46:20,431 [Worker-64: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:46:20,532 [Worker-64: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:46:20,532 [Worker-64: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:46:20,556 [Worker-60: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 11:46:21,606 [Worker-57: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:46:21,606 [Worker-57: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:46:21,615 [Worker-57: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:46:21,615 [Worker-57: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:46:28,097 [Worker-60: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 11:46:28,097 [Worker-60: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 11:46:34,187 [Worker-60: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:46:34,187 [Worker-60: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 11:46:34,314 [Worker-60: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 11:46:34,314 [Worker-60: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 11:46:34,337 [Worker-63: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 13:04:45,345 [Worker-65: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:04:45,346 [Worker-65: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:04:45,461 [Worker-65: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:04:45,461 [Worker-65: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:04:45,484 [Worker-71: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 13:04:46,532 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:04:46,533 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:04:46,543 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:04:46,543 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:05:11,436 [Worker-72: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:05:11,436 [Worker-72: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 13:05:11,572 [Worker-72: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:05:11,572 [Worker-72: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:05:11,590 [Worker-68: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 13:05:12,638 [Worker-72: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:05:12,639 [Worker-72: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:05:12,646 [Worker-72: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:05:12,646 [Worker-72: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:05:18,558 [Worker-72: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 13:05:18,558 [Worker-72: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 13:05:25,154 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:05:25,155 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:05:25,279 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:05:25,279 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:05:25,307 [Worker-68: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 13:06:34,901 [Worker-65: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:06:34,901 [Worker-65: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 13:06:35,015 [Worker-65: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:06:35,015 [Worker-65: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:06:35,029 [Worker-75: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 13:06:36,031 [Worker-74: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:06:36,032 [Worker-74: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:06:36,037 [Worker-74: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:06:36,038 [Worker-74: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:06:39,596 [Worker-73: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 13:06:39,596 [Worker-73: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 13:06:45,880 [Worker-65: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:06:45,881 [Worker-65: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:06:45,997 [Worker-65: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:06:45,997 [Worker-65: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:06:46,020 [Worker-76: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 13:07:25,676 [Worker-73: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:07:25,682 [Worker-73: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:07:25,822 [Worker-73: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:07:25,822 [Worker-73: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:07:25,845 [Worker-76: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 13:07:26,841 [Worker-75: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:07:26,842 [Worker-75: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:07:26,851 [Worker-75: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:07:26,851 [Worker-75: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:09:20,708 [Worker-75: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:09:20,708 [Worker-75: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 13:09:20,833 [Worker-75: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:09:20,833 [Worker-75: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:09:20,846 [Worker-75: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 13:09:21,847 [Worker-73: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:09:21,847 [Worker-73: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:09:21,855 [Worker-73: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:09:21,855 [Worker-73: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:09:36,704 [Worker-74: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:09:36,705 [Worker-74: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 13:09:36,833 [Worker-74: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:09:36,833 [Worker-74: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:09:36,856 [Worker-75: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 13:09:37,898 [Worker-73: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:09:37,899 [Worker-73: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:09:37,908 [Worker-73: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:09:37,908 [Worker-73: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:09:42,736 [Worker-74: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 13:09:42,737 [Worker-74: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 13:09:49,453 [Worker-65: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:09:49,454 [Worker-65: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:09:49,594 [Worker-65: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:09:49,594 [Worker-65: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:09:49,617 [Worker-65: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 13:10:34,432 [Worker-73: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:10:34,432 [Worker-73: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 13:10:34,570 [Worker-73: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:10:34,570 [Worker-73: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:10:34,590 [Worker-74: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 13:10:35,587 [Worker-74: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:10:35,587 [Worker-74: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:10:35,596 [Worker-74: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:10:35,596 [Worker-74: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:10:50,487 [Worker-75: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 13:10:50,488 [Worker-75: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 13:10:56,279 [Worker-77: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:10:56,280 [Worker-77: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:10:56,394 [Worker-77: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:10:56,395 [Worker-77: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:10:56,420 [Worker-73: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 13:12:04,147 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:12:04,148 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 13:12:04,281 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:12:04,281 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:12:04,296 [Worker-77: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 13:12:05,346 [Worker-77: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:12:05,347 [Worker-77: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:12:05,353 [Worker-77: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:12:05,354 [Worker-77: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:12:15,069 [Worker-77: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 13:12:15,069 [Worker-77: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 13:12:21,545 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:12:21,546 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:12:21,650 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:12:21,650 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:12:21,672 [Worker-78: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 13:13:25,428 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:13:25,428 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 13:13:25,561 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:13:25,561 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:13:25,580 [Worker-78: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 13:13:26,578 [Worker-81: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:13:26,579 [Worker-81: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:13:26,589 [Worker-81: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:13:26,590 [Worker-81: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:13:32,455 [Worker-78: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 13:13:32,455 [Worker-78: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 13:13:38,236 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:13:38,237 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:13:38,343 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:13:38,344 [Worker-78: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:13:38,363 [Worker-83: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 13:15:24,713 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:15:24,713 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 13:15:24,844 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:15:24,844 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:15:24,859 [Worker-79: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 13:15:25,858 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:15:25,859 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:15:25,865 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:15:25,865 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:15:34,664 [Worker-86: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:15:34,664 [Worker-86: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 13:15:34,767 [Worker-86: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:15:34,767 [Worker-86: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:15:34,780 [Worker-86: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 13:15:35,834 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:15:35,835 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:15:35,842 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:15:35,842 [Worker-79: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:15:41,117 [Worker-83: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 13:15:41,118 [Worker-83: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 13:15:47,515 [Worker-85: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:15:47,516 [Worker-85: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:15:47,630 [Worker-85: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:15:47,630 [Worker-85: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:15:47,652 [Worker-88: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 13:16:00,347 [Worker-85: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:16:00,347 [Worker-85: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 13:16:00,473 [Worker-85: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:16:00,473 [Worker-85: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:16:00,498 [Worker-88: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 13:16:01,539 [Worker-83: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:16:01,540 [Worker-83: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:16:01,548 [Worker-83: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:16:01,548 [Worker-83: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:16:07,228 [Worker-79: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 13:16:07,228 [Worker-79: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 13:16:13,808 [Worker-85: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:16:13,809 [Worker-85: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:16:13,943 [Worker-85: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:16:13,943 [Worker-85: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:16:13,962 [Worker-85: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 13:18:09,035 [Worker-83: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:18:09,036 [Worker-83: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:18:09,147 [Worker-83: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:18:09,147 [Worker-83: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:18:09,164 [Worker-87: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 13:18:10,211 [Worker-83: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:18:10,211 [Worker-83: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:18:10,219 [Worker-83: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:18:10,219 [Worker-83: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:18:15,034 [Worker-86: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 13:18:15,034 [Worker-86: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 13:18:21,366 [Worker-83: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:18:21,367 [Worker-83: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 13:18:21,491 [Worker-83: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 13:18:21,491 [Worker-83: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 13:18:21,514 [Worker-85: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:05:51,881 [Bnd-Executor,pool-3-thread-2] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-api: com.aspire.studentservice:StudentService-api:1.0.0 with classifier  to /StudentService-api/target/classes
+2023-06-19 14:06:03,701 [Bnd-Executor,pool-3-thread-2] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-service: com.aspire.studentservice:StudentService-service:1.0.0 with classifier  to /StudentService-service/target/classes
+2023-06-19 14:06:03,701 [Bnd-Executor,pool-3-thread-2] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-api: com.aspire.studentservice:StudentService-api:1.0.0 with classifier  to /StudentService-api/target/classes
+2023-06-19 14:06:05,630 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:06:05,632 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/StudentService/StudentService-api/src/main/resources
+2023-06-19 14:06:13,453 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:06:13,453 [Worker-3: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/StudentService/StudentService-api/src/test/resources
+2023-06-19 14:06:14,631 [Worker-11: Executing StudentService-api jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/StudentService/StudentService-api/target/StudentService-api-1.0.0.jar
+2023-06-19 14:06:17,118 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:06:17,124 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2023-06-19 14:06:17,348 [Worker-8: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-api: com.aspire.studentservice:StudentService-api:1.0.0 with classifier  to /StudentService-api/target/classes
+2023-06-19 14:06:17,368 [Bnd-Executor,pool-3-thread-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+2023-06-19 14:06:19,828 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:06:19,829 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/StudentService/StudentService-service/src/test/resources
+2023-06-19 14:06:19,896 [Worker-5: Executing StudentService-service jar:jar goal] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-api: com.aspire.studentservice:StudentService-api:1.0.0 with classifier  to /StudentService-api/target/classes
+2023-06-19 14:06:19,969 [Worker-5: Executing StudentService-service jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/StudentService/StudentService-service/target/StudentService-service-1.0.0.jar
+2023-06-19 14:06:20,984 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:06:20,990 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 14:06:21,158 [Worker-6: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-service: com.aspire.studentservice:StudentService-service:1.0.0 with classifier  to /StudentService-service/target/classes
+2023-06-19 14:06:21,159 [Worker-6: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-api: com.aspire.studentservice:StudentService-api:1.0.0 with classifier  to /StudentService-api/target/classes
+2023-06-19 14:06:21,496 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:06:21,497 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:06:21,676 [Worker-6: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-service: com.aspire.studentservice:StudentService-service:1.0.0 with classifier  to /StudentService-service/target/classes
+2023-06-19 14:06:21,676 [Worker-6: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-api: com.aspire.studentservice:StudentService-api:1.0.0 with classifier  to /StudentService-api/target/classes
+2023-06-19 14:06:21,733 [Worker-6: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:06:21,997 [Bnd-Executor,pool-3-thread-1] WARN  a.b.m.l.resolve.DependencyResolver - Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+2023-06-19 14:06:22,218 [Bnd-Executor,pool-3-thread-1] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-api: com.aspire.studentservice:StudentService-api:1.0.0 with classifier  to /StudentService-api/target/classes
+2023-06-19 14:06:22,218 [Bnd-Executor,pool-3-thread-1] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-api: com.aspire.studentservice:StudentService-api:1.0.0 with classifier  to /StudentService-api/target/classes
+2023-06-19 14:06:23,551 [Bnd-Executor,pool-3-thread-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+2023-06-19 14:06:25,353 [Bnd-Executor,pool-3-thread-1] WARN  a.b.m.l.resolve.DependencyResolver - Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+2023-06-19 14:06:25,589 [Bnd-Executor,pool-3-thread-1] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-service: com.aspire.studentservice:StudentService-service:1.0.0 with classifier  to /StudentService-service/target/classes
+2023-06-19 14:06:25,589 [Bnd-Executor,pool-3-thread-1] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-api: com.aspire.studentservice:StudentService-api:1.0.0 with classifier  to /StudentService-api/target/classes
+2023-06-19 14:06:25,590 [Bnd-Executor,pool-3-thread-1] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-service: com.aspire.studentservice:StudentService-service:1.0.0 with classifier  to /StudentService-service/target/classes
+2023-06-19 14:06:25,590 [Bnd-Executor,pool-3-thread-1] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/StudentService-api: com.aspire.studentservice:StudentService-api:1.0.0 with classifier  to /StudentService-api/target/classes
+2023-06-19 14:06:26,872 [Bnd-Executor,pool-3-thread-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+2023-06-19 14:06:27,634 [Bnd-Executor,pool-3-thread-1] WARN  a.b.m.l.resolve.DependencyResolver - Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+2023-06-19 14:06:28,838 [Bnd-Executor,pool-3-thread-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+2023-06-19 14:06:29,519 [Bnd-Executor,pool-3-thread-1] WARN  a.b.m.l.resolve.DependencyResolver - Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+2023-06-19 14:06:30,594 [Bnd-Executor,pool-3-thread-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+2023-06-19 14:06:31,252 [Bnd-Executor,pool-3-thread-1] WARN  a.b.m.l.resolve.DependencyResolver - Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+2023-06-19 14:06:32,063 [Bnd-Executor,pool-3-thread-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+2023-06-19 14:06:32,669 [Bnd-Executor,pool-3-thread-1] WARN  a.b.m.l.resolve.DependencyResolver - Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+2023-06-19 14:06:33,620 [Bnd-Executor,pool-3-thread-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for glassfish:appserv-ext:jar:9.1 is missing, no dependency information available
+2023-06-19 14:06:34,436 [Bnd-Executor,pool-3-thread-1] WARN  a.b.m.l.resolve.DependencyResolver - Failed to resolve dependency glassfish:appserv-ext:jar:9.1
+2023-06-19 14:07:20,062 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:07:20,066 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 14:07:20,216 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:07:20,216 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:07:20,253 [Worker-5: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:07:21,302 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:07:21,303 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 14:07:21,318 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:07:21,318 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:07:29,569 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:07:29,571 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 14:07:29,763 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:07:29,763 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:07:29,807 [Worker-5: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:07:30,843 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:07:30,845 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 14:07:30,859 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:07:30,859 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:07:36,251 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-06-19 14:07:51,808 [Worker-10: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 14:07:51,809 [Worker-10: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 14:07:58,545 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:07:58,547 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2023-06-19 14:07:58,735 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:07:58,735 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:07:58,780 [Worker-3: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:09:45,494 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:09:45,495 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-06-19 14:09:45,648 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:09:45,648 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:09:45,689 [Worker-9: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:10:20,270 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:10:20,271 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 14:10:20,452 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:10:20,452 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:10:20,484 [Worker-13: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:10:21,536 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:10:21,537 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:10:21,551 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:10:21,551 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:10:28,751 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:10:28,752 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 14:10:28,883 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:10:28,883 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:10:28,907 [Worker-9: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:10:29,963 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:10:29,965 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:10:29,977 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:10:29,977 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:10:41,130 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:10:41,131 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:10:41,282 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:10:41,282 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:10:41,321 [Worker-14: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:10:42,363 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:10:42,364 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:10:42,385 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:10:42,386 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:10:50,224 [Worker-15: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 14:10:50,224 [Worker-15: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 14:10:56,139 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:10:56,140 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:10:56,287 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:10:56,288 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:10:56,344 [Worker-1: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:12:06,016 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:12:06,017 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/StudentService/StudentService-api/src/main/resources
+2023-06-19 14:12:06,194 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:12:06,194 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/StudentService/StudentService-api/src/test/resources
+2023-06-19 14:12:06,231 [Worker-9: Executing StudentService-api jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/StudentService/StudentService-api/target/StudentService-api-1.0.0.jar
+2023-06-19 14:12:06,466 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:12:06,466 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-06-19 14:12:06,630 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:12:06,630 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/StudentService/StudentService-service/src/test/resources
+2023-06-19 14:12:06,676 [Worker-16: Executing StudentService-service jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/StudentService/StudentService-service/target/StudentService-service-1.0.0.jar
+2023-06-19 14:12:06,901 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:12:06,902 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 14:12:07,060 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:12:07,060 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:12:07,092 [Worker-12: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:12:08,092 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:12:08,093 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:12:08,103 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:12:08,103 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:12:55,206 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:12:55,207 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:12:55,371 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:12:55,371 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:12:55,409 [Worker-15: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:12:56,455 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:12:56,456 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:12:56,465 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:12:56,466 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:13:48,440 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:13:48,440 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 14:13:48,557 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:13:48,558 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:13:48,576 [Worker-12: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:13:49,636 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:13:49,637 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:13:49,652 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:13:49,652 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:14:02,051 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:14:02,051 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 14:14:02,231 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:14:02,231 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:14:02,254 [Worker-15: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:14:03,308 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:14:03,309 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:14:03,322 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:14:03,322 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:14:28,399 [Worker-15: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 14:14:28,399 [Worker-15: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 14:14:35,355 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:14:35,356 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:14:35,477 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:14:35,477 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:14:35,510 [Worker-17: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:16:18,763 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:16:18,764 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:16:18,910 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:16:18,910 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:16:18,931 [Worker-16: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:16:19,950 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:16:19,951 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:16:19,968 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:16:19,968 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:17:07,548 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:17:07,549 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 14:17:07,673 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:17:07,673 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:17:07,697 [Worker-12: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:17:08,699 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:17:08,701 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:17:08,715 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:17:08,716 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:17:14,303 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:17:14,304 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 14:17:14,499 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:17:14,499 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:17:14,520 [Worker-17: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:17:15,572 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:17:15,573 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:17:15,585 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:17:15,585 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:19:26,363 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:19:26,364 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 14:19:26,507 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:19:26,507 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:19:26,525 [Worker-19: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:19:27,580 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:19:27,581 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:19:27,590 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:19:27,590 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:19:48,449 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:19:48,449 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 14:19:48,574 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:19:48,575 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:19:48,593 [Worker-16: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:19:49,649 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:19:49,650 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:19:49,664 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:19:49,664 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:21:33,952 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:21:33,952 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 14:21:34,116 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:21:34,116 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:21:34,150 [Worker-24: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:21:35,202 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:21:35,203 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:21:35,213 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:21:35,214 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:21:48,986 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:21:48,987 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 14:21:49,100 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:21:49,100 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:21:49,118 [Worker-19: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:21:50,177 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:21:50,178 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:21:50,192 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:21:50,192 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:21:56,222 [Worker-23: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 14:21:56,222 [Worker-23: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 14:22:02,100 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:22:02,101 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:22:02,234 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:22:02,237 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:22:02,269 [Worker-22: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:23:27,692 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:23:27,693 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:23:27,808 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:23:27,808 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:23:27,827 [Worker-25: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:23:28,881 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:23:28,882 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:23:28,895 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:23:28,896 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:23:37,532 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:23:37,534 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:23:37,653 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:23:37,653 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:23:37,675 [Worker-26: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:23:38,750 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:23:38,751 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:23:38,763 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:23:38,763 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:23:52,632 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:23:52,633 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 14:23:52,798 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:23:52,798 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:23:52,821 [Worker-22: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:23:53,867 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:23:53,868 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:23:53,874 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:23:53,874 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:24:13,584 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:24:13,584 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 14:24:13,689 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:24:13,689 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:24:13,708 [Worker-19: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:24:14,709 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:24:14,711 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:24:14,723 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:24:14,724 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:24:24,493 [Worker-22: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 14:24:24,493 [Worker-22: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 14:24:30,428 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:24:30,431 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:24:30,563 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:24:30,564 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:24:30,594 [Worker-26: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:25:50,022 [Worker-26: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 14:25:50,023 [Worker-26: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 14:25:55,879 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:25:55,881 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:25:55,998 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:25:55,998 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:25:56,034 [Worker-25: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:26:46,312 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:26:46,314 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:26:46,424 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:26:46,424 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:26:46,460 [Worker-25: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:26:47,456 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:26:47,457 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:26:47,467 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:26:47,467 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:27:10,602 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:27:10,603 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:27:10,729 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:27:10,729 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:27:10,751 [Worker-26: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:27:11,800 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:27:11,801 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:27:11,814 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:27:11,814 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:27:55,543 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:27:55,543 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 14:27:55,637 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:27:55,637 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:27:55,652 [Worker-25: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:27:56,711 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:27:56,712 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:27:56,728 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:27:56,728 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:28:04,074 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:28:04,074 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 14:28:04,178 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:28:04,178 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:28:04,198 [Worker-19: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:28:05,241 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:28:05,241 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:28:05,248 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:28:05,249 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:28:42,068 [Worker-26: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 14:28:42,068 [Worker-26: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 14:28:48,241 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:28:48,242 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:28:48,440 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:28:48,441 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:28:48,492 [Worker-25: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:30:31,668 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:30:31,669 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 14:30:31,796 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:30:31,796 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:30:31,823 [Worker-33: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:30:32,871 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:30:32,872 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:30:32,880 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:30:32,881 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:30:36,779 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:30:36,780 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 14:30:36,876 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:30:36,876 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:30:36,898 [Worker-30: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:30:37,942 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:30:37,942 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:30:37,954 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:30:37,954 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:30:40,160 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:30:40,160 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 14:30:40,296 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:30:40,296 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:30:40,313 [Worker-34: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:30:41,360 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:30:41,361 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:30:41,371 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:30:41,371 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:30:47,138 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:30:47,138 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 14:30:47,290 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:30:47,290 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:30:47,308 [Worker-32: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:30:48,357 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:30:48,358 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:30:48,366 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:30:48,366 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:31:04,237 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:31:04,237 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 14:31:04,335 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:31:04,335 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:31:04,353 [Worker-30: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:31:05,403 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:31:05,404 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:31:05,415 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:31:05,416 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:31:19,420 [Worker-33: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 14:31:19,420 [Worker-33: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 14:31:25,475 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:31:25,476 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:31:25,565 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:31:25,566 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:31:25,590 [Worker-30: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:31:58,875 [Worker-34: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 14:31:58,875 [Worker-34: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 14:32:05,553 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:32:05,555 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:32:05,654 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:32:05,655 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:32:05,689 [Worker-33: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:33:35,111 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:33:35,112 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 14:33:35,237 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:33:35,237 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:33:35,255 [Worker-36: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:33:36,306 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:33:36,307 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:33:36,312 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:33:36,312 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:34:45,367 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:34:45,368 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-06-19 14:34:45,499 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:34:45,499 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:34:45,523 [Worker-33: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:34:46,522 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:34:46,523 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:34:46,531 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:34:46,531 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:35:44,455 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:35:44,456 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:35:44,596 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:35:44,596 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:35:44,613 [Worker-37: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:35:45,661 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:35:45,662 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:35:45,669 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:35:45,669 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:36:00,729 [Worker-33: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 14:36:00,729 [Worker-33: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 14:36:06,532 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:36:06,532 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:36:06,659 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:36:06,659 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:36:06,693 [Worker-32: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:38:18,782 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:38:18,783 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:38:18,961 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:38:18,962 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:38:48,692 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:38:48,693 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:38:48,798 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:38:48,799 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:38:49,225 [Worker-32: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:38:49,829 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:38:49,834 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:38:49,846 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:38:49,846 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:39:00,567 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:39:00,567 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:39:00,722 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:39:00,722 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:39:00,742 [Worker-39: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:39:01,789 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:39:01,790 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:39:01,797 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:39:01,798 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:39:05,452 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:39:05,453 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:39:05,548 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:39:05,548 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:39:05,569 [Worker-32: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:39:06,616 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:39:06,617 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:39:06,625 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:39:06,625 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:41:54,111 [Worker-42: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:41:54,112 [Worker-42: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:41:54,234 [Worker-42: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:41:54,234 [Worker-42: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:41:54,257 [Worker-32: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:41:55,309 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:41:55,310 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:41:55,322 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:41:55,322 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:42:00,285 [Worker-42: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 14:42:00,285 [Worker-42: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 14:42:05,984 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:42:05,985 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:42:06,130 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:42:06,130 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:42:06,158 [Worker-41: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:44:04,768 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:44:04,769 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:44:04,870 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:44:04,870 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:44:04,886 [Worker-41: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:44:05,892 [Worker-45: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:44:05,893 [Worker-45: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:44:05,902 [Worker-45: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:44:05,903 [Worker-45: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:46:16,842 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:46:16,843 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:46:16,972 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:46:16,973 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:46:37,737 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:46:37,738 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:46:37,892 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:46:37,892 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:46:52,496 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:46:52,497 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:46:52,661 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:46:52,662 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:47:16,979 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:47:16,980 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:47:17,094 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:47:17,094 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:47:26,045 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:47:26,046 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:47:26,174 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:47:26,174 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:47:26,201 [Worker-32: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:47:27,245 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:47:27,246 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:47:27,253 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:47:27,254 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:47:39,185 [Worker-49: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 14:47:39,186 [Worker-49: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 14:47:44,929 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:47:44,930 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:47:45,064 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:47:45,064 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:47:45,087 [Worker-49: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:49:37,193 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:49:37,194 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:49:37,319 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:49:37,319 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:49:48,560 [Worker-50: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:49:48,561 [Worker-50: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:49:48,696 [Worker-50: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:49:48,696 [Worker-50: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:49:48,721 [Worker-49: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:49:49,765 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:49:49,766 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:49:49,774 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:49:49,774 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:50:11,340 [Worker-50: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:50:11,341 [Worker-50: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:50:11,507 [Worker-50: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:50:11,508 [Worker-50: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:50:11,530 [Worker-50: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:50:12,578 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:50:12,579 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:50:12,587 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:50:12,587 [Worker-32: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:52:37,237 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:52:37,238 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:52:37,346 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:52:37,346 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:52:47,021 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:52:47,022 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:52:47,136 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:52:47,136 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:53:01,633 [Worker-55: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:53:01,633 [Worker-55: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:53:01,748 [Worker-55: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:53:01,748 [Worker-55: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:53:01,774 [Worker-48: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:53:02,765 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:53:02,766 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:53:02,776 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:53:02,777 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:54:05,928 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:54:05,928 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:54:06,059 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:54:06,060 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:54:06,083 [Worker-32: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar
+2023-06-19 14:54:07,098 [Worker-53: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:54:07,099 [Worker-53: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:54:07,105 [Worker-53: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:54:07,106 [Worker-53: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:54:22,871 [Worker-54: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/aspire/StudentRepo/Student/modules/AddStudent
+2023-06-19 14:54:22,872 [Worker-54: Launching AddStudent] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -U -Dmaven.test.skip=true -DskipTests package bundle-support:deploy
+2023-06-19 14:54:28,755 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:54:28,756 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2023-06-19 14:54:28,868 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-19 14:54:28,869 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/aspire/StudentRepo/Student/modules/AddStudent/src/test/resources
+2023-06-19 14:54:28,888 [Worker-53: Executing AddStudent jar:jar goal] INFO  o.e.m.c.i.embedder.EclipseLogger - Building jar: /home/aspire/StudentRepo/Student/modules/AddStudent/target/AddStudent-1.0.0.jar

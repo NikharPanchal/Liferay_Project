@@ -37,6 +37,7 @@ import org.osgi.service.component.annotations.Component;
 		"javax.portlet.display-name=AddStudent",
 		"javax.portlet.init-param.template-path=/",
 		"javax.portlet.init-param.view-template=/view.jsp",
+		"jspPage=/UpdateStudent.jsp",
 		"javax.portlet.name=" + AddStudentPortletKeys.ADDSTUDENT,
 		"javax.portlet.resource-bundle=content.Language",
 		"javax.portlet.security-role-ref=power-user,user",
@@ -103,33 +104,49 @@ public class AddStudentPortlet extends MVCPortlet {
 		System.out.println(student);
 
 		studentLocalServiceUtil.addstudent(student);
-
 	}
 
 	@ProcessAction(name = "deleteStudent")
 	public void deleteStudent(ActionRequest actionRequest, ActionResponse actionResponse) {
-		
 			try {
 				long studentId = ParamUtil.getLong(actionRequest, "studentId");
 				System.out.println("id for delete student"+studentId);
 				studentLocalServiceUtil.deletestudent(studentId);
 			} catch (Exception e) {
 				e.printStackTrace();
-			}
-		
+			}	
 	}
 
-	@ProcessAction(name = "updateStudent")
+	@ProcessAction(name="editStudent")
 	public void editStudent(ActionRequest actionRequest, ActionResponse actionResponse)
 			throws IOException, PortletException, PortalException, ServletException {
 		long studentId = ParamUtil.getLong(actionRequest, "studentId");
 		System.out.println("student id:-----" + studentId);
 		student stud = studentLocalServiceUtil.getstudent(studentId);
-		actionRequest.setAttribute("studentList", stud);
+		actionRequest.setAttribute("stud", stud);
 		System.out.println(stud.toString());
-
-		// actionResponse.sendRedirect("/resources/META-INF/resources/UpdateStudent.jsp");
+//		actionResponse.sendRedirect("/META-INF/resources/UpdateStudent.jsp");
+		actionResponse.setRenderParameter("jspPage", "/UpdateStudent.jsp");
 	}
+
+//	@Override
+//	public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
+//			throws IOException, PortletException {
+//		long studentId = ParamUtil.getLong(renderRequest, "studentId");
+//		System.out.println("student id for update:-----" + studentId);
+//		student stud;
+//		try {
+//			stud = studentLocalServiceUtil.getstudent(studentId);
+//			renderRequest.setAttribute("studentList", stud);
+//			System.out.println(stud.toString());
+//		} catch (PortalException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		
+//		
+//		super.doView(renderRequest, renderResponse);
+//	}
 
 	@ProcessAction(name = "updateStudentDetails")
 	public void updateStudent(ActionRequest actionRequest, ActionResponse actionResponse)
@@ -148,15 +165,21 @@ public class AddStudentPortlet extends MVCPortlet {
 		System.out.println(contactno);
 		System.out.println(city);
 
-//		student studentdata = null;
-//		studentdata.setId(studentId);
-//		studentdata.setEnrollmentno(enrollmentno);
-//		studentdata.setFname(firstname);
-//		studentdata.setLname(lastname);
-//		studentdata.setContactno(contactno);
-//		studentdata.setCity(city);
-//		System.out.println(studentdata);
-		
-//		studentLocalServiceUtil.updatestudent(studentdata);
+		student stud = null;
+        try {
+        	stud =studentLocalServiceUtil.getstudent(studentId);
+        } catch (Exception e) {
+        	e.printStackTrace();
+        }
+   
+ 
+        if(Validator.isNotNull(stud)) {
+        	stud.setEnrollmentno(enrollmentno);
+        	stud.setFname(firstname);
+        	stud.setLname(lastname);
+        	stud.setContactno(contactno);
+        	stud.setCity(city);
+        }
+		studentLocalServiceUtil.updatestudent(stud);
 	}
 }

@@ -1,0 +1,19 @@
+<%@page import="com.aspire.studentservice.model.student"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<%
+	List<student> studentList = (List<student>) request.getAttribute("studentList");
+%>
+${studentList}
+<body>
+<h1>test</h1>
+</body>
+</html>
