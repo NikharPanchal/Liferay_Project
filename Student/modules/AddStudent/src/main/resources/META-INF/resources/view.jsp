@@ -54,18 +54,26 @@
 	$('#myModal').on('shown.bs.modal', function() {
 		$('#myInput').trigger('focus')
 	})
+	
+	
+	
 </script>
 
 
 <%
 	List<student> studentList = (List) request.getAttribute("studentList");
+	
+	String msg=(String)request.getAttribute("Message");
+	
+	Boolean role=(Boolean)request.getAttribute("Role");
 %>
 <body>
 	<p>
-
 		<b><liferay-ui:message key="addstudent.caption" /></b>
 	</p>
-
+	<%if(msg!=null){ %>
+	<span class="success-msg" ><%= msg %></span>
+	<%} %>
 	<p>Welcome</p>
 
 	<div class="mb-5 p-3">
@@ -83,8 +91,12 @@
 				<th>Last Name</th>
 				<th>Contact No</th>
 				<th>City</th>
+				
 				<th>Edit</th>
+			
+				<%if(role==true){ %>
 				<th>Delete</th>
+					<%} %>
 			</tr>
 		</thead>
 
@@ -125,7 +137,8 @@
 					class="btn  btn-primary btn-default btn-sm px-2 py-1"> <i
 						class="glyphicon glyphicon-edit">Edit</i>
 				</a></td>
-
+				
+				<%if(role==true){ %>	
 				<portlet:actionURL var="deleteStudentUrl" name="deleteStudent">
 					<portlet:param name="studentId" value="${student.getId()}" />
 				</portlet:actionURL>
@@ -135,7 +148,7 @@
 					class="btn  btn-primary btn-default btn-sm px-2 py-1"> <i
 						class="glyphicon glyphicon-remove">Delete</i>
 				</a></td>
-
+				<%}%>
 			</tr>
 			</c:forEach>
 		</tbody>

@@ -14,10 +14,14 @@
 <html>
 <head>
 <title>Add Student</title>
+
+
 </head>
-
-
+<liferay-portlet:resourceURL var="checkDuplicateUrl" >
+    <liferay-portlet:param name="task" value="checkDuplicate"/>
+</liferay-portlet:resourceURL>
 <body>
+<a href="#" onclick="callServeResource()">This is resource URL</a>
 	<h1 class="text-center p-3">Add Student</h1>
 	<div class="container">
 
@@ -27,7 +31,7 @@
 				<aui:validator name="alphanum" />
 			</aui:input>
 
-			<aui:input name="firstName">
+			<aui:input name="firstName" onblur="checkFname()">
 				<aui:validator name="required" />
 				<aui:validator name="alpha" />
 			</aui:input>
@@ -55,5 +59,65 @@
 	</div>
 	<br>
 	<br>
+<!-- <script src="js/jquery-2.2.4.min.js"></script>
+<script>
+$(document).ready(function(){
+		$("#fname").blur(function(){
+			var firstname=$('#fname').val();
+			alert(firstname);
+			$.ajax({url: "demo_test.txt", success: function(result){
+			    $("#div1").html(result);
+			  }});
+		});
+	});
+</script> -->
+
+
 </body>
+
+<script type="text/javascript">
+
+function checkFname(){
+ var myname=document.getElementsByName("_com_aspire_addstudent_AddStudentPortlet_INSTANCE_zmbq_firstName");
+   alert("Cursor is on the input box"); 
+   alert(myname[0].value);
+   var fname=myname[0].value;
+   AUI().use('aui-io-request', function(A){
+	    A.io.request('${checkDuplicateUrl}', {
+	           method: 'post',
+	           data: {
+	               <portlet:namespace />param2: fname,
+	           },
+	           on: {
+	                success: function() {
+	                alert(this.get('responseData'));
+	               }
+	          }
+	    });
+
+	});
+} 
+
+function callServeResource(){
+	var myname=document.getElementById("fnameinput");
+	   alert("Cursor is on the input box");
+	  var input=myname.value;
+	  console.log("Input value: " + input);
+	
+AUI().use('aui-io-request', function(A){
+    A.io.request('${checkDuplicateUrl}', {
+           method: 'post',
+           data: {
+               <portlet:namespace />param2: 'value2',
+           },
+           on: {
+                success: function() {
+                alert(this.get('responseData'));
+               }
+          }
+    });
+
+});
+}
+</script>
 </html>

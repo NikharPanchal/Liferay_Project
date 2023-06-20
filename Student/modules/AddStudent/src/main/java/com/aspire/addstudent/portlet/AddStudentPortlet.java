@@ -3,20 +3,21 @@ package com.aspire.addstudent.portlet;
 import com.aspire.addstudent.constants.AddStudentPortletKeys;
 import com.aspire.studentservice.model.student;
 import com.aspire.studentservice.model.studentModel;
-import com.aspire.studentservice.service.studentLocalService;
 import com.aspire.studentservice.service.studentLocalServiceUtil;
 import com.liferay.counter.kernel.service.CounterLocalServiceUtil;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.model.Role;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
+import com.liferay.portal.kernel.service.RoleLocalServiceUtil;
 import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.Validator;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
-import javax.annotation.Generated;
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
 import javax.portlet.Portlet;
@@ -24,6 +25,8 @@ import javax.portlet.PortletException;
 import javax.portlet.ProcessAction;
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
+import javax.portlet.ResourceRequest;
+import javax.portlet.ResourceResponse;
 import javax.servlet.ServletException;
 
 import org.osgi.service.component.annotations.Component;
@@ -75,7 +78,14 @@ public class AddStudentPortlet extends MVCPortlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+		if (renderRequest.isUserInRole("power-user")) {
+			renderRequest.setAttribute("Role", true);
+		}
+		else
+		{
+			renderRequest.setAttribute("Role", false);
+			System.out.println("normal user");
+		}
 		super.render(renderRequest, renderResponse);
 	}
 
@@ -104,6 +114,10 @@ public class AddStudentPortlet extends MVCPortlet {
 		System.out.println(student);
 
 		studentLocalServiceUtil.addstudent(student);
+		
+		actionRequest.setAttribute("Message", "Student added successfully");
+		
+		
 	}
 
 	@ProcessAction(name = "deleteStudent")
@@ -112,6 +126,7 @@ public class AddStudentPortlet extends MVCPortlet {
 				long studentId = ParamUtil.getLong(actionRequest, "studentId");
 				System.out.println("id for delete student"+studentId);
 				studentLocalServiceUtil.deletestudent(studentId);
+				actionRequest.setAttribute("Message", "Student delete successfully");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}	
@@ -125,7 +140,6 @@ public class AddStudentPortlet extends MVCPortlet {
 		student stud = studentLocalServiceUtil.getstudent(studentId);
 		actionRequest.setAttribute("stud", stud);
 		System.out.println(stud.toString());
-//		actionResponse.sendRedirect("/META-INF/resources/UpdateStudent.jsp");
 		actionResponse.setRenderParameter("jspPage", "/UpdateStudent.jsp");
 	}
 
@@ -181,5 +195,31 @@ public class AddStudentPortlet extends MVCPortlet {
         	stud.setCity(city);
         }
 		studentLocalServiceUtil.updatestudent(stud);
+		
+		actionRequest.setAttribute("Message", "Student update successfully");
+		
+		try {
+			Role role = RoleLocalServiceUtil.getRole(studentId);
+			System.out.println("role of a current user"+role);
+		} catch (PortalException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
+	@Override
+    public void serveResource(ResourceRequest resourceRequest,
+            ResourceResponse resourceResponse) throws IOException,
+            PortletException {
+        
+        _log.info("This is serve resource method....");
+        
+        String firstname=resourceRequest.getParameter("param2");
+        _log.info(firstname);
+       
+        
+        PrintWriter out = resourceResponse.getWriter();
+        out.println("Resource URL is created with Liferay Tag - liferay-portlet:resourceURL");
+        out.flush();
+        super.serveResource(resourceRequest, resourceResponse);
+    }
 }

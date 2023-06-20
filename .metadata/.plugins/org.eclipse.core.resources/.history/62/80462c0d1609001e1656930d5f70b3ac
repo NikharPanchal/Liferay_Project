@@ -1,6 +1,0 @@
-<portlet:defineObjects />
- 
-<portlet:actionURL name="addStudent" var="addStudentActionURL"/>
-            
-                
-<h2>Add Student Form here !</h2>

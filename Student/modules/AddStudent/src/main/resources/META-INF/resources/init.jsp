@@ -13,3 +13,5 @@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 <liferay-theme:defineObjects />
 
 <portlet:defineObjects />
+
+<jsp:include page="Test.jsp"></jsp:include>
