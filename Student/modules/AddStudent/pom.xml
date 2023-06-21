@@ -132,6 +132,26 @@
 				</configuration>
 			</plugin>
 			<plugin>
+				<groupId>com.liferay</groupId>
+				<artifactId>com.liferay.portal.tools.bundle.support</artifactId>
+				<version>3.2.1</version>
+				<executions>
+					<execution>
+						<id>deploy</id>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+						<phase>pre-integration-test</phase>
+					</execution>
+				</executions>
+				<configuration>
+					<liferayHome>/home/aspire/Downloads/liferay-ce-portal-tomcat-7.4.3.32-ga32-20220704200951543/liferay-ce-portal-7.4.3.32-ga32</liferayHome>
+				</configuration>
+				<!-- <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-war-plugin</artifactId> 
+					<version>3.2.3</version> <configuration> <outputDirectory>/home/aspire/Downloads/liferay-ce-portal-tomcat-7.4.3.32-ga32-20220704200951543/liferay-ce-portal-7.4.3.32-ga32/deploy</outputDirectory> 
+					</configuration> -->
+			</plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>

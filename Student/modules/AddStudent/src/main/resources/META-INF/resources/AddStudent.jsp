@@ -21,7 +21,7 @@
     <liferay-portlet:param name="task" value="checkDuplicate"/>
 </liferay-portlet:resourceURL>
 <body>
-<a href="#" onclick="callServeResource()">This is resource URL</a>
+<!-- <a href="#" onclick="callServeResource()">This is resource URL</a> -->
 	<h1 class="text-center p-3">Add Student</h1>
 	<span id="fname-error" class="text-center p-3"></span>
 	
@@ -91,10 +91,10 @@ function checkFname(){
 	           },
 	           on: {
 	                success: function() {
-	                alert(this.get('responseData'));
+	                //alert(this.get('responseData'));
 	                var data=this.get('responseData');
 	                const jsonData = JSON.parse(data);
-	                alert(jsonData.duplicate);
+	                //alert(jsonData.duplicate);
 	                if(jsonData.duplicate==true)
 	                	{
 	                		console.log("jsonData duplicate "+jsonData.duplicate);
