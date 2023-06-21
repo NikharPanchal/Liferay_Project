@@ -74,7 +74,6 @@ $(document).ready(function(){
 	});
 </script> -->
 
-
 </body>
 
 <script type="text/javascript">
@@ -83,7 +82,6 @@ function checkFname(){
  var myname=document.getElementsByName("_com_aspire_addstudent_AddStudentPortlet_INSTANCE_zmbq_firstName");
    /* alert("Cursor is on the input box"); 
    alert(myname[0].value); */
-   console.log("===============");
    var fname=myname[0].value;
    AUI().use('aui-io-request', function(A){
 	    A.io.request('${checkDuplicateUrl}', {
@@ -96,14 +94,16 @@ function checkFname(){
 	                alert(this.get('responseData'));
 	                var data=this.get('responseData');
 	                const jsonData = JSON.parse(data);
-
-	                alert(jsonData);
-	                if(jsonData.success)
+	                alert(jsonData.duplicate);
+	                if(jsonData.duplicate==true)
 	                	{
-	                	console.log("jsonData duplicate "+jsonData.duplicate);
+	                		console.log("jsonData duplicate "+jsonData.duplicate);
 	                		document.getElementById("fname-error").innerHTML +="Firstname is already taken";
-	                		myname.value="";
-	                		myname.focus()
+	                		document.getElementsByName("_com_aspire_addstudent_AddStudentPortlet_INSTANCE_zmbq_firstName").value = "";
+	                		//myname.focus()
+	                	}
+	                else{
+	                		document.getElementById("fname-error").innerHTML +="";
 	                	}
 	               }
 	          }

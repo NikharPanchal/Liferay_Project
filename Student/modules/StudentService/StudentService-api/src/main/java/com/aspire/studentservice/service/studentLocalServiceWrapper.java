@@ -281,13 +281,6 @@ public class studentLocalServiceWrapper
 		return _studentLocalService.getstudent(id);
 	}
 
-	@Override
-	public java.util.List<com.aspire.studentservice.model.student>
-		getStudentList() {
-
-		return _studentLocalService.getStudentList();
-	}
-
 	/**
 	 * Returns a range of all the students.
 	 *

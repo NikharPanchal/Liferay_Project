@@ -254,10 +254,6 @@ public class studentLocalServiceUtil {
 		return getService().getstudent(id);
 	}
 
-	public static List<student> getStudentList() {
-		return getService().getStudentList();
-	}
-
 	/**
 	 * Returns a range of all the students.
 	 *

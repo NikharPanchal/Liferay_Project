@@ -233,9 +233,6 @@ public interface studentLocalService
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public student getstudent(long id) throws PortalException;
 
-	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public List<student> getStudentList();
-
 	/**
 	 * Returns a range of all the students.
 	 *
