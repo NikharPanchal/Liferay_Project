@@ -121,6 +121,170 @@ public class studentUtil {
 	}
 
 	/**
+	 * Returns all the students where fname = &#63;.
+	 *
+	 * @param fname the fname
+	 * @return the matching students
+	 */
+	public static List<student> findByfirstName(String fname) {
+		return getPersistence().findByfirstName(fname);
+	}
+
+	/**
+	 * Returns a range of all the students where fname = &#63;.
+	 *
+	 * <p>
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>studentModelImpl</code>.
+	 * </p>
+	 *
+	 * @param fname the fname
+	 * @param start the lower bound of the range of students
+	 * @param end the upper bound of the range of students (not inclusive)
+	 * @return the range of matching students
+	 */
+	public static List<student> findByfirstName(
+		String fname, int start, int end) {
+
+		return getPersistence().findByfirstName(fname, start, end);
+	}
+
+	/**
+	 * Returns an ordered range of all the students where fname = &#63;.
+	 *
+	 * <p>
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>studentModelImpl</code>.
+	 * </p>
+	 *
+	 * @param fname the fname
+	 * @param start the lower bound of the range of students
+	 * @param end the upper bound of the range of students (not inclusive)
+	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	 * @return the ordered range of matching students
+	 */
+	public static List<student> findByfirstName(
+		String fname, int start, int end,
+		OrderByComparator<student> orderByComparator) {
+
+		return getPersistence().findByfirstName(
+			fname, start, end, orderByComparator);
+	}
+
+	/**
+	 * Returns an ordered range of all the students where fname = &#63;.
+	 *
+	 * <p>
+	 * Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to <code>QueryUtil#ALL_POS</code> will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent, then the query will include the default ORDER BY logic from <code>studentModelImpl</code>.
+	 * </p>
+	 *
+	 * @param fname the fname
+	 * @param start the lower bound of the range of students
+	 * @param end the upper bound of the range of students (not inclusive)
+	 * @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	 * @param useFinderCache whether to use the finder cache
+	 * @return the ordered range of matching students
+	 */
+	public static List<student> findByfirstName(
+		String fname, int start, int end,
+		OrderByComparator<student> orderByComparator, boolean useFinderCache) {
+
+		return getPersistence().findByfirstName(
+			fname, start, end, orderByComparator, useFinderCache);
+	}
+
+	/**
+	 * Returns the first student in the ordered set where fname = &#63;.
+	 *
+	 * @param fname the fname
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the first matching student
+	 * @throws NoSuchstudentException if a matching student could not be found
+	 */
+	public static student findByfirstName_First(
+			String fname, OrderByComparator<student> orderByComparator)
+		throws com.aspire.studentservice.exception.NoSuchstudentException {
+
+		return getPersistence().findByfirstName_First(fname, orderByComparator);
+	}
+
+	/**
+	 * Returns the first student in the ordered set where fname = &#63;.
+	 *
+	 * @param fname the fname
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the first matching student, or <code>null</code> if a matching student could not be found
+	 */
+	public static student fetchByfirstName_First(
+		String fname, OrderByComparator<student> orderByComparator) {
+
+		return getPersistence().fetchByfirstName_First(
+			fname, orderByComparator);
+	}
+
+	/**
+	 * Returns the last student in the ordered set where fname = &#63;.
+	 *
+	 * @param fname the fname
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the last matching student
+	 * @throws NoSuchstudentException if a matching student could not be found
+	 */
+	public static student findByfirstName_Last(
+			String fname, OrderByComparator<student> orderByComparator)
+		throws com.aspire.studentservice.exception.NoSuchstudentException {
+
+		return getPersistence().findByfirstName_Last(fname, orderByComparator);
+	}
+
+	/**
+	 * Returns the last student in the ordered set where fname = &#63;.
+	 *
+	 * @param fname the fname
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the last matching student, or <code>null</code> if a matching student could not be found
+	 */
+	public static student fetchByfirstName_Last(
+		String fname, OrderByComparator<student> orderByComparator) {
+
+		return getPersistence().fetchByfirstName_Last(fname, orderByComparator);
+	}
+
+	/**
+	 * Returns the students before and after the current student in the ordered set where fname = &#63;.
+	 *
+	 * @param id the primary key of the current student
+	 * @param fname the fname
+	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	 * @return the previous, current, and next student
+	 * @throws NoSuchstudentException if a student with the primary key could not be found
+	 */
+	public static student[] findByfirstName_PrevAndNext(
+			long id, String fname, OrderByComparator<student> orderByComparator)
+		throws com.aspire.studentservice.exception.NoSuchstudentException {
+
+		return getPersistence().findByfirstName_PrevAndNext(
+			id, fname, orderByComparator);
+	}
+
+	/**
+	 * Removes all the students where fname = &#63; from the database.
+	 *
+	 * @param fname the fname
+	 */
+	public static void removeByfirstName(String fname) {
+		getPersistence().removeByfirstName(fname);
+	}
+
+	/**
+	 * Returns the number of students where fname = &#63;.
+	 *
+	 * @param fname the fname
+	 * @return the number of matching students
+	 */
+	public static int countByfirstName(String fname) {
+		return getPersistence().countByfirstName(fname);
+	}
+
+	/**
 	 * Caches the student in the entity cache if it is enabled.
 	 *
 	 * @param student the student

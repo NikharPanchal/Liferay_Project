@@ -11,5 +11,11 @@
         <column name="lname" type="String"></column>
         <column name="contactno" type="String"></column>
         <column name="city" type="String"></column>
+        
+        
+        <finder name="firstName" return-type="Collection">
+            <finder-column name="fname"></finder-column>
+        </finder>
+    
     </entity>
 </service-builder>

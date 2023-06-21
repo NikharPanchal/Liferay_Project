@@ -1,0 +1,1 @@
+create index IX_904A8251 on student_table (fname[$COLUMN_LENGTH:75$]);

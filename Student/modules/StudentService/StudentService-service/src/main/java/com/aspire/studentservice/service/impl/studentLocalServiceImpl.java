@@ -38,15 +38,18 @@ import org.osgi.service.component.annotations.Component;
 )
 public class studentLocalServiceImpl extends studentLocalServiceBaseImpl {
 	
-//	public List<student> getStudentList(){
-//	
-//		System.out.println("sqlllllllllll");
-//		List<student> studentData= null;
-//		Session session1 = null;
-//		String sql=CustomSQLUtil.get("Select * from student_table");
-//		SQLQuery query=session1.createSQLQuery(sql);
-//		studentData=(List<student>)query.list();
-//		
-//		return studentData;	
-//	}
+	public List<student> getStudentList(){
+
+		List<student> studentData= null;
+		Session session1 = null;
+		String sql=CustomSQLUtil.get("Select * from student_table");
+		SQLQuery query=session1.createSQLQuery(sql);
+		studentData=(List<student>)query.list();
+	 	
+		return studentData;	
+	}
+	
+	public List<student> findbyfirstname(String fname){
+		return studentPersistence.findByfirstName(fname);	
+	}
 }

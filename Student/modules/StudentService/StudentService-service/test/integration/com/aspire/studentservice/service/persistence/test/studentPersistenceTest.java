@@ -148,6 +148,15 @@ public class studentPersistenceTest {
 	}
 
 	@Test
+	public void testCountByfirstName() throws Exception {
+		_persistence.countByfirstName("");
+
+		_persistence.countByfirstName("null");
+
+		_persistence.countByfirstName((String)null);
+	}
+
+	@Test
 	public void testFindByPrimaryKeyExisting() throws Exception {
 		student newstudent = addstudent();
 

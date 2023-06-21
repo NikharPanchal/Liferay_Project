@@ -3,15 +3,24 @@ package com.aspire.addstudent.portlet;
 import com.aspire.addstudent.constants.AddStudentPortletKeys;
 import com.aspire.studentservice.model.student;
 import com.aspire.studentservice.model.studentModel;
+import com.aspire.studentservice.service.studentLocalService;
 import com.aspire.studentservice.service.studentLocalServiceUtil;
+import com.aspire.studentservice.service.impl.studentLocalServiceImpl;
 import com.liferay.counter.kernel.service.CounterLocalServiceUtil;
+import com.liferay.portal.kernel.dao.orm.DynamicQuery;
+import com.liferay.portal.kernel.dao.orm.DynamicQueryFactoryUtil;
+import com.liferay.portal.kernel.dao.orm.PropertyFactoryUtil;
+import com.liferay.portal.kernel.dao.orm.RestrictionsFactoryUtil;
 import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.json.JSONFactoryUtil;
+import com.liferay.portal.kernel.json.JSONObject;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.model.Role;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 import com.liferay.portal.kernel.service.RoleLocalServiceUtil;
 import com.liferay.portal.kernel.util.ParamUtil;
+import com.liferay.portal.kernel.util.PortalClassLoaderUtil;
 import com.liferay.portal.kernel.util.Validator;
 
 import java.io.IOException;
@@ -35,19 +44,12 @@ import org.osgi.service.component.annotations.Component;
  * @author aspire
  */
 @Component(immediate = true, property = { "com.liferay.portlet.display-category=category.sample",
-		"com.liferay.portlet.header-portlet-css=/css/main.css",
-		"com.liferay.portlet.instanceable=true",
-		"javax.portlet.display-name=AddStudent",
-		"javax.portlet.init-param.template-path=/",
-		"javax.portlet.init-param.view-template=/view.jsp",
-		"jspPage=/UpdateStudent.jsp",
-		"javax.portlet.name=" + AddStudentPortletKeys.ADDSTUDENT,
-		"javax.portlet.resource-bundle=content.Language",
-		"javax.portlet.security-role-ref=power-user,user",
-		"mvc.command.name=addStudent",
-		"mvc.command.name=updateStudent"
-		}, 
-	service = Portlet.class)
+		"com.liferay.portlet.header-portlet-css=/css/main.css", "com.liferay.portlet.instanceable=true",
+		"javax.portlet.display-name=AddStudent", "javax.portlet.init-param.template-path=/",
+		"javax.portlet.init-param.view-template=/view.jsp", "jspPage=/UpdateStudent.jsp",
+		"javax.portlet.name=" + AddStudentPortletKeys.ADDSTUDENT, "javax.portlet.resource-bundle=content.Language",
+		"javax.portlet.security-role-ref=power-user,user", "mvc.command.name=addStudent",
+		"mvc.command.name=updateStudent" }, service = Portlet.class)
 
 public class AddStudentPortlet extends MVCPortlet {
 
@@ -56,33 +58,39 @@ public class AddStudentPortlet extends MVCPortlet {
 	@Override
 	public void render(RenderRequest renderRequest, RenderResponse renderResponse)
 			throws IOException, PortletException {
-		System.out.println(
-				"---------------------------------------------$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
-//		List<student> studentList=studentLocalServiceUtil.getstudents(QueryUtil.ALL_POS, QueryUtil.ALL_POS);
-//		System.out.println(studentList);
-//		renderRequest.setAttribute("studentList", studentList);
+		System.out.println("--------RenderRequest Executing-------------------------------------");
 
+//		 Getting student list
+//		List<student> studentList = null;
 //		try {
-//			System.out.println("---"+studentLocalServiceUtil.getstudentsCount());
+//			studentList = studentLocalServiceUtil.getstudents(-1, -1);
+//
 //		} catch (Exception e) {
-//			// TODO Auto-generated catch block
+//			_log.error("Error ! while getting list of student");
 //			e.printStackTrace();
 //		}
+//		if (Validator.isNotNull(studentList)) {
+//			renderRequest.setAttribute("studentList", studentList);
+//		}
+		
+		//Getting list using Custom Query
+		
+		List<student> studentList = null;
 		try {
-			List<student> studentList=studentLocalServiceUtil.getstudents(-1, -1);
-			System.out.println("custom list"+studentList.toString());
-//			System.out.println("---"+studentLocalServiceUtil.getstudentsCount());
-			renderRequest.setAttribute("studentList", studentList);
-
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			studentList = studentLocalServiceUtil.getStudentList();
+		}
+		catch(Exception e) {
+			_log.error("Error ! while getting list ");
 			e.printStackTrace();
 		}
+		if(Validator.isNotNull(studentList)) {
+			renderRequest.setAttribute("studentList", studentList);
+		}
+		
+		// Checking role
 		if (renderRequest.isUserInRole("power-user")) {
 			renderRequest.setAttribute("Role", true);
-		}
-		else
-		{
+		} else {
 			renderRequest.setAttribute("Role", false);
 			System.out.println("normal user");
 		}
@@ -114,25 +122,24 @@ public class AddStudentPortlet extends MVCPortlet {
 		System.out.println(student);
 
 		studentLocalServiceUtil.addstudent(student);
-		
+
 		actionRequest.setAttribute("Message", "Student added successfully");
-		
-		
+
 	}
 
 	@ProcessAction(name = "deleteStudent")
 	public void deleteStudent(ActionRequest actionRequest, ActionResponse actionResponse) {
-			try {
-				long studentId = ParamUtil.getLong(actionRequest, "studentId");
-				System.out.println("id for delete student"+studentId);
-				studentLocalServiceUtil.deletestudent(studentId);
-				actionRequest.setAttribute("Message", "Student delete successfully");
-			} catch (Exception e) {
-				e.printStackTrace();
-			}	
+		try {
+			long studentId = ParamUtil.getLong(actionRequest, "studentId");
+			System.out.println("id for delete student" + studentId);
+			studentLocalServiceUtil.deletestudent(studentId);
+			actionRequest.setAttribute("Message", "Student delete successfully");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
-	@ProcessAction(name="editStudent")
+	@ProcessAction(name = "editStudent")
 	public void editStudent(ActionRequest actionRequest, ActionResponse actionResponse)
 			throws IOException, PortletException, PortalException, ServletException {
 		long studentId = ParamUtil.getLong(actionRequest, "studentId");
@@ -180,46 +187,71 @@ public class AddStudentPortlet extends MVCPortlet {
 		System.out.println(city);
 
 		student stud = null;
-        try {
-        	stud =studentLocalServiceUtil.getstudent(studentId);
-        } catch (Exception e) {
-        	e.printStackTrace();
-        }
-   
- 
-        if(Validator.isNotNull(stud)) {
-        	stud.setEnrollmentno(enrollmentno);
-        	stud.setFname(firstname);
-        	stud.setLname(lastname);
-        	stud.setContactno(contactno);
-        	stud.setCity(city);
-        }
+		try {
+			stud = studentLocalServiceUtil.getstudent(studentId);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		if (Validator.isNotNull(stud)) {
+			stud.setEnrollmentno(enrollmentno);
+			stud.setFname(firstname);
+			stud.setLname(lastname);
+			stud.setContactno(contactno);
+			stud.setCity(city);
+		}
 		studentLocalServiceUtil.updatestudent(stud);
-		
+
 		actionRequest.setAttribute("Message", "Student update successfully");
-		
+
 		try {
 			Role role = RoleLocalServiceUtil.getRole(studentId);
-			System.out.println("role of a current user"+role);
+			System.out.println("role of a current user" + role);
 		} catch (PortalException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
+
 	@Override
-    public void serveResource(ResourceRequest resourceRequest,
-            ResourceResponse resourceResponse) throws IOException,
-            PortletException {
-        
-        _log.info("This is serve resource method....");
-        
-        String firstname=resourceRequest.getParameter("param2");
-        _log.info(firstname);
-       
-        
-        PrintWriter out = resourceResponse.getWriter();
-        out.println("Resource URL is created with Liferay Tag - liferay-portlet:resourceURL");
-        out.flush();
-        super.serveResource(resourceRequest, resourceResponse);
-    }
+	public void serveResource(ResourceRequest resourceRequest, ResourceResponse resourceResponse)
+			throws IOException, PortletException {
+
+		boolean duplicate;
+		_log.info("This is serve resource method....");
+
+		String firstname = resourceRequest.getParameter("param2");
+		_log.info(firstname);
+
+		DynamicQuery query = DynamicQueryFactoryUtil.forClass(student.class, PortalClassLoaderUtil.getClassLoader());
+		query.add(PropertyFactoryUtil.forName("fname").eq(firstname));
+		query.add(RestrictionsFactoryUtil.eq("fname", firstname));
+		List<student> findbyfirstname = studentLocalServiceUtil.dynamicQuery(query);
+
+//      List<student> findbyfirstname = studentLocalServiceUtil.findbyfirstname(firstname);
+
+		System.out.println(findbyfirstname);
+
+		if (!findbyfirstname.isEmpty()) {
+			System.out.println("name is already taken");
+			duplicate = true;
+		} else {
+			System.out.println("this is a valid name");
+			duplicate = false;
+		}
+		JSONObject obj = JSONFactoryUtil.createJSONObject();
+
+		obj.put("duplicate", duplicate);
+		obj.put("success", true);
+		// Example: Send a JSON response
+		try {
+			PrintWriter writer = resourceResponse.getWriter();
+			writer.print(obj);
+			writer.flush();
+		} catch (IOException e) {
+			// Handle the exception
+		}
+
+//        return true;
+	}
 }

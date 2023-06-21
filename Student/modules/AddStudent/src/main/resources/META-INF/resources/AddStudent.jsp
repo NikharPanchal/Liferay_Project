@@ -23,6 +23,8 @@
 <body>
 <a href="#" onclick="callServeResource()">This is resource URL</a>
 	<h1 class="text-center p-3">Add Student</h1>
+	<span id="fname-error" class="text-center p-3"></span>
+	
 	<div class="container">
 
 		<aui:form action="<%=addStudentURL%>" method="post">
@@ -35,7 +37,7 @@
 				<aui:validator name="required" />
 				<aui:validator name="alpha" />
 			</aui:input>
-
+			
 			<aui:input name="lastName">
 				<aui:validator name="required" />
 				<aui:validator name="alpha" />
@@ -79,8 +81,9 @@ $(document).ready(function(){
 
 function checkFname(){
  var myname=document.getElementsByName("_com_aspire_addstudent_AddStudentPortlet_INSTANCE_zmbq_firstName");
-   alert("Cursor is on the input box"); 
-   alert(myname[0].value);
+   /* alert("Cursor is on the input box"); 
+   alert(myname[0].value); */
+   console.log("===============");
    var fname=myname[0].value;
    AUI().use('aui-io-request', function(A){
 	    A.io.request('${checkDuplicateUrl}', {
@@ -91,6 +94,17 @@ function checkFname(){
 	           on: {
 	                success: function() {
 	                alert(this.get('responseData'));
+	                var data=this.get('responseData');
+	                const jsonData = JSON.parse(data);
+
+	                alert(jsonData);
+	                if(jsonData.success)
+	                	{
+	                	console.log("jsonData duplicate "+jsonData.duplicate);
+	                		document.getElementById("fname-error").innerHTML +="Firstname is already taken";
+	                		myname.value="";
+	                		myname.focus()
+	                	}
 	               }
 	          }
 	    });

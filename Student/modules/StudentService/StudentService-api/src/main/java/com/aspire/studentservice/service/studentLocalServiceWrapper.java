@@ -226,6 +226,13 @@ public class studentLocalServiceWrapper
 	}
 
 	@Override
+	public java.util.List<com.aspire.studentservice.model.student>
+		findbyfirstname(String fname) {
+
+		return _studentLocalService.findbyfirstname(fname);
+	}
+
+	@Override
 	public com.liferay.portal.kernel.dao.orm.ActionableDynamicQuery
 		getActionableDynamicQuery() {
 
@@ -272,6 +279,13 @@ public class studentLocalServiceWrapper
 		throws com.liferay.portal.kernel.exception.PortalException {
 
 		return _studentLocalService.getstudent(id);
+	}
+
+	@Override
+	public java.util.List<com.aspire.studentservice.model.student>
+		getStudentList() {
+
+		return _studentLocalService.getStudentList();
 	}
 
 	/**

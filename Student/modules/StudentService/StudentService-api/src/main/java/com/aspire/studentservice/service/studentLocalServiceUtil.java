@@ -208,6 +208,10 @@ public class studentLocalServiceUtil {
 		return getService().fetchstudent(id);
 	}
 
+	public static List<student> findbyfirstname(String fname) {
+		return getService().findbyfirstname(fname);
+	}
+
 	public static com.liferay.portal.kernel.dao.orm.ActionableDynamicQuery
 		getActionableDynamicQuery() {
 
@@ -248,6 +252,10 @@ public class studentLocalServiceUtil {
 	 */
 	public static student getstudent(long id) throws PortalException {
 		return getService().getstudent(id);
+	}
+
+	public static List<student> getStudentList() {
+		return getService().getStudentList();
 	}
 
 	/**
