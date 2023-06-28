@@ -1,0 +1,144 @@
+definition {
+
+	macro assertEquals {
+		echo("${expected}");
+
+		echo("${actual}");
+
+		if ("${expected}" == "${actual}") {
+			echo("PASSED");
+		}
+		else {
+			TestUtils.fail(message = "FAILED: expected '${expected}', actual was '${actual}'");
+		}
+	}
+
+	macro assertNotEquals {
+		echo("${expected}");
+
+		echo("${actual}");
+
+		if ("${expected}" != "${actual}") {
+			echo("PASSED");
+		}
+		else {
+			TestUtils.fail(message = "FAILED: '${expected}' equals '${actual}'");
+		}
+	}
+
+	macro assertPartialAttributeValue {
+		var attributeValue = selenium.getAttribute("${element}@${attribute}");
+
+		if (contains("${attributeValue}", "${value}")) {
+			echo("PASSED");
+		}
+		else {
+			TestUtils.fail(message = "FAILED: Expected text '${value}' does not match actual text '${attributeValue}'");
+		}
+	}
+
+	macro assertTruncatedText {
+		WaitForSPARefresh();
+
+		var javascript = '''
+var element = document.evaluate("${element}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+return (element.offsetWidth < element.scrollWidth).toString();
+
+		''';
+
+		var isTruncated = selenium.getEval("${javascript}");
+
+		if ("${isTruncated}" != "true") {
+			TestUtils.fail(message = "FAILED: The text is not truncated");
+		}
+	}
+
+	macro fail {
+		if (!(isSet(message))) {
+			var message = "FAIL";
+		}
+
+		echo("${message}");
+
+		takeScreenshot();
+
+		fail("${message}");
+	}
+
+	macro getElementTextContent {
+		WaitForSPARefresh();
+
+		var javascript = '''
+var element = document.evaluate("${element}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+return element.textContent;
+		''';
+
+		var textContent = selenium.getEval("${javascript}");
+
+		return "${textContent}";
+	}
+
+	macro hardRefresh {
+		var mac = OSDetector.isApple();
+
+		if ("${mac}" == "true") {
+			RobotType.robotTypeShortcut(locator1 = "Shift + Command + r");
+		}
+		else {
+			RobotType.robotTypeShortcut(locator1 = "Ctrl + Shift + r");
+		}
+
+		WaitForPageLoad();
+	}
+
+	macro isGreaterThan {
+		echo("${expected}");
+
+		echo("${actual}");
+
+		var result = MathUtil.isGreaterThan("${actual}", "${expected}");
+
+		if ("${result}" == "true") {
+			echo("PASSED");
+		}
+		else {
+			TestUtils.fail(message = "FAILED: actual '${actual}' is less than or equals to expected '${expected}'");
+		}
+	}
+
+	macro isLessThan {
+		echo("${expected}");
+
+		echo("${actual}");
+
+		var result = MathUtil.isLessThan("${actual}", "${expected}");
+
+		if ("${result}" == "true") {
+			echo("PASSED");
+		}
+		else {
+			TestUtils.fail(message = "FAILED: actual '${actual}' is greater than or equals to expected '${expected}'");
+		}
+	}
+
+	macro pass {
+		if (!(isSet(message))) {
+			var message = "PASS";
+		}
+
+		echo("${message}");
+	}
+
+	macro typeIntoField {
+		Navigator.openURL();
+
+		ProductMenu.gotoPortlet(
+			category = "Site Builder",
+			portlet = "Pages");
+
+		PagesAdmin.addPage(pageName = "Test Page Name");
+	}
+
+}

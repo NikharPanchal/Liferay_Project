@@ -1,0 +1,278 @@
+@component-name = "portal-wcm"
+definition {
+
+	property portal.release = "true";
+	property portal.upstream = "true";
+	property testray.main.component.name = "Site Pages Administration";
+
+	setUp {
+		task ("Set up instance and sign in") {
+			TestCase.setUpPortalInstance();
+
+			User.firstLoginPG();
+		}
+
+		task ("Add a site") {
+			JSONGroup.addGroup(groupName = "Test Site Name");
+		}
+	}
+
+	tearDown {
+		var testPortalInstance = PropsUtil.get("test.portal.instance");
+
+		if ("${testPortalInstance}" == "true") {
+			PortalInstances.tearDownCP();
+		}
+		else {
+			JSONGroup.deleteGroupByName(groupName = "Test Site Name");
+		}
+	}
+
+	@description = "The user can add a blogs entry and message boards via collaboration panel page."
+	@priority = "3"
+	@uitest
+	test AddAssetsViaCollaborationPanel {
+		task ("Add a panel page with collaboration component") {
+			PagesAdmin.openPagesAdmin(siteURLKey = "Test Site Name");
+
+			PagesAdmin.addPage(
+				componentName = "Collaboration",
+				pageName = "Test Page Name",
+				sitePageType = "Panel");
+		}
+
+		task ("View collaboration portlets are shown") {
+			Navigator.gotoSitePage(
+				pageName = "Test Page Name",
+				siteName = "Test Site Name");
+
+			Page.viewPanelPortletListPG(
+				componentName = "Collaboration",
+				pageName = "Test Page Name",
+				portletNameList = "Blogs,Blogs Aggregator,Invite Members,Message Boards,Questions,Recent Bloggers");
+		}
+
+		task ("Add a blogs entry") {
+			HeadlessBlog.addBlogEntry(
+				content = "Blogs Entry Content",
+				groupName = "Test Site Name",
+				title = "Blogs Entry Title");
+		}
+
+		task ("View Blogs Entry is shown") {
+			Page.gotoPagePanelPortlet(portletName = "Blogs");
+
+			BlogsEntry.viewPG(
+				entryContent = "Blogs Entry Content",
+				entryTitle = "Blogs Entry Title");
+		}
+
+		task ("Add a message boards via panel page") {
+			Page.gotoPagePanelPortlet(portletName = "Message Boards");
+
+			MessageboardsThread.addPG(
+				threadBody = "MB Thread Message Body",
+				threadSubject = "MB Thread Message Subject");
+		}
+
+		task ("View message boards is shown") {
+			Page.gotoPagePanelPortlet(portletName = "Message Boards");
+
+			MessageboardsThread.gotoPG(
+				lastPostUserName = "Test Test",
+				replyCount = "0",
+				threadBody = "MB Thread Message Body",
+				threadSubject = "MB Thread Message Subject");
+
+			MessageboardsThread.viewPG(
+				replyCount = "0",
+				threadBody = "MB Thread Message Body",
+				threadSubject = "MB Thread Message Subject",
+				userName = "Test Test");
+		}
+	}
+
+	@description = "The user can not delete the last public page on Liferay instance."
+	@priority = "3"
+	test CannotDeleteLastPublicPageOnDefaultSite {
+		task ("Delete the Search page in Liferay instance") {
+			PagesAdmin.openPagesAdmin(siteURLKey = "guest");
+
+			PagesAdmin.deletePage(pageName = "Search");
+		}
+
+		task ("View the last public page can not be deleted") {
+			PagesAdmin.openPageEllipsisMenu(pageName = "Home");
+
+			MenuItem.viewNotPresent(menuItem = "Delete");
+		}
+	}
+
+	@description = "The user can add an embedded and panel page via pages administration."
+	@priority = "5"
+	@uitest
+	test ConfigureEmbeddedAndPanelPage {
+		property osgi.app.includes = "bookmarks";
+		property portal.acceptance = "true";
+		property testray.component.names = "Training";
+
+		task ("Add an embedded page") {
+			PagesAdmin.openPagesAdmin(siteURLKey = "test-site-name");
+
+			PagesAdmin.addPage(
+				pageName = "Test Page Name 1",
+				pageTypeURL = "https://www.google.com",
+				sitePageType = "Embedded");
+		}
+
+		task ("Change embedded type URL") {
+			PagesAdmin.configurePage(
+				pageName = "Test Page Name 1",
+				pageTypeURL = "http://iscaliforniaonfire.com/",
+				sitePageType = "Embedded");
+		}
+
+		task ("Add a panel page with community component") {
+			PagesAdmin.openPagesAdmin(siteURLKey = "test-site-name");
+
+			PagesAdmin.addPage(
+				componentName = "Community",
+				pageName = "Test Page Name 2",
+				sitePageType = "Panel");
+		}
+
+		task ("View the community options are checked in page settings") {
+			PagesAdmin.viewPanelPortletList(
+				componentName = "Community",
+				pageName = "Test Page Name 2",
+				portletNameList = "Bookmarks,My Sites,Page Comments,Page Flags,Page Ratings");
+		}
+
+		task ("View california page is shown") {
+			Navigator.gotoSitePage(
+				pageName = "Test Page Name 1",
+				siteName = "Test Site Name");
+
+			SelectFrame.selectFrameNoLoading(locator1 = "IFrame#EMBEDDED_IFRAME");
+
+			AssertVisible(
+				key_title = "Yes",
+				locator1 = "Header#H1_TITLE");
+		}
+
+		task ("View community portlets are shown") {
+			Navigator.gotoSitePage(
+				pageName = "Test Page Name 2",
+				siteName = "Test Site Name");
+
+			Page.viewPanelPortletListPG(
+				componentName = "Community",
+				pageName = "Test Page Name 2",
+				portletNameList = "Bookmarks,My Sites,Page Comments,Page Flags,Page Ratings");
+		}
+	}
+
+	@description = "This is a use case for LPS-71160. Can edit the SEO settings in a widget page via control menu."
+	@priority = "5"
+	test EditPageViaControlMenu {
+		property portal.acceptance = "true";
+		property testray.component.names = "Training";
+
+		task ("Add a widget page") {
+			JSONLayout.addPublicLayout(
+				groupName = "Test Site Name",
+				layoutName = "Test Page Name");
+		}
+
+		task ("Edit the page via control menu") {
+			Navigator.gotoSitePage(
+				pageName = "Test Page Name",
+				siteName = "Test Site Name");
+
+			Navigator.gotoEditPageViaControlMenu(pageName = "Test Page Name");
+
+			PagesAdmin.editName(pageNameEdit = "Test Page Name Edit");
+		}
+
+		task ("View the edited name in pages admin") {
+			Navigator.gotoSitePage(
+				pageName = "Test Page Name Edit",
+				siteName = "Test Site Name");
+
+			PagesAdmin.viewPageItemPresent(pageName = "Test Page Name Edit");
+		}
+
+		task ("Edit the SEO settings") {
+			Navigator.gotoSitePage(
+				pageName = "Test Page Name Edit",
+				siteName = "Test Site Name");
+
+			Navigator.gotoEditPageViaControlMenu(pageName = "Test Page Name Edit");
+
+			PagesAdmin.editSeoMetadata(
+				htmlTitle = "S.P.A.C.E.Home",
+				metaTagsDescription = "Welcome to S.P.A.C.E., a graduate-level school for those passionate about expanding their horizons through science, research, and space travel",
+				metaTagsKeywords = "space, education, space travel, graduateschool");
+		}
+
+		task ("View the SEO settings is shown") {
+			Navigator.gotoSitePage(
+				pageName = "Test Page Name Edit",
+				siteName = "Test Site Name");
+
+			Navigator.gotoEditPageViaControlMenu(pageName = "Test Page Name Edit");
+
+			PagesAdmin.viewSeoMetadata(
+				htmlTitle = "S.P.A.C.E.Home",
+				metaTagsDescription = "Welcome to S.P.A.C.E., a graduate-level school for those passionate about expanding their horizons through science, research, and space travel",
+				metaTagsKeywords = "space, education, space travel, graduateschool");
+		}
+	}
+
+	@description = "An error is thrown when the default language has an empty friendly url in widget page."
+	@priority = "3"
+	test ViewNoExceptionWhenPageWithoutFriendlyURLInDefaultLanguage {
+		task ("Add a widget page") {
+			JSONLayout.addPublicLayout(
+				groupName = "Test Site Name",
+				layoutName = "Test Page Name");
+		}
+
+		task ("Add a localized friendly url") {
+			PagesAdmin.openPagesAdmin(siteURLKey = "test-site-name");
+
+			PagesAdmin.gotoPageEllipsisMenuItem(
+				menuItem = "Configure",
+				pageName = "Test Page Name");
+
+			PagesAdmin.addLocalizedFriendlyURL(
+				configureWithoutSave = "true",
+				friendlyURLLocalizedList = "de-DE",
+				localizedFriendlyURLList = "/german",
+				localizedNameList = "-");
+		}
+
+		task ("Delete default friendly url") {
+			PagesAdmin.deleteFriendlyURL(locale = "en-US");
+		}
+
+		task ("View no error thrown on console when navigating to page") {
+			Navigator.gotoSitePage(
+				pageName = "Test Page Name",
+				siteName = "Test Site Name");
+
+			AssertConsoleTextNotPresent(value1 = "java.lang.StringIndexOutOfBoundsException: String index out of range: -1");
+		}
+
+		task ("View default friendly url") {
+			PagesAdmin.openPagesAdmin(siteURLKey = "test-site-name");
+
+			PagesAdmin.gotoPageEllipsisMenuItem(
+				menuItem = "Configure",
+				pageName = "Test Page Name");
+
+			PagesAdmin.viewFriendlyURL(pageName = "test-page-name");
+		}
+	}
+
+}

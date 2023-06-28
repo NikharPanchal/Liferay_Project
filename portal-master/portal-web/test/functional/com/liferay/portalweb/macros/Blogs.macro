@@ -1,0 +1,710 @@
+definition {
+
+	macro addDraft {
+		if (isSet(siteURLKey)) {
+			BlogsNavigator.openToAddEntry(
+				layoutName = "${layoutName}",
+				siteURLKey = "${siteURLKey}");
+		}
+		else {
+			BlogsNavigator.gotoAddEntry();
+		}
+
+		BlogsEntry.addEntryContent(
+			entryContent = "${entryContent}",
+			entrySubtitle = "${entrySubtitle}",
+			entryTitle = "${entryTitle}");
+
+		BlogsEntry.saveAsDraft();
+	}
+
+	macro addDraftViaAutoSave {
+		BlogsNavigator.gotoAddEntry();
+
+		BlogsEntry.addEntryContent(
+			entryContent = "${entryContent}",
+			entrySubtitle = "${entrySubtitle}",
+			entryTitle = "${entryTitle}");
+
+		BlogsEntry.autoSaveDraft();
+	}
+
+	macro addEntry {
+		BlogsNavigator.gotoAddEntry();
+
+		BlogsEntry.addEntryContent(
+			depotName = "${depotName}",
+			embedVideo = "${embedVideo}",
+			entryContent = "${entryContent}",
+			entrySubtitle = "${entrySubtitle}",
+			entryTitle = "${entryTitle}",
+			extractedVideoShortcutTitle = "${extractedVideoShortcutTitle}",
+			navTab = "${navTab}",
+			videoName = "${videoName}",
+			videoService = "${videoService}",
+			videoShortcutDescription = "${videoShortcutDescription}",
+			videoShortcutPreview = "${videoShortcutPreview}",
+			videoShortcutTitle = "${videoShortcutTitle}",
+			videoURL = "${videoURL}",
+			viewInternalVideoPreview = "${viewInternalVideoPreview}");
+
+		if (isSet(readingTime)) {
+			var key_readingTime = "${readingTime}";
+
+			AssertTextEquals(
+				locator1 = "BlogsEditEntry#STATUS_READING_TIME",
+				value1 = "${readingTime}");
+		}
+
+		if (isSet(injectCode)) {
+			AssertAlertNotPresent();
+		}
+
+		if (isSet(viewVideoHelpMessage)) {
+			Click.clickNoMouseOverNoWaitForVisible(locator1 = "BlogsEntry#VIDEO_EMBED_HELP_MESSAGE");
+
+			AssertTextEquals.assertPartialText(
+				locator1 = "BlogsEntry#VIDEO_EMBED_HELP_MESSAGE",
+				value1 = "Video playback is disabled during edit mode");
+		}
+
+		PortletEntry.publish();
+	}
+
+	macro addEntryWithCategory {
+		BlogsNavigator.gotoAddEntry();
+
+		BlogsEntry.addEntryContent(
+			entryContent = "${entryContent}",
+			entrySubtitle = "${entrySubtitle}",
+			entryTitle = "${entryTitle}");
+
+		Panel.expandPanel(panel = "Categorization");
+
+		AssetCategorization.addCategory(
+			categoryName = "${categoryName}",
+			vocabularyName = "${vocabularyName}");
+
+		PortletEntry.publish();
+	}
+
+	macro addEntryWithCoverImageFromDepot {
+		BlogsNavigator.openToAddEntry(siteURLKey = "${siteURLKey}");
+
+		BlogsEntry.addTitle(entryTitle = "${entryTitle}");
+
+		BlogsEntry.addEntryContent(
+			entryContent = "${entryContent}",
+			entrySubtitle = "${entrySubtitle}",
+			entryTitle = "${entryTitle}");
+
+		BlogsNavigator.gotoSelectFile();
+
+		ItemSelector.selectRepositoryImage(
+			depotName = "${depotName}",
+			imageFileName = "${imageFileName}",
+			navTab = "Documents and Media");
+
+		Button.clickPublish();
+	}
+
+	macro addEntryWithCustomURL {
+		if (isSet(siteURLKey)) {
+			BlogsNavigator.openToAddEntry(siteURLKey = "${siteURLKey}");
+		}
+		else {
+			BlogsNavigator.gotoAddEntry();
+		}
+
+		BlogsEntry.addEntryContent(
+			entryContent = "${entryContent}",
+			entrySubtitle = "${entrySubtitle}",
+			entryTitle = "${entryTitle}");
+
+		Panel.expandPanel(panel = "Configuration");
+
+		BlogsEntry.addCustomURL(customURL = "${customURL}");
+
+		PortletEntry.publish();
+	}
+
+	macro addEntryWithHTML {
+		if (!(isSet(skipNavigation))) {
+			BlogsNavigator.gotoAddEntry();
+		}
+
+		BlogsEntry.addTitle(entryTitle = "${entryTitle}");
+
+		BlogsEntry.addSubtitle(entrySubtitle = "${entrySubtitle}");
+
+		AlloyEditor.addSourceContent(content = "${entryContent}");
+
+		PortletEntry.publish();
+	}
+
+	macro addEntryWithPermissions {
+		BlogsNavigator.gotoAddEntry();
+
+		BlogsEntry.addEntryContent(
+			entryContent = "${entryContent}",
+			entrySubtitle = "${entrySubtitle}",
+			entryTitle = "${entryTitle}");
+
+		Panel.expandPanel(panel = "Permissions");
+
+		BlogsEntry.entryAddPermissions(viewableBy = "${viewableBy}");
+
+		PortletEntry.publish();
+	}
+
+	macro addEntryWithTag {
+		BlogsNavigator.gotoAddEntry();
+
+		BlogsEntry.addEntryContent(
+			entryContent = "${entryContent}",
+			entrySubtitle = "${entrySubtitle}",
+			entryTitle = "${entryTitle}");
+
+		Panel.expandPanel(panel = "Categorization");
+
+		AssetCategorization.addTag(tagName = "${tagName}");
+
+		SelectFrameTop(value1 = "relative=top");
+
+		Button.clickPublish();
+	}
+
+	macro addEntryWithTags {
+		BlogsNavigator.gotoAddEntry();
+
+		BlogsEntry.addEntryContent(
+			entryContent = "${entryContent}",
+			entrySubtitle = "${entrySubtitle}",
+			entryTitle = "${entryTitle}");
+
+		Panel.expandPanel(panel = "Categorization");
+
+		for (var tagName : list "${tagNameList}") {
+			AssetCategorization.addTag(tagName = "${tagName}");
+		}
+
+		SelectFrameTop(value1 = "relative=top");
+
+		Button.clickPublish();
+	}
+
+	macro addEntryWithUploadedCoverImage {
+		BlogsNavigator.gotoAddEntry();
+
+		BlogsNavigator.gotoSelectFile();
+
+		if (isSet(uploadedFileName)) {
+			ItemSelector.selectBlogImage(
+				imageFileName = "${uploadedFileName}",
+				navTab = "${navTab}");
+		}
+		else if (isSet(depotName)) {
+			ItemSelector.selectRepositoryImage(
+				depotName = "${depotName}",
+				imageFileName = "${imageFileName}",
+				navTab = "${navTab}");
+		}
+		else {
+			ItemSelector.uploadFile(
+				navTab = "${navTab}",
+				uploadFileName = "${uploadFileName}");
+		}
+
+		SelectFrame(value1 = "relative-top");
+
+		if (isSet(captionField)) {
+			AssertElementPresent(locator1 = "BlogsEntry#ENTRY_COVER_IMAGE_CAPTION");
+
+			if ("${captionField}" != "true") {
+				Type(
+					key_editor = "coverImageCaption",
+					locator1 = "AlloyEditor#EDITOR",
+					value1 = "${captionField}");
+			}
+
+			if (isSet(captionFieldLink)) {
+				SelectFieldText(
+					key_editor = "coverImageCaption",
+					locator1 = "AlloyEditor#EDITOR",
+					value1 = "Caption");
+
+				Click(locator1 = "BlogsEntry#ENTRY_COVER_IMAGE_CAPTION_LINK_ICON");
+
+				Type(
+					locator1 = "BlogsEntry#ENTRY_COVER_IMAGE_CAPTION_LINK_INPUT",
+					value1 = "${captionFieldLink}");
+
+				Click(locator1 = "BlogsEntry#ENTRY_COVER_IMAGE_CAPTION_LINK_CHECK_ICON");
+			}
+		}
+
+		BlogsEntry.addEntryContent(
+			entryContent = "${entryContent}",
+			entrySubtitle = "${entrySubtitle}",
+			entryTitle = "${entryTitle}");
+
+		AssertVisible(
+			key_coverImageName = "${coverImageName}",
+			locator1 = "BlogsEntry#ENTRY_COVER_IMAGE_UNPUBLISHED");
+	}
+
+	macro addImageToBlogImages {
+		BlogsNavigator.openToAddEntry(siteURLKey = "${siteURLKey}");
+
+		for (var uploadFileName : list "${uploadFileNames}") {
+			if (IsElementPresent(locator1 = "BlogsEntry#ENTRY_COVER_IMAGE_SELECT_FILE")) {
+				AssertClick(
+					locator1 = "BlogsEntry#ENTRY_COVER_IMAGE_SELECT_FILE",
+					value1 = "Select File");
+			}
+			else {
+				BlogsNavigator.gotoBrowseImage();
+			}
+
+			ItemSelector.uploadFile(uploadFileName = "${uploadFileName}");
+		}
+	}
+
+	macro addViaAP {
+		AssetPublisherPortlet.addAsset(assetType = "Blogs Entry");
+
+		BlogsEntry.addTitle(entryTitle = "${entryTitle}");
+
+		AlloyEditor.addContent(content = "${entryContent}");
+
+		AssertClick(
+			locator1 = "Button#PUBLISH",
+			value1 = "Publish");
+
+		SelectFrameTop(value1 = "relative=top");
+
+		var key_assetTitle = "${entryTitle}";
+
+		WaitForVisible(locator1 = "AP#ASSET_ABSTRACT_TITLE");
+
+		AssertTextEquals(
+			locator1 = "AP#ASSET_ABSTRACT_TITLE",
+			value1 = "${entryTitle}");
+
+		AssertTextEquals.assertPartialText(
+			locator1 = "AP#ASSET_ABSTRACT_DESCRIPTION",
+			value1 = "${entryContent}");
+	}
+
+	macro addViaAPSelectScope {
+		AssetPublisherPortlet.addAsset(
+			assetType = "Blogs Entry",
+			siteScope = "${siteScope}");
+
+		BlogsEntry.addTitle(entryTitle = "${entryTitle}");
+
+		AlloyEditor.addContent(content = "${entryContent}");
+
+		AssertClick(
+			locator1 = "Button#PUBLISH",
+			value1 = "Publish");
+
+		SelectFrameTop(value1 = "relative=top");
+
+		var key_assetTitle = "${entryTitle}";
+
+		WaitForVisible(locator1 = "AP#ASSET_ABSTRACT_TITLE");
+
+		AssertTextEquals(
+			locator1 = "AP#ASSET_ABSTRACT_TITLE",
+			value1 = "${entryTitle}");
+
+		AssertTextEquals.assertPartialText(
+			locator1 = "AP#ASSET_ABSTRACT_DESCRIPTION",
+			value1 = "${entryContent}");
+	}
+
+	macro addWithCustomAbstract {
+		BlogsNavigator.gotoAddEntry();
+
+		BlogsEntry.addEntryContent(
+			entryContent = "${entryContent}",
+			entrySubtitle = "${entrySubtitle}",
+			entryTitle = "${entryTitle}");
+
+		Panel.expandPanel(panel = "Configuration");
+
+		BlogsEntry.addCustomAbstract(entryAbstractDescription = "${entryAbstractDescription}");
+
+		PortletEntry.publish();
+	}
+
+	macro addWithCustomAbstractViaAP {
+		AssetPublisherPortlet.addAsset(assetType = "Blogs Entry");
+
+		BlogsEntry.addEntryContent(
+			entryContent = "${entryContent}",
+			entryTitle = "${entryTitle}");
+
+		Panel.expandPanel(panel = "Configuration");
+
+		BlogsEntry.addCustomAbstract(entryAbstractDescription = "${entryAbstractDescription}");
+
+		PortletEntry.publish();
+	}
+
+	macro addWithDefaultAbstract {
+		BlogsNavigator.gotoAddEntry();
+
+		BlogsEntry.addEntryContent(
+			entryContent = "${entryContent}",
+			entrySubtitle = "${entrySubtitle}",
+			entryTitle = "${entryTitle}");
+
+		Panel.expandPanel(panel = "Configuration");
+
+		AssertChecked(
+			locator1 = "Radio#FIRST_400_ABSTRACT",
+			value1 = "Use the first 400 characters of the entry content.");
+
+		PortletEntry.publish();
+	}
+
+	macro addWithInvalidContent {
+		BlogsNavigator.gotoAddEntry();
+
+		BlogsEntry.addEntryContent(
+			entryContent = "${entryInvalidContent}",
+			entrySubtitle = "${entrySubtitle}",
+			entryTitle = "${entryTitle}");
+
+		BlogsEntry.publishWithInvalidContent();
+	}
+
+	macro addWithInvalidTitle {
+		BlogsNavigator.gotoAddEntry();
+
+		BlogsEntry.addEntryContent(
+			entryContent = "${entryContent}",
+			entrySubtitle = "${entrySubtitle}",
+			entryTitle = "${entryInvalidTitle}");
+
+		BlogsEntry.publishWithInvalidTitle();
+	}
+
+	macro addWithInvalidTitleLength {
+		BlogsNavigator.gotoAddEntry();
+
+		BlogsEntry.addEntryContent(
+			entryContent = "${entryContent}",
+			entrySubtitle = "${entrySubtitle}",
+			entryTitle = "${entryInvalidTitleLength}");
+
+		BlogsEntry.publishWithInvalidTitleLength();
+	}
+
+	macro addWithWorkflow {
+		BlogsNavigator.gotoAddEntry();
+
+		BlogsEntry.addEntryContent(
+			entryContent = "${entryContent}",
+			entrySubtitle = "${entrySubtitle}",
+			entryTitle = "${entryTitle}");
+
+		BlogsEntry.publishWithWorkflow();
+	}
+
+	macro addWithWorkflowViaAP {
+		AssetPublisherPortlet.addAsset(assetType = "Blogs Entry");
+
+		BlogsEntry.addTitle(entryTitle = "${entryTitle}");
+
+		AlloyEditor.addContent(content = "${entryContent}");
+
+		AssertClick(
+			locator1 = "Button#SUBMIT_FOR_PUBLICATION",
+			value1 = "Submit for Publication");
+
+		SelectFrame(value1 = "relative=top");
+	}
+
+	macro assertNoPublishOption {
+		LexiconEntry.changeDisplayStyle(displayStyle = "list");
+
+		Blogs.viewEntryTitle(entryTitle = "${entryTitle}");
+
+		Click(
+			key_listEntry = "${entryTitle}",
+			locator1 = "LexiconList#LIST_ENTRY_ELLIPSIS");
+
+		MenuItem.viewNotPresent(menuItem = "Publish to Live");
+	}
+
+	macro clickEllipsisItemCP {
+		LexiconCard.clickEllipsisItem(
+			card = "${entryTitle}",
+			item = "${item}");
+	}
+
+	macro clickEllipsisItemPG {
+		if (isSet(entryContent)) {
+			Click(
+				key_entryContent = "Blogs Entry Content",
+				locator1 = "BlogsEntry#CONTENT");
+		}
+
+		Click(
+			key_entryTitle = "${entryTitle}",
+			locator1 = "Blogs#WIDGET_VIEW_ENTRY_ELLIPSIS");
+
+		MenuItem.clickNoError(menuItem = "${item}");
+	}
+
+	macro disableSocialBookmarkSites {
+		Navigator.gotoPage(pageName = "Blogs Page");
+
+		Portlet.gotoPortletOptions(
+			portletName = "Blogs",
+			portletOption = "Configuration");
+
+		BlogsConfiguration.selectConfigurationIFrame();
+
+		for (var socialBookmarkSite : list "${disableSocialBookmarkSites}") {
+			AddSelection(
+				locator1 = "SocialBookmarks#ENABLE_SOCIAL_BOOKMARK_CURRENT_SELECT",
+				value1 = "${socialBookmarkSite}");
+
+			Click(locator1 = "Button#MOVE_CURRENT_TO_AVAILABLE");
+
+			AssertTextEquals.assertPartialText(
+				locator1 = "SocialBookmarks#ENABLE_SOCIAL_BOOKMARK_AVAILABLE_SELECT",
+				value1 = "${socialBookmarkSite}");
+		}
+
+		IFrame.saveConfiguration();
+	}
+
+	macro editDraftPG {
+		BlogsNavigator.gotoEditPG(entryTitle = "${entryTitle}");
+
+		BlogsEntry.editEntryContent(
+			embedVideo = "${embedVideo}",
+			entryContent = "${entryContent}",
+			entryContentEdit = "${entryContentEdit}",
+			entrySubtitle = "${entrySubtitle}",
+			entrySubtitleEdit = "${entrySubtitleEdit}",
+			entryTitle = "${entryTitle}",
+			entryTitleEdit = "${entryTitleEdit}");
+
+		AssertClick(
+			locator1 = "Button#SAVE_AS_DRAFT",
+			value1 = "Save as Draft");
+
+		Alert.viewSuccessMessage();
+	}
+
+	macro editEntryPG {
+		if (isSet(siteURLKey)) {
+			BlogsNavigator.openToEditEntryInSite(
+				entryTitle = "${entryTitle}",
+				groupName = "${groupName}",
+				siteURLKey = "${siteURLKey}");
+		}
+		else {
+			BlogsNavigator.gotoEditPG(entryTitle = "${entryTitle}");
+		}
+
+		BlogsEntry.editEntryContent(
+			entryContent = "${entryContent}",
+			entryContentEdit = "${entryContentEdit}",
+			entrySubtitle = "${entrySubtitle}",
+			entrySubtitleEdit = "${entrySubtitleEdit}",
+			entryTitle = "${entryTitle}",
+			entryTitleEdit = "${entryTitleEdit}");
+
+		if (isSet(uploadFileName)) {
+			BlogsNavigator.gotoBrowseImage();
+
+			ItemSelector.uploadFile(
+				navTab = "${navTab}",
+				uploadFileName = "${uploadFileName}");
+		}
+
+		if ("${sendEmailEntryUpdated}" == "true") {
+			Panel.expandPanel(panel = "Configuration");
+
+			Check.checkToggleSwitch(
+				key_toggleSwitchLabel = "Send Email Entry Updated",
+				locator1 = "ToggleSwitch#ANY_TOGGLE_SWITCH");
+		}
+
+		PortletEntry.publish();
+	}
+
+	macro editEntryViaSearchResultDetails {
+		MouseOver(
+			locator1 = "SearchResults#ASSET_DETAILS_TITLE",
+			value1 = "${searchAssetTitle}");
+
+		Click(locator1 = "Icon#EDIT_PENCIL");
+
+		BlogsEntry.editEntryContent(
+			entryContent = "${entryContent}",
+			entryContentEdit = "${entryContentEdit}",
+			entrySubtitle = "${entrySubtitle}",
+			entrySubtitleEdit = "${entrySubtitleEdit}",
+			entryTitle = "${entryTitle}",
+			entryTitleEdit = "${entryTitleEdit}");
+
+		PortletEntry.publish();
+	}
+
+	macro enableSocialBookmarkSites {
+		Navigator.gotoPage(pageName = "Blogs Page");
+
+		Portlet.gotoPortletOptions(
+			portletName = "Blogs",
+			portletOption = "Configuration");
+
+		BlogsConfiguration.selectConfigurationIFrame();
+
+		for (var socialBookmarkSite : list "${socialBookmarkSites}") {
+			BlogsConfiguration.enableSocialBookmarkSites(
+				enableSocialBookmarkSites = "${enableSocialBookmarkSites}",
+				socialBookmarkSite = "${socialBookmarkSite}");
+		}
+
+		IFrame.saveConfiguration();
+	}
+
+	macro publishDraftCP {
+		BlogsNavigator.gotoEditCP(entryTitle = "${entryTitle}");
+
+		BlogsEntry.viewEntryCP(
+			entryContent = "${entryContent}",
+			entrySubtitle = "${entrySubtitle}",
+			entryTitle = "${entryTitle}");
+
+		PortletEntry.publish();
+	}
+
+	macro publishViaSAP {
+		if (IsElementPresent(key_portletTitleName = "Blogs", locator1 = "Portlet#SPECIFIC_TITLE")) {
+			Blogs.clickEllipsisItemPG(
+				entryTitle = "${entryTitle}",
+				item = "Publish to Live");
+
+			AssertConfirm(value1 = "${confirmMessage}");
+
+			Alert.viewSuccessMessage();
+		}
+		else {
+			Blogs.clickEllipsisItemCP(
+				entryTitle = "${entryTitle}",
+				item = "Publish to Live");
+
+			AssertConfirm(value1 = "${confirmMessage}");
+
+			AssertTextEquals(
+				locator1 = "Staging#PROCESS_SUCCESSFUL",
+				value1 = "Successful");
+		}
+	}
+
+	macro subscribePG {
+		AssertClick(
+			locator1 = "Blogs#SUBSCRIBE_LINK",
+			value1 = "Subscribe");
+
+		Alert.viewSuccessMessage();
+	}
+
+	macro tearDownConfigurationDisplaySettingsPG {
+		Navigator.gotoPage(pageName = "${pageName}");
+
+		BlogsNavigator.gotoConfigurationSetupPG();
+
+		BlogsConfiguration.selectDisplayTemplate(displayTemplate = "Abstract");
+
+		IFrame.saveConfiguration();
+	}
+
+	macro tearDownConfigurationScopePG {
+		Navigator.gotoPage(pageName = "${pageName}");
+
+		BlogsNavigator.gotoConfigurationSetupPG();
+
+		Navigator.gotoPage(pageName = "${pageName}");
+
+		Portlet.selectScopePG(
+			portletName = "Blogs",
+			scope = "Liferay");
+	}
+
+	macro tearDownCP {
+		Navigator.openURL();
+
+		ProductMenu.gotoPortlet(
+			category = "Content & Data",
+			portlet = "Blogs");
+
+		if (IsElementPresent.isVisible(locator1 = "Blogs#ENTRY_TABLE_ALL_CHECKBOX")) {
+			Click(locator1 = "Blogs#ENTRY_TABLE_ALL_CHECKBOX");
+
+			Click(
+				key_text = "trash",
+				locator1 = "ManagementBar#ANY_ICON");
+
+			VerifyElementPresent(locator1 = "Message#SUCCESS");
+		}
+
+		JSONRecycleBin.emptyRecycleBin();
+	}
+
+	macro tearDownSubscribePG {
+		Navigator.gotoPage(pageName = "${pageName}");
+
+		AssertClick(
+			locator1 = "Blogs#UNSUBSCRIBE_LINK",
+			value1 = "Unsubscribe");
+
+		Alert.viewSuccessMessage();
+	}
+
+	macro viewContentAbstractDescription {
+		var key_entryAbstractDescription = "${descriptionValue}";
+
+		AssertTextEquals.assertPartialText(
+			locator1 = "BlogsEntry#CONTENT_ABSTRACT_AP",
+			value1 = "${key_entryAbstractDescription}");
+	}
+
+	macro viewEntryNotPresent {
+		LexiconList.viewListEntryNotPresent(listEntry = "${entryTitle}");
+	}
+
+	macro viewEntryPresent {
+		LexiconCard.viewCardPresent(card = "${entryTitle}");
+	}
+
+	macro viewEntryTitle {
+		var key_entryTitle = "${entryTitle}";
+		var key_position = "${position}";
+
+		if (isSet(position)) {
+			LexiconList.viewListEntryTitleLinkSpecific(
+				listEntry = "${entryTitle}",
+				position = "${position}");
+		}
+		else {
+			LexiconList.viewListEntryTitleLink(listEntry = "${entryTitle}");
+		}
+	}
+
+	macro viewNoEntryCP {
+		AssertTextEquals(
+			locator1 = "Message#EMPTY_INFO",
+			value1 = "No entries were found.");
+	}
+
+}

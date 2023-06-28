@@ -1,0 +1,22 @@
+{
+	"dependencies": {
+	},
+	"jest": {
+		"setupFilesAfterEnv": [
+			"<rootDir>/test/setup.js"
+		],
+		"testPathIgnorePatterns": [
+			"<rootDir>/test/setup.js",
+			"<rootDir>/test/utils.js"
+		]
+	},
+	"name": "ratings-taglib",
+	"private": true,
+	"scripts": {
+		"build": "liferay-npm-scripts build",
+		"checkFormat": "liferay-npm-scripts check",
+		"format": "liferay-npm-scripts fix",
+		"test": "liferay-npm-scripts test"
+	},
+	"version": "3.1.5"
+}

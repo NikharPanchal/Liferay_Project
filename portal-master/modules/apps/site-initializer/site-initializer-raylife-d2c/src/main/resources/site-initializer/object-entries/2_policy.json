@@ -1,0 +1,212 @@
+{
+	"object-entries": [
+		{
+			"commission": "1129.00",
+			"endDate": "2022-03-03T00:00:00Z",
+			"externalReferenceCode": "RAYPOL-001",
+			"policyOwnerName": "test 1",
+			"r_quoteToPolicies_c_raylifeQuoteId": "[$RaylifeApplication#RAYAPP-001$]",
+			"startDate": "2021-01-01T00:00:00Z",
+			"termPremium": "123.00"
+		},
+		{
+			"commission": "973.00",
+			"endDate": "2022-03-03T00:00:00Z",
+			"externalReferenceCode": "RAYPOL-002",
+			"policyOwnerName": "test 2",
+			"r_quoteToPolicies_c_raylifeQuoteId": "[$RaylifeApplication#RAYAPP-002$]",
+			"startDate": "2021-01-15T00:00:00Z",
+			"termPremium": "123.00"
+		},
+		{
+			"commission": "912.00",
+			"endDate": "2022-03-03T00:00:00Z",
+			"externalReferenceCode": "RAYPOL-003",
+			"policyOwnerName": "test 3",
+			"r_quoteToPolicies_c_raylifeQuoteId": "[$RaylifeApplication#RAYAPP-003$]",
+			"startDate": "2021-02-01T00:00:00Z",
+			"termPremium": "123.00"
+		},
+		{
+			"commission": "935.00",
+			"endDate": "2022-03-03T00:00:00Z",
+			"externalReferenceCode": "RAYPOL-004",
+			"policyOwnerName": "test 4",
+			"r_quoteToPolicies_c_raylifeQuoteId": "[$RaylifeApplication#RAYAPP-004$]",
+			"startDate": "2021-02-15T00:00:00Z",
+			"termPremium": "123.00"
+		},
+		{
+			"commission": "532.00",
+			"endDate": "2022-03-03T00:00:00Z",
+			"externalReferenceCode": "RAYPOL-005",
+			"policyOwnerName": "test 5",
+			"r_quoteToPolicies_c_raylifeQuoteId": "[$RaylifeApplication#RAYAPP-005$]",
+			"startDate": "2021-03-01T00:00:00Z",
+			"termPremium": "123.00"
+		},
+		{
+			"commission": "1146.00",
+			"endDate": "2022-03-03T00:00:00Z",
+			"externalReferenceCode": "RAYPOL-006",
+			"policyOwnerName": "test 6",
+			"r_quoteToPolicies_c_raylifeQuoteId": "[$RaylifeApplication#RAYAPP-006$]",
+			"startDate": "2021-03-15T00:00:00Z",
+			"termPremium": "123.00"
+		},
+		{
+			"commission": "1232.00",
+			"endDate": "2022-03-03T00:00:00Z",
+			"externalReferenceCode": "RAYPOL-007",
+			"policyOwnerName": "test 7",
+			"r_quoteToPolicies_c_raylifeQuoteId": "[$RaylifeApplication#RAYAPP-001$]",
+			"startDate": "2021-04-01T00:00:00Z",
+			"termPremium": "123.00"
+		},
+		{
+			"commission": "747.00",
+			"endDate": "2022-03-03T00:00:00Z",
+			"externalReferenceCode": "RAYPOL-008",
+			"policyOwnerName": "test 8",
+			"r_quoteToPolicies_c_raylifeQuoteId": "[$RaylifeApplication#RAYAPP-002$]",
+			"startDate": "2021-04-15T00:00:00Z",
+			"termPremium": "123.00"
+		},
+		{
+			"commission": "652.00",
+			"endDate": "2022-03-03T00:00:00Z",
+			"externalReferenceCode": "RAYPOL-009",
+			"policyOwnerName": "test 9",
+			"r_quoteToPolicies_c_raylifeQuoteId": "[$RaylifeApplication#RAYAPP-003$]",
+			"startDate": "2021-05-01T00:00:00Z",
+			"termPremium": "123.00"
+		},
+		{
+			"commission": "765.00",
+			"endDate": "2022-03-03T00:00:00Z",
+			"externalReferenceCode": "RAYPOL-010",
+			"policyOwnerName": "test 10",
+			"r_quoteToPolicies_c_raylifeQuoteId": "[$RaylifeApplication#RAYAPP-004$]",
+			"startDate": "2021-05-15T00:00:00Z",
+			"termPremium": "123.00"
+		},
+		{
+			"commission": "832.00",
+			"endDate": "2022-03-03T00:00:00Z",
+			"externalReferenceCode": "RAYPOL-011",
+			"policyOwnerName": "test 11",
+			"r_quoteToPolicies_c_raylifeQuoteId": "[$RaylifeApplication#RAYAPP-005$]",
+			"startDate": "2021-12-01T00:00:00Z",
+			"termPremium": "123.00"
+		},
+		{
+			"commission": "734.00",
+			"endDate": "2022-03-03T00:00:00Z",
+			"externalReferenceCode": "RAYPOL-012",
+			"policyOwnerName": "test 12",
+			"r_quoteToPolicies_c_raylifeQuoteId": "[$RaylifeApplication#RAYAPP-006$]",
+			"startDate": "2021-12-15T00:00:00Z",
+			"termPremium": "123.00"
+		},
+		{
+			"commission": "854.00",
+			"endDate": "2022-03-03T00:00:00Z",
+			"externalReferenceCode": "RAYPOL-013",
+			"policyOwnerName": "test 13",
+			"r_quoteToPolicies_c_raylifeQuoteId": "[$RaylifeApplication#RAYAPP-001$]",
+			"startDate": "2022-01-01T00:00:00Z",
+			"termPremium": "123.00"
+		},
+		{
+			"commission": "1134.00",
+			"endDate": "2022-03-03T00:00:00Z",
+			"externalReferenceCode": "RAYPOL-014",
+			"policyOwnerName": "test 14",
+			"r_quoteToPolicies_c_raylifeQuoteId": "[$RaylifeApplication#RAYAPP-002$]",
+			"startDate": "2022-01-15T00:00:00Z",
+			"termPremium": "123.00"
+		},
+		{
+			"commission": "1052.00",
+			"endDate": "2022-03-03T00:00:00Z",
+			"externalReferenceCode": "RAYPOL-015",
+			"policyOwnerName": "test 15",
+			"r_quoteToPolicies_c_raylifeQuoteId": "[$RaylifeApplication#RAYAPP-003$]",
+			"startDate": "2022-02-01T00:00:00Z",
+			"termPremium": "123.00"
+		},
+		{
+			"commission": "978.00",
+			"endDate": "2022-03-03T00:00:00Z",
+			"externalReferenceCode": "RAYPOL-016",
+			"policyOwnerName": "test 16",
+			"r_quoteToPolicies_c_raylifeQuoteId": "[$RaylifeApplication#RAYAPP-004$]",
+			"startDate": "2022-02-15T00:00:00Z",
+			"termPremium": "123.00"
+		},
+		{
+			"commission": "1134.00",
+			"endDate": "2022-03-03T00:00:00Z",
+			"externalReferenceCode": "RAYPOL-017",
+			"policyOwnerName": "test 17",
+			"r_quoteToPolicies_c_raylifeQuoteId": "[$RaylifeApplication#RAYAPP-005$]",
+			"startDate": "2022-03-01T00:00:00Z",
+			"termPremium": "123.00"
+		},
+		{
+			"commission": "851.00",
+			"endDate": "2022-03-03T00:00:00Z",
+			"externalReferenceCode": "RAYPOL-018",
+			"policyOwnerName": "test 18",
+			"r_quoteToPolicies_c_raylifeQuoteId": "[$RaylifeApplication#RAYAPP-006$]",
+			"startDate": "2022-03-15T00:00:00Z",
+			"termPremium": "123.00"
+		},
+		{
+			"commission": "978.00",
+			"endDate": "2022-03-03T00:00:00Z",
+			"externalReferenceCode": "RAYPOL-019",
+			"policyOwnerName": "test 19",
+			"r_quoteToPolicies_c_raylifeQuoteId": "[$RaylifeApplication#RAYAPP-001$]",
+			"startDate": "2022-04-01T00:00:00Z",
+			"termPremium": "123.00"
+		},
+		{
+			"commission": "1256.00",
+			"endDate": "2022-03-03T00:00:00Z",
+			"externalReferenceCode": "RAYPOL-020",
+			"policyOwnerName": "test 20",
+			"r_quoteToPolicies_c_raylifeQuoteId": "[$RaylifeApplication#RAYAPP-002$]",
+			"startDate": "2022-04-15T00:00:00Z",
+			"termPremium": "123.00"
+		},
+		{
+			"commission": "976.00",
+			"endDate": "2022-03-03T00:00:00Z",
+			"externalReferenceCode": "RAYPOL-021",
+			"policyOwnerName": "test 21",
+			"r_quoteToPolicies_c_raylifeQuoteId": "[$RaylifeApplication#RAYAPP-003$]",
+			"startDate": "2022-05-01T00:00:00Z",
+			"termPremium": "123.00"
+		},
+		{
+			"commission": "1263.00",
+			"endDate": "2022-03-03T00:00:00Z",
+			"externalReferenceCode": "RAYPOL-022",
+			"policyOwnerName": "test 22",
+			"r_quoteToPolicies_c_raylifeQuoteId": "[$RaylifeApplication#RAYAPP-004$]",
+			"startDate": "2022-05-15T00:00:00Z",
+			"termPremium": "123.00"
+		},
+		{
+			"commission": "1200.00",
+			"endDate": "2023-06-06T00:00:00Z",
+			"externalReferenceCode": "RAYPOL-023",
+			"policyOwnerName": "test 23",
+			"r_quoteToPolicies_c_raylifeQuoteId": "[$RaylifeApplication#RAYAPP-005$]",
+			"startDate": "2022-06-06T00:00:00Z",
+			"termPremium": "123.00"
+		}
+	],
+	"objectDefinitionName": "RaylifePolicy"
+}

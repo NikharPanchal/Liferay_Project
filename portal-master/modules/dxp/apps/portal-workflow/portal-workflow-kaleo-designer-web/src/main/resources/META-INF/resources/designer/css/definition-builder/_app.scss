@@ -1,0 +1,29 @@
+.definition-builder-app {
+	height: calc(100vh - 120px);
+
+	.diagram-builder {
+		display: flex;
+		flex-direction: row;
+		height: 100%;
+
+		.diagram-area {
+			height: 100%;
+			position: relative;
+			width: 100%;
+		}
+
+		.lexicon-icon {
+			margin-top: 0;
+		}
+	}
+
+	.truncate-container {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+}
+
+.modal-dialog.modal-sm.modal-dialog-centered:focus-visible {
+	outline: none;
+}

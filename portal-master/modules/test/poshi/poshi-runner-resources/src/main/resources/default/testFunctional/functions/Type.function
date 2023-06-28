@@ -1,0 +1,149 @@
+@default = "clickAtType"
+@summary = "Type to '${locator1}' the value '${value1}'"
+definition {
+
+	function clickAtType {
+		selenium.waitForVisible();
+
+		selenium.waitForEditable();
+
+		selenium.mouseOver();
+
+		selenium.clickAt();
+
+		selenium.pause("1000");
+
+		selenium.type();
+
+		selenium.pause("1000");
+
+		selenium.clickAt();
+
+		selenium.pause("1000");
+	}
+
+	function sendKeys {
+		selenium.waitForVisible();
+
+		selenium.waitForEditable();
+
+		selenium.mouseOver();
+
+		selenium.sendKeys();
+	}
+
+	function sendKeysAceEditor {
+		selenium.waitForElementPresent();
+
+		selenium.waitForEditable();
+
+		selenium.mouseOver();
+
+		selenium.sendKeysAceEditor();
+	}
+
+	function type {
+		selenium.waitForVisible();
+
+		selenium.waitForEditable();
+
+		selenium.mouseOver();
+
+		selenium.type();
+	}
+
+	function typeAceEditor {
+		selenium.waitForElementPresent();
+
+		selenium.waitForEditable();
+
+		selenium.mouseOver();
+
+		selenium.typeAceEditor();
+	}
+
+	function typeAceEditorNoError {
+		selenium.waitForElementPresent();
+
+		selenium.waitForEditable();
+
+		selenium.mouseOver();
+
+		selenium.typeAceEditor();
+	}
+
+	function typeAceEditorNoMouseOver {
+		selenium.waitForElementPresent();
+
+		selenium.waitForEditable();
+
+		selenium.typeAceEditor();
+	}
+
+	function typeCKEditor {
+		selenium.waitForVisible();
+
+		selenium.waitForEditable();
+
+		selenium.mouseOver();
+
+		selenium.typeCKEditor();
+	}
+
+	function typeClickAt {
+		selenium.waitForVisible();
+
+		selenium.waitForEditable();
+
+		selenium.mouseOver();
+
+		selenium.type();
+
+		selenium.clickAt();
+	}
+
+	function typeCodeMirrorEditorNoError {
+		selenium.waitForElementPresent();
+
+		selenium.mouseOver();
+
+		selenium.typeCodeMirrorEditor();
+	}
+
+	function typeEditor {
+		selenium.waitForElementPresent();
+
+		selenium.waitForEditable();
+
+		selenium.mouseOver();
+
+		selenium.typeEditor();
+	}
+
+	function typeNoMouseOver {
+		selenium.waitForElementPresent();
+
+		selenium.waitForEditable();
+
+		selenium.type();
+	}
+
+	function typeNotVisibleNoMouseOver {
+		selenium.waitForEditable();
+
+		selenium.type();
+	}
+
+	function typePause {
+		selenium.waitForVisible();
+
+		selenium.waitForEditable();
+
+		selenium.mouseOver();
+
+		selenium.type();
+
+		selenium.pause("5000");
+	}
+
+}

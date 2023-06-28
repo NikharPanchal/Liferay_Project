@@ -1,0 +1,92 @@
+@default = "assertClick"
+@summary = "Click on '${locator1}' that should have a value of '${value1}'"
+definition {
+
+	function assertClick {
+		if (contains("${locator1}", "/input")) {
+			AssertClick.assertValueClickAt();
+		}
+		else {
+			AssertClick.assertTextClickAt();
+		}
+	}
+
+	function assertPartialTextClickAt {
+		AssertTextEquals.assertPartialText();
+
+		selenium.mouseOver();
+
+		selenium.clickAt();
+	}
+
+	function assertPartialTextClickAtNoMouseOver {
+		AssertTextEquals.assertPartialText();
+
+		selenium.clickAt();
+	}
+
+	function assertTextClickAt {
+		AssertTextEquals.assertText();
+
+		selenium.mouseOver();
+
+		selenium.clickAt();
+	}
+
+	function assertTextClickAtAndPause {
+		AssertTextEquals.assertText();
+
+		selenium.mouseOver();
+
+		selenium.clickAt();
+
+		selenium.pause("1000");
+	}
+
+	function assertTextClickAtNoJavaScript {
+		AssertTextEquals.assertText();
+
+		selenium.mouseOver();
+
+		selenium.clickAt();
+
+		selenium.assertLiferayErrors();
+	}
+
+	function assertTextClickAtWaitForLastScript {
+		selenium.waitForVisible();
+
+		AssertClick.assertTextClickAt();
+
+		selenium.waitForElementPresent("xpath=(//script)[last()]");
+	}
+
+	function assertTextClickCaseSensitive {
+		AssertTextEquals.assertTextCaseSensitive();
+
+		selenium.mouseOver();
+
+		selenium.click();
+	}
+
+	function assertTextClickNoMouseOver {
+		AssertTextEquals.assertText();
+
+		selenium.click();
+	}
+
+	function assertValueClickAt {
+		AssertTextEquals.assertValue();
+
+		selenium.mouseOver();
+
+		selenium.clickAt();
+	}
+
+	function pauseAssertTextClickAt {
+		selenium.pause("1000");
+
+		AssertClick.assertTextClickAt();
+	}
+
+}

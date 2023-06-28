@@ -1,0 +1,26 @@
+@default = "isElementPresent"
+definition {
+
+	function isElementPresent {
+		selenium.isElementPresent();
+	}
+
+	function isElementPresentAfterWait {
+		selenium.isElementPresentAfterWait();
+	}
+
+	function isElementPresentNoSPARefresh {
+		selenium.isElementPresent();
+	}
+
+	function isVisible {
+		selenium.isVisible();
+	}
+
+	function pauseIsElementPresent {
+		selenium.pause("1000");
+
+		selenium.isElementPresent();
+	}
+
+}

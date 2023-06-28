@@ -1,0 +1,53 @@
+definition {
+
+	static var testCaseStaticVar = "A static var set in the definition.";
+
+	setUp {
+		if ("${testCaseStaticVar}" != "A static var set in the definition.") {
+			fail("Expected static var value does not match actual value");
+		}
+
+		var testCaseStaticVar = "A static var overridden in the set up.";
+	}
+
+	test ExecuteVarInheritance {
+		RootVar.assertExecuteVar(
+			executeVar = "An execute var that will referenced by another execute var.",
+			referenceExecuteVar = "${executeVar}");
+
+		var commandVar = "A command var that will be overridden by an execute var.";
+
+		RootVar.assertExecuteVar(
+			commandVar = "An execute var that will referenced by another execute var.",
+			referenceExecuteVar = "${commandVar}");
+	}
+
+	test MacroStaticVarInheritance {
+		MacroVar.setStaticVar();
+
+		MacroVar.callStaticVar();
+	}
+
+	test RootVarInheritance {
+		RootVar.assertRootVar();
+
+		RootVar.assertRootVarInNestedMacro();
+
+		RootVar.overrideRootVar(rootVar = "An execute variable passed into a macro.");
+
+		RootVar.overrideRootVarInNestedMacro(rootVar = "An execute variable passed into a macro.");
+	}
+
+	test TestCaseStaticVarInheritance {
+		if ("${testCaseStaticVar}" != "A static var overridden in the set up.") {
+			fail("Expected static var value does not match actual value");
+		}
+
+		var testCaseStaticVar = "A static var overridden in the command.";
+
+		if ("${testCaseStaticVar}" != "A static var overridden in the command.") {
+			fail("Expected static var value does not match actual value");
+		}
+	}
+
+}

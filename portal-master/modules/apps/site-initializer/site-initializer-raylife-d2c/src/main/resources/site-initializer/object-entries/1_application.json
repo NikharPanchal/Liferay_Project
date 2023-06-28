@@ -1,0 +1,41 @@
+{
+	"object-entries": [
+		{
+			"applicationCreateDate": "2022-03-09",
+			"applicationStatus": "incomplete",
+			"externalReferenceCode": "RAYAPP-001",
+			"productName": "Home"
+		},
+		{
+			"applicationCreateDate": "2022-02-16",
+			"applicationStatus": "quoted",
+			"externalReferenceCode": "RAYAPP-002",
+			"productName": "Auto"
+		},
+		{
+			"applicationCreateDate": "2022-02-10",
+			"applicationStatus": "reviewed",
+			"externalReferenceCode": "RAYAPP-005",
+			"productName": "Life"
+		},
+		{
+			"applicationCreateDate": "2022-02-16",
+			"applicationStatus": "incomplete",
+			"externalReferenceCode": "RAYAPP-003",
+			"productName": "Auto"
+		},
+		{
+			"applicationCreateDate": "2022-02-16",
+			"applicationStatus": "quoted",
+			"externalReferenceCode": "RAYAPP-004",
+			"productName": "Home"
+		},
+		{
+			"applicationCreateDate": "2022-03-04",
+			"applicationStatus": "reviewed",
+			"externalReferenceCode": "RAYAPP-006",
+			"productName": "Home"
+		}
+	],
+	"objectDefinitionName": "RaylifeApplication"
+}

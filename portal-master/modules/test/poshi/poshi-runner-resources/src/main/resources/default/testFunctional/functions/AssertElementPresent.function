@@ -1,0 +1,23 @@
+@default = "assertElementPresent"
+@summary = "Assert that '${locator1}' is available"
+definition {
+
+	function assertElementPresent {
+		selenium.waitForElementPresent();
+
+		selenium.assertElementPresent();
+	}
+
+	function assertVisible {
+		selenium.waitForVisible();
+
+		selenium.assertVisible();
+	}
+
+	function pauseAssertVisible {
+		selenium.pause("2000");
+
+		AssertElementPresent.assertVisible();
+	}
+
+}

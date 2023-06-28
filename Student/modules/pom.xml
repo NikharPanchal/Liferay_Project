@@ -12,5 +12,8 @@
   <modules>
     <module>AddStudent</module>
     <module>StudentService</module>
+    <module>login-fragment</module>
+    <module>login-fragment-demo</module>
+    <module>login-hook</module>
   </modules>
 </project>

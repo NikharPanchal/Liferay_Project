@@ -1,0 +1,303 @@
+@component-name = "portal-wcm"
+definition {
+
+	property portal.release = "true";
+	property portal.upstream = "true";
+	property testray.main.component.name = "Site Pages Administration";
+
+	setUp {
+		task ("Set up instance and sign in") {
+			TestCase.setUpPortalInstance();
+
+			User.firstLoginPG();
+		}
+
+		task ("Add two sites") {
+			for (var i : list "1,2") {
+				JSONGroup.addGroup(groupName = "Test Site Name ${i}");
+			}
+		}
+
+		task ("Add a widget page in each site") {
+			for (var i : list "1,2") {
+				JSONLayout.addPublicLayout(
+					groupName = "Test Site Name ${i}",
+					layoutName = "Test Page Name");
+			}
+		}
+	}
+
+	tearDown {
+		var testPortalInstance = PropsUtil.get("test.portal.instance");
+
+		if ("${testPortalInstance}" == "true") {
+			PortalInstances.tearDownCP();
+		}
+		else {
+			for (var i : list "1,2") {
+				JSONGroup.deleteGroupByName(groupName = "Test Site Name ${i}");
+			}
+		}
+	}
+
+	@description = "This is a use case for LPS-108216. Can hide and show existing invisible portlets on widget page via switch toggle controls. Assert Toggle Controls affects all widget pages in virtual instance scoped."
+	@priority = "5"
+	test HideAndShowExistingInvisiblePortlet {
+		property portal.acceptance = "true";
+
+		task ("View toggle controls is at view status") {
+			Navigator.gotoSitePage(
+				pageName = "Test Page Name",
+				siteName = "Test Site Name 1");
+
+			WidgetPages.viewToggleControls(status = "view");
+		}
+
+		task ("View invisible widgets are shown on page") {
+			Portlet.addPG(
+				pageName = "Test Page Name",
+				portletName = "Web Content Display");
+
+			AssertVisible(
+				key_portletName = "Web Content Display",
+				locator1 = "Home#PORTLET");
+
+			AssertVisible(
+				key_portletName = "Search",
+				locator1 = "ManagementBar#PORTLET_BODY");
+		}
+
+		task ("Switch Toggle Controls to hidden then invisible widgets are not shown") {
+			WidgetPages.switchToggleControls(status = "view");
+
+			WidgetPages.viewToggleControls(status = "hidden");
+
+			AssertNotVisible(
+				key_portletName = "Web Content Display",
+				locator1 = "Home#PORTLET");
+
+			AssertNotVisible(
+				key_portletName = "Search",
+				locator1 = "ManagementBar#PORTLET_BODY");
+		}
+
+		task ("Switch Toggle Controls to view then view invisible widgets are shown") {
+			WidgetPages.switchToggleControls(status = "hidden");
+
+			AssertVisible(
+				key_portletName = "Web Content Display",
+				locator1 = "Home#PORTLET");
+
+			AssertVisible(
+				key_portletName = "Search",
+				locator1 = "ManagementBar#PORTLET_BODY");
+		}
+
+		task ("View Toggle Controls affects all widget pages in virtual instance scoped") {
+			WidgetPages.switchToggleControls(status = "view");
+
+			Navigator.gotoSitePage(
+				pageName = "Test Page Name",
+				siteName = "Test Site Name 2");
+
+			WidgetPages.viewToggleControls(status = "hidden");
+		}
+	}
+
+	@description = "This is a use case for LPS-108216. Can hide and show portlet header of existing visible portlets on widget page via switch Toggle Controls."
+	@priority = "5"
+	test HideAndShowHeaderOfExistingVisiblePortlet {
+		property portal.acceptance = "true";
+
+		task ("View toggle controls is at view status") {
+			Navigator.gotoSitePage(
+				pageName = "Test Page Name",
+				siteName = "Test Site Name 1");
+
+			WidgetPages.viewToggleControls(status = "view");
+		}
+
+		task ("Add an Asset Publisher widget to page then view its bordless is shown when mouse over") {
+			Portlet.addPG(
+				pageName = "Test Page Name",
+				portletName = "Asset Publisher");
+
+			MouseOver(
+				key_portletName = "Asset Publisher",
+				locator1 = "Home#PORTLET");
+
+			AssertVisible(
+				key_portletName = "Asset Publisher",
+				locator1 = "Portlet#SPECIFIC_BORDERLESS_BAR");
+		}
+
+		task ("Switch Toggle Controls to hidden then view Asset Publisher's borderless is not shown") {
+			WidgetPages.switchToggleControls(status = "view");
+
+			MouseOver(
+				key_portletName = "Asset Publisher",
+				locator1 = "Home#PORTLET");
+
+			AssertNotVisible(
+				key_portletName = "Asset Publisher",
+				locator1 = "Portlet#SPECIFIC_BORDERLESS_BAR");
+		}
+
+		task ("Switch Toggle Controls to view then view Asset Publisher's borderless is shown") {
+			WidgetPages.switchToggleControls(status = "hidden");
+
+			MouseOver(
+				key_portletName = "Asset Publisher",
+				locator1 = "Home#PORTLET");
+
+			AssertVisible(
+				key_portletName = "Asset Publisher",
+				locator1 = "Portlet#SPECIFIC_BORDERLESS_BAR");
+		}
+	}
+
+	@description = "This is a use case for LPS-108216. Can hide future invisible portlets and portlet header of future visible portlets on widget page when Toggle Controls is closed."
+	@priority = "4"
+	test HideFutureInvisiblePortletAndHeaderOfFutureVisiblePortlet {
+		task ("Can hide future invisible portlets on widget page when Toggle Controls is closed") {
+			Navigator.gotoSitePage(
+				pageName = "Test Page Name",
+				siteName = "Test Site Name 1");
+
+			WidgetPages.switchToggleControls(status = "view");
+
+			WidgetPages.viewToggleControls(status = "hidden");
+
+			Portlet.addPG(
+				pageName = "Test Page Name",
+				portletName = "Web Content Display");
+
+			AssertElementPresent(
+				key_portletName = "Web Content Display",
+				locator1 = "Portlet#LOADED");
+
+			AssertNotVisible(
+				key_portletName = "Web Content Display",
+				locator1 = "Home#PORTLET");
+		}
+
+		task ("Can hide portlet header of future visible portlets on widget page when Toggle Controls is closed") {
+			WidgetPages.viewToggleControls(status = "hidden");
+
+			Portlet.addPG(
+				pageName = "Test Page Name",
+				portletName = "Asset Publisher");
+
+			MouseOver(
+				key_portletName = "Asset Publisher",
+				locator1 = "Home#PORTLET");
+
+			AssertNotVisible(
+				key_portletName = "Asset Publisher",
+				locator1 = "Portlet#SPECIFIC_BORDERLESS_BAR");
+		}
+	}
+
+	@description = "This is a use case for LPS-108216. Switch toggle controls shouldn't affect portlets on content page."
+	@priority = "4"
+	test ViewNotAffectPortletsOnContentPage {
+		task ("Add a content page") {
+			JSONLayout.addPublicLayout(
+				groupName = "Test Site Name 1",
+				layoutName = "Test Content Page Name",
+				type = "content");
+
+			JSONLayout.publishLayout(
+				groupName = "Test Site Name 1",
+				layoutName = "Test Content Page Name");
+		}
+
+		task ("Switch Toggle Controls to hidden") {
+			Navigator.gotoSitePage(
+				pageName = "Test Page Name",
+				siteName = "Test Site Name 1");
+
+			WidgetPages.switchToggleControls(status = "view");
+
+			WidgetPages.viewToggleControls(status = "hidden");
+
+			MouseOver(
+				key_portletName = "Menu Display",
+				locator1 = "ManagementBar#PORTLET_BODY");
+
+			AssertNotVisible(
+				key_portletName = "Menu Display",
+				locator1 = "Portlet#SPECIFIC_BORDERLESS_BAR");
+		}
+
+		task ("View not affect portlets on content page") {
+			Navigator.gotoSitePage(
+				pageName = "Test Content Page Name",
+				siteName = "Test Site Name 1");
+
+			AssertElementNotPresent(
+				key_status = "hidden",
+				locator1 = "ControlMenu#TOGGLE_CONTROLS");
+
+			AssertElementNotPresent(
+				key_status = "view",
+				locator1 = "ControlMenu#TOGGLE_CONTROLS");
+
+			MouseOver(
+				key_portletName = "Menu Display",
+				locator1 = "ManagementBar#PORTLET_BODY");
+
+			AssertVisible(
+				key_portletName = "Menu Display",
+				locator1 = "Portlet#SPECIFIC_BORDERLESS_BAR");
+		}
+	}
+
+	@description = "This is a use case for LPS-108216. Assert Toggle Controls doesn't affect widget pages in other virtual instance scoped."
+	@priority = "4"
+	test ViewOnlyAffectCurrentInstance {
+		property test.name.skip.portal.instance = "ToggleControls#ViewOnlyAffectCurrentInstance";
+
+		task ("Add a virtual instance") {
+			ApplicationsMenu.gotoPortlet(
+				category = "System",
+				panel = "Control Panel",
+				portlet = "Virtual Instances");
+
+			PortalInstances.addCP(
+				mailDomain = "www.able.com",
+				virtualHost = "www.able.com",
+				webId = "www.able.com");
+		}
+
+		task ("Switch Toggle Controls to hidden in current instance") {
+			Navigator.gotoSitePage(
+				pageName = "Test Page Name",
+				siteName = "Test Site Name 2");
+
+			WidgetPages.switchToggleControls(status = "view");
+
+			WidgetPages.viewToggleControls(status = "hidden");
+		}
+
+		task ("View Toggle Controls doesn't affect widget pages in other virtual instance scope") {
+			User.firstLoginPG(
+				password = "test",
+				userEmailAddress = "test@www.able.com",
+				virtualHostsURL = "http://www.able.com:8080");
+
+			ProductMenu.gotoPortlet(
+				category = "Site Builder",
+				portlet = "Pages");
+
+			PagesAdmin.addPage(pageName = "Test Site Page");
+
+			Navigator.gotoSpecificURLPage(
+				pageName = "Test Site Page",
+				url = "http://www.able.com:8080");
+
+			WidgetPages.switchToggleControls(status = "view");
+		}
+	}
+
+}

@@ -1,0 +1,18 @@
+@default = "uploadTempFile"
+definition {
+
+	function uploadTempFile {
+		selenium.waitForVisible();
+
+		selenium.mouseOver();
+
+		selenium.uploadTempFile();
+	}
+
+	function uploadTempFileHiddenNoMouseOver {
+		selenium.waitForElementPresent();
+
+		selenium.uploadTempFile();
+	}
+
+}

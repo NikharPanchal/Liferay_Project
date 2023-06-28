@@ -57,9 +57,25 @@ import org.osgi.service.component.annotations.Component;
 service = Portlet.class)
 
 public class AddStudentPortlet extends MVCPortlet {
-
+	
 	private static final Log _log = LogFactoryUtil.getLog(AddStudentPortlet.class.getName());
 
+	
+//	@Override
+//		public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
+//				throws IOException, PortletException {
+//		List<student> studentList = null;
+//		try {
+//			studentList = studentLocalServiceUtil.getStudentList();
+//		}
+//		catch(Exception e) {
+//			_log.error("Error ! while getting custom list ");
+//			e.printStackTrace();
+//		}
+//			super.doView(renderRequest, renderResponse);
+//		}
+	
+	
 	@Override
 	public void render(RenderRequest renderRequest, RenderResponse renderResponse)
 			throws IOException, PortletException {
@@ -80,17 +96,7 @@ public class AddStudentPortlet extends MVCPortlet {
 		
 		//Getting list using Custom Query
 		
-//		List<student> studentList = null;
-//		try {
-//			studentList = studentLocalServiceUtil.getStudentList();
-//		}
-//		catch(Exception e) {
-//			_log.error("Error ! while getting list ");
-//			e.printStackTrace();
-//		}
-//		if(Validator.isNotNull(studentList)) {
-//			renderRequest.setAttribute("studentList", studentList);
-//		}
+		
 		
 		// Checking role
 		if (renderRequest.isUserInRole("power-user")) {

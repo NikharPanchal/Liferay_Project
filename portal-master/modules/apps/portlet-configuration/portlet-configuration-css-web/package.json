@@ -1,0 +1,11 @@
+{
+	"dependencies": {
+	},
+	"name": "portlet-configuration-css-web",
+	"scripts": {
+		"build": "liferay-npm-scripts build",
+		"checkFormat": "liferay-npm-scripts check",
+		"format": "liferay-npm-scripts fix"
+	},
+	"version": "6.0.31"
+}

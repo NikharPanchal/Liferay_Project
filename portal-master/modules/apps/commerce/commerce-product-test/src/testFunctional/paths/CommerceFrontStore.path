@@ -1,0 +1,196 @@
+<html>
+<head>
+<title>CommerceFrontStore</title>
+</head>
+
+<body>
+<table border="1" cellpadding="1" cellspacing="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CommerceFrontStore</td></tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>FS_IMAGE_GALLERY_ARROW_NEXT</td>
+	<td>//div[@class='arrow next']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>FS_IMAGE_GALLERY_ARROW_PREV</td>
+	<td>//div[@class='arrow prev']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>FS_IMAGE_GALLERY_MAIN_IMAGE</td>
+	<td>//div[@class='product-gallery']/div/img[contains(@alt, '${key_fsProductImage}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>FS_IMAGE_GALLERY_OVERLAY</td>
+	<td>//div[@class='gallery-overlay']//img[contains(@alt, '${key_fsProductImage}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>FS_IMAGE_GALLERY_THUMBNAIL</td>
+	<td>//div[@class= 'gallery-thumbnails']//img[contains(@alt,'${key_fsProductImage}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>FS_PRODUCT_COUNT</td>
+	<td>//div[contains(@class,'pull-right')]/p[contains(text(),'${key_productCount} Products Available')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>FS_PRODUCT_SKU</td>
+	<td>//p/span[(normalize-space(text())='SKU')]/following::span[text()='${key_productSku}']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>FS_PRODUCT_DETAIL</td>
+	<td>//span[(normalize-space(text())='${key_detail}')]/following-sibling::span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>FS_PRODUCT_STOCK_QUANTITY</td>
+	<td>//div[contains(concat(' ',normalize-space(@class),' '),' stock-quantity ')]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>FS_PRODUCT_AVAILABILITY</td>
+	<td>//div/div/span[contains(@class,'availability-label')]/span[contains(text(),'${key_availability}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>FS_PRODUCT_AVAILABILITY_DISCONTINUED</td>
+	<td>//div[contains(@class,'availability')]//span[@class='text-danger'][contains(text(),'Discontinued')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>FS_PRODUCT_DESCRIPTION</td>
+	<td>//p[contains(concat(' ',normalize-space(@class),' '),'product-description')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>FS_PRODUCT_SPECIFICATIONS</td>
+	<td>//dl/dt[@class="specification-term"][contains(text(),'${key_specification}')]/following-sibling::dd</td>
+	<td></td>
+</tr>
+<tr>
+	<td>FS_PRODUCT_NAME</td>
+	<td>//h2[@class='product-header-title']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>FS_PRODUCT_OPTIONS_SELECT</td>
+	<td>//div/label[text()='${key_optionName}']/..//div[contains (@class,'select-field-trigger')]//a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>FS_PRODUCT_OPTION</td>
+	<td>//div[contains(@class,'dropdown-menu')]/ul//li/button[(normalize-space(text())='${key_optionValue}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>FS_PRODUCT_IMAGE</td>
+	<td>//div[@class='product-gallery']//img[contains(@src, '${key_fsProductImage}') or contains(@alt,'${key_fsProductImage}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>MAX_QUANTITY_SELECTOR_PRODUCT_DETAILS</td>
+	<td>//div[contains(@class,"product-detail")]//div[contains(@class,"add-to-cart")]//input[contains(@max, '${key_value}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>PRODUCT_DETAILS_QUANTITY_SELECTOR</td>
+	<td>//h2[text()='${key_productName}']/../..//input[contains(@class,'quantity-selector')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>PRODUCT_DETAILS_QUANTITY_SELECTOR_HAS_ERROR</td>
+	<td>//h2[text()='${key_productName}']/../..//div[contains(@class,'has-error')]/input[contains(@class,'quantity-selector')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>PRODUCT_DETAILS_PRICE_VALUE_INACTIVE</td>
+	<td>//p[@title='${key_productName}']/following-sibling::p//span[contains(@class, 'price-value price-value-inactive')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>PRODUCT_DETAILS_QUANTITY_OPTION</td>
+	<td>//header//h2[text()='${key_productName}']//..//following-sibling::div[4]//option[@value='${key_optionValue}']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>PRODUCT_DETAILS_PRICE_VALUE_FINAL</td>
+	<td>//p[@title='${key_productName}']/following-sibling::p//span[contains(@class, 'price-value price-value-final')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>PRODUCT_DETAILS_PACKAGE_QUANTITY</td>
+	<td>//label[text()='Package Quantity']//..//div[contains(@class,'form-control')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>PRODUCT_DETAILS_REPLACEMENTS_SKU</td>
+	<td>//h4[contains(text(),'Replacements')]/..//div[contains(@class,'content-wrapper')]//a[text()='${key_productSku}']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>PRODUCT_DETAILS_IN_STOCK_QUANTITY</td>
+	<td>//span[(@data-qa-id='in-stock-quantity') and (contains(text(),'${key_inStockQuantity}'))]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>MINI_COMPARE_ITEM_ACTIVE_N</td>
+	<td>//div[@class='mini-compare-item active'][${key_value}]//div[@class='mini-compare-thumbnail']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>MINI_COMPARE_ITEM_CUSTOM_IMAGE</td>
+	<td>//div[contains(@class,'mini-compare active')]//div[contains(@style,'${key_productMediaId}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>FS_PRODUCT_VALUE_PROMO_PRICE</td>
+	<td>//p[@title='${key_productName}']//following-sibling::p[@class='card-text']//span[@class='price-value price-value-promo']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>FS_PRODUCT_VALUE_INACTIVE_PRICE</td>
+	<td>//p[@title='${key_productName}']//following-sibling::p[@class='card-text']//span[@class='price-value price-value-inactive']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>MINI_COMPARE_ITEM_REMOVE_BUTTON</td>
+	<td>//div[contains(@class,'mini-compare active')]//div[contains(@style,'${key_productMediaId}')]/../../..//button[contains(@class,'mini-compare-delete')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>PRODUCT_CARD_CATALOG_IMAGE</td>
+	<td>//a[contains(@href,'${key_productName}')]//img[contains(@class,'card-picture')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>PRODUCT_CARD_IMAGE</td>
+	<td>//a[contains(@href,'${key_productName}')]//*[(contains(@style,'image')) or (contains(@class,'img'))]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>PRODUCT_CARD_IMAGE_SPECIFIC</td>
+	<td>//a[contains(@href,'${key_productName}')]//img[contains(@src,'${key_image}')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>QUANTITY_SELECTOR_POPOVER_LIST_ITEM</td>
+	<td>//div[contains(@class,'quantity-selector-popover')]//small[text()='${key_quantityConfigurationText}']/b[text()='${key_quantity}']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>QUANTITY_SELECTOR_POPOVER_LIST_ITEM_ERROR</td>
+	<td>//div[contains(@class,'quantity-selector-popover')]//small[(@class='text-danger') and (text()='${key_quantityConfigurationText}')]/b[text()='${key_quantity}']</td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

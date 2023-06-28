@@ -1,0 +1,66 @@
+@default = "clickAt"
+definition {
+
+	function checkNotVisible {
+		selenium.waitForElementPresent();
+
+		selenium.mouseOver();
+
+		if (selenium.isNotChecked()) {
+			selenium.clickAt();
+
+			selenium.pause("1000");
+		}
+
+		selenium.assertChecked();
+	}
+
+	function checkToggleSwitch {
+		selenium.waitForElementPresent();
+
+		selenium.mouseOver();
+
+		if (selenium.isNotChecked()) {
+			selenium.clickAt();
+		}
+	}
+
+	function checkToggleSwitchAndPause {
+		selenium.waitForElementPresent();
+
+		selenium.mouseOver();
+
+		if (selenium.isNotChecked()) {
+			selenium.clickAt();
+		}
+
+		selenium.pause("1000");
+
+		AssertChecked.assertCheckedNotVisible();
+	}
+
+	function clickAt {
+		selenium.waitForVisible();
+
+		selenium.mouseOver();
+
+		if (selenium.isNotChecked()) {
+			selenium.clickAt();
+		}
+
+		AssertChecked.assertChecked();
+	}
+
+	function toggleSwitch {
+		selenium.waitForElementPresent();
+
+		selenium.mouseOver();
+
+		if (selenium.isNotChecked()) {
+			selenium.clickAt();
+		}
+
+		AssertElementPresent();
+	}
+
+}

@@ -1,0 +1,508 @@
+@component-name = "portal-wcm"
+definition {
+
+	property portal.release = "true";
+	property portal.upstream = "true";
+	property testray.main.component.name = "Site Pages Administration";
+
+	setUp {
+		task ("Set up instance and sign in") {
+			TestCase.setUpPortalInstance();
+
+			User.firstLoginPG();
+		}
+
+		task ("Add a site") {
+			JSONGroup.addGroup(groupName = "Test Site Name");
+		}
+	}
+
+	tearDown {
+		var testPortalInstance = PropsUtil.get("test.portal.instance");
+
+		if ("${testPortalInstance}" == "true") {
+			PortalInstances.tearDownCP();
+		}
+		else {
+			SiteTemplates.tearDownCP();
+
+			JSONGroup.deleteGroupByName(groupName = "Test Site Name");
+
+			JSONUser.tearDownNonAdminUsers();
+		}
+	}
+
+	@description = "The user can add a page based in global search template."
+	@priority = "5"
+	@uitest
+	test AddPageBasedOnGlobalSearchTemplate {
+		property portal.acceptance = "true";
+		property testray.component.names = "Training";
+
+		task ("Add a page based in global search template") {
+			PagesAdmin.openPagesAdmin(siteURLKey = "test-site-name");
+
+			PagesAdmin.addPage(
+				pageName = "Test Page Name",
+				pageTemplateName = "Search");
+		}
+
+		task ("View portlets are shown in search template page") {
+			Navigator.gotoSitePage(
+				pageName = "Test Page Name",
+				siteName = "Test Site Name");
+
+			for (var portletName : list "Search Bar,Suggestions,Site Facet,Type Facet,Tag Facet,Category Facet,Folder Facet,User Facet,Modified Facet,Search Results,Search Options") {
+				Portlet.viewDefaultTitle(portletName = "${portletName}");
+			}
+		}
+	}
+
+	@description = "Can add a widget page with escape characters."
+	@priority = "3"
+	test AddPageWithEscapeCharacter {
+		task ("Add a page with escape characters name") {
+			PagesAdmin.openPagesAdmin(siteURLKey = "test-site-name");
+
+			PagesAdmin.addPage(pageName = "Test's Page Name");
+		}
+
+		task ("View the alert not shown") {
+			AssertAlertNotPresent();
+		}
+	}
+
+	@priority = "3"
+	test AddPageWithMultipleChildPages {
+		task ("Add a widget page") {
+			JSONLayout.addPublicLayout(
+				groupName = "Test Site Name",
+				layoutName = "Test Page Name");
+		}
+
+		task ("Add three children pages") {
+			for (var i : list "1,2,3") {
+				JSONLayout.addPublicLayout(
+					groupName = "Test Site Name",
+					layoutName = "Test Child Page ${i}",
+					parentLayoutName = "Test Page Name");
+			}
+		}
+
+		task ("View parent page is shown") {
+			PagesAdmin.openPagesAdmin(siteURLKey = "test-site-name");
+
+			PagesAdmin.viewPageItemPresent(pageName = "Test Page Name");
+		}
+
+		task ("View children pages are shwon") {
+			for (var i : list "1,2,3") {
+				PagesAdmin.viewPageItemPresent(
+					depth = "2",
+					pageName = "Test Child Page ${i}");
+			}
+		}
+	}
+
+	@description = "The user can add a private widget page with a child page."
+	@priority = "4"
+	test AddPrivateChildPage {
+		property release.feature.flags.disable.DISABLE_PRIVATE_LAYOUTS = "true";
+
+		task ("Add a private widget page") {
+			JSONLayout.addPrivateLayout(
+				groupName = "Test Site Name",
+				layoutName = "Test Private Page");
+		}
+
+		task ("Add a child page") {
+			JSONLayout.addPrivateLayout(
+				groupName = "Test Site Name",
+				layoutName = "Test Child Page",
+				parentLayoutName = "Test Private Page");
+		}
+
+		task ("View child page is shown") {
+			PagesAdmin.openPagesAdmin(siteURLKey = "test-site-name");
+
+			PagesAdmin.viewPageItemPresent(
+				depth = "2",
+				pageName = "Test Child Page",
+				privacy = "Private Pages");
+		}
+	}
+
+	@description = "Add a web content via content panel on a widget page."
+	@priority = "4"
+	@uitest
+	test AddWebContentViaContentPanel {
+		task ("Add a widget page") {
+			JSONLayout.addPublicLayout(
+				groupName = "Test Site Name",
+				layoutName = "Test Page Name");
+		}
+
+		task ("Add a web content via content panel") {
+			Navigator.gotoSitePage(
+				pageName = "Test Page Name",
+				siteName = "Test Site Name");
+
+			WidgetPages.addNewContent(assetType = "Basic Web Content");
+
+			WebContent.addCP(
+				webContentContent = "Web Content Content",
+				webContentTitle = "Web Content Title");
+
+			PortletEntry.publish();
+		}
+
+		task ("View web content is shown in content panel") {
+			WidgetPages.viewContentPanel(entryTitleList = "Web Content Title");
+		}
+	}
+
+	@description = "The user can add a Blogs portlet to private page."
+	@priority = "4"
+	test AddWidgetToPrivatePage {
+		property release.feature.flags.disable.DISABLE_PRIVATE_LAYOUTS = "true";
+
+		task ("Add a private widget page") {
+			JSONLayout.addPrivateLayout(
+				groupName = "Test Site Name",
+				layoutName = "Test Private Page");
+		}
+
+		task ("Add a Blogs portlet to private page") {
+			Navigator.gotoPrivateSitePage(
+				pageName = "Test Private Page",
+				siteName = "Test Site Name");
+
+			Portlet.addPG(portletName = "Blogs");
+		}
+
+		task ("View Blogs portlet is shown") {
+			Portlet.viewPG(portletName = "Blogs");
+		}
+	}
+
+	@description = "The user can add a Blogs portlet to public page."
+	@priority = "4"
+	test AddWidgetToPublicPage {
+		task ("Add a widget page") {
+			JSONLayout.addPublicLayout(
+				groupName = "Test Site Name",
+				layoutName = "Test Page Name");
+		}
+
+		task ("Add a Blogs portlet to public page") {
+			Navigator.gotoSitePage(
+				pageName = "Test Page Name",
+				siteName = "Test Site Name");
+
+			Portlet.addPG(portletName = "Blogs");
+		}
+
+		task ("View Blogs portlet is shown") {
+			Portlet.viewPG(portletName = "Blogs");
+		}
+	}
+
+	@description = "Cannot reset changes as user without permissions."
+	@priority = "3"
+	test CannotResetChangesAsUserWithoutPermissions {
+		property custom.properties = "jsonws.web.service.paths.excludes=";
+		property testray.component.names = "Site and Page Templates";
+
+		task ("Add a new user") {
+			JSONUser.addUser(
+				userEmailAddress = "userea@liferay.com",
+				userFirstName = "userfn",
+				userLastName = "userln",
+				userScreenName = "usersn");
+
+			JSONUser.setFirstPassword(
+				agreeToTermsAndAnswerReminderQuery = "true",
+				requireReset = "false",
+				userEmailAddress = "userea@liferay.com");
+		}
+
+		task ("Add a site template") {
+			SiteTemplates.addCP(siteTemplateName = "Site Template Name");
+		}
+
+		task ("Add a site based on template") {
+			Site.openSitesAdmin();
+
+			Site.addCP(
+				siteName = "Site Name",
+				siteTemplateName = "Site Template Name",
+				siteType = "Site Template");
+		}
+
+		task ("Assign the user to site") {
+			JSONUser.addUserToSite(
+				groupName = "Site Name",
+				userEmailAddress = "userea@liferay.com");
+		}
+
+		task ("Sign in as new user") {
+			User.logoutAndLoginPG(userLoginEmailAddress = "userea@liferay.com");
+		}
+
+		task ("View Home page is shown") {
+			ContentPagesNavigator.openViewContentPage(
+				pageName = "Home",
+				siteName = "Site Name");
+
+			Page.viewDefaultSiteTemplatePagesPG(
+				pageName = "Home",
+				siteName = "Site Name");
+		}
+
+		task ("Sign in as Test Test") {
+			User.logoutAndLoginPG(userLoginEmailAddress = "test@liferay.com");
+		}
+
+		task ("Add a Blogs widget to home page") {
+			ContentPagesNavigator.openEditContentPage(
+				pageName = "Home",
+				siteName = "Site Name");
+
+			PageEditor.addWidget(portletName = "Blogs");
+		}
+
+		task ("Publish the page") {
+			PageEditor.publish();
+		}
+
+		task ("Sign in as new user") {
+			User.logoutAndLoginPG(userLoginEmailAddress = "userea@liferay.com");
+		}
+
+		task ("View info icon is not shown") {
+			ContentPagesNavigator.openViewContentPage(
+				pageName = "Home",
+				siteName = "Site Name");
+
+			SiteTemplates.viewNoInfoMessage();
+		}
+
+		task ("Delete new site by Test Test") {
+			User.logoutAndLoginPG(userLoginEmailAddress = "test@liferay.com");
+
+			JSONGroup.deleteGroupByName(groupName = "Site Name");
+		}
+	}
+
+	@description = "The user can change the page layout template of a widget page."
+	@priority = "5"
+	test ChangeLayoutTemplate {
+		property portal.acceptance = "true";
+		property testray.component.names = "Training";
+
+		task ("Add a widget page") {
+			JSONLayout.addPublicLayout(
+				groupName = "Test Site Name",
+				layoutName = "Test Page Name");
+		}
+
+		task ("View the default page layout template") {
+			Navigator.gotoSitePage(
+				pageName = "Test Page Name",
+				siteName = "Test Site Name");
+
+			WidgetPages.viewPageLayout(
+				pageColumnNumberList = "1,2",
+				spanList = "4,8");
+		}
+
+		task ("Change the layout template then view the layout is applied to page") {
+			for (var layoutTemplate : list "1 Column,2 Columns (50/50),2 Columns (70/30),3 Columns,1-2 Columns (30/70),1-2 Columns (70/30),1-2-1 Columns (50/50),1-2-1 Columns (70/30),1-3-1 Columns,1-3-2 Columns,2-1-2 Columns,2-2 Columns,3-2-3 Columns") {
+				JSONLayout.updateLayoutTemplateOfPublicLayout(
+					groupName = "Test Site Name",
+					layoutName = "Test Page Name",
+					layoutTemplate = "${layoutTemplate}");
+
+				Navigator.gotoSitePage(
+					pageName = "Test Page Name",
+					siteName = "Test Site Name");
+
+				Navigator.gotoEditPageViaControlMenu(pageName = "Test Page Name");
+
+				PagesAdmin.viewSelectedLayoutColumn(columnName = "${layoutTemplate}");
+			}
+		}
+	}
+
+	@description = "Can configure a full page application to use all available portlets on the page."
+	@priority = "4"
+	test ConfigureFullPageApplicationOfPage {
+		property osgi.app.includes = "hello-soy";
+
+		task ("Add a Full Page Application page") {
+			JSONLayout.addPublicLayout(
+				groupName = "Test Site Name",
+				layoutName = "Test Page Name",
+				type = "full_page_application");
+		}
+
+		task ("Configure the page with all available portlets then view the portlet is shown") {
+			for (var portletName : list "Blogs,Wiki,Media Gallery,Message Boards,RSS Publisher,Documents and Media,Form,Application Authorization Request") {
+				PagesAdmin.openPagesAdmin(siteURLKey = "test-site-name");
+
+				PagesAdmin.configurePage(
+					pageName = "Test Page Name",
+					portlet = "${portletName}",
+					sitePageType = "Full Page Application");
+
+				Navigator.gotoSitePage(
+					pageName = "Test Page Name",
+					siteName = "Test Site Name");
+
+				Portlet.viewPG(portletName = "${portletName}");
+
+				AssertElementNotPresent(locator1 = "ControlMenu#ADD");
+			}
+		}
+	}
+
+	@description = "Can edit the page name and layout template via pages administration."
+	@priority = "5"
+	test EditViaPagesAdmin {
+		property portal.acceptance = "true";
+		property testray.component.names = "Training";
+
+		task ("Add two widget pages") {
+			for (var i : list "1,2") {
+				JSONLayout.addPublicLayout(
+					groupName = "Test Site Name",
+					layoutName = "Test Page Name ${i}");
+			}
+		}
+
+		task ("Edit the name of the first page") {
+			PagesAdmin.openPagesAdmin(siteURLKey = "test-site-name");
+
+			PagesAdmin.gotoPageEllipsisMenuItem(
+				menuItem = "Configure",
+				pageName = "Test Page Name 1");
+
+			PagesAdmin.editName(pageNameEdit = "Test Page Name 1 Edited");
+		}
+
+		task ("View the edited name is shown") {
+			PagesAdmin.viewPageItemPresent(pageName = "Test Page Name 1 Edited");
+		}
+
+		task ("Change the layout template of the second page") {
+			JSONLayout.updateLayoutTemplateOfPublicLayout(
+				groupName = "Test Site Name",
+				layoutName = "Test Page Name 2",
+				layoutTemplate = "1 Column");
+		}
+
+		task ("View the edited layout template is shown") {
+			PagesAdmin.gotoPageEllipsisMenuItem(
+				menuItem = "Configure",
+				pageName = "Test Page Name 2");
+
+			PagesAdmin.viewSelectedLayoutColumn(columnName = "1 Column");
+		}
+
+		task ("Edit the name of the second page") {
+			PagesAdmin.editName(pageNameEdit = "Test Page Name 2 Edited");
+		}
+
+		task ("View the edited name is shown") {
+			PagesAdmin.viewPageItemPresent(pageName = "Test Page Name 2 Edited");
+		}
+	}
+
+	@description = "This is a use case for LPS-123143. View the languageId shown in configuration page."
+	@priority = "3"
+	test ViewLanguageIdInConfigurationPage {
+		task ("Add a widget page") {
+			JSONLayout.addPublicLayout(
+				groupName = "Test Site Name",
+				layoutName = "Test Page Name");
+		}
+
+		task ("View default locale is shown") {
+			PagesAdmin.openPagesAdmin(siteURLKey = "test-site-name");
+
+			PagesAdmin.gotoPageEllipsisMenuItem(
+				menuItem = "Configure",
+				pageName = "Test Page Name");
+
+			PortletEntry.viewLocale(locale = "en-US");
+		}
+	}
+
+	@description = "This is a test for LPS-142251. View widgets are rendered well after adding a web content via content panel."
+	@priority = "4"
+	test ViewWidgetAfterAddWebContentViaContentPanel {
+		task ("Add an IFrame and a Web Content Display to a widget page") {
+			JSONLayout.addPublicLayout(
+				groupName = "Test Site Name",
+				layoutName = "Test Page Name");
+
+			JSONLayout.addWidgetToPublicLayout(
+				column = "2",
+				groupName = "Test Site Name",
+				layoutName = "Test Page Name",
+				widgetName = "IFrame");
+
+			JSONLayout.addWidgetToPublicLayout(
+				groupName = "Test Site Name",
+				layoutName = "Test Page Name",
+				widgetName = "Web Content Display");
+		}
+
+		task ("Add a Home page as source URL in IFrame") {
+			Navigator.gotoSitePage(
+				pageName = "Test Page Name",
+				siteName = "Test Site Name");
+
+			var baseURL = PropsUtil.get("portal.url");
+
+			Portlet.gotoPortletOptions(
+				portletName = "IFrame",
+				portletOption = "Configuration");
+
+			IFrame.addCP(sourceURL = "${baseURL}");
+
+			IFrame.closeFrame();
+		}
+
+		task ("Add the first web content via Web Content Display") {
+			WebContentDisplayPortlet.add(
+				webContentContent = "Web Content Content 1",
+				webContentTitle = "Web Content Title 1");
+		}
+
+		task ("Add the second web content via content panel") {
+			WidgetPages.addNewContent(assetType = "Basic Web Content");
+
+			WebContent.addCP(
+				webContentContent = "Web Content Content 2",
+				webContentTitle = "Web Content Title 2");
+
+			PortletEntry.publish();
+		}
+
+		task ("View the Home page shown in IFrame widget") {
+			SelectFrame.selectFrameNoLoading(locator1 = "IFrame#IFRAME_PORTLET");
+
+			Smoke.viewWelcomeContentPage();
+
+			SelectFrameTop();
+		}
+
+		task ("View the first web content shown in Web Content Display widget") {
+			WebContentDisplayPortlet.viewContent(
+				webContentContent = "Web Content Content 1",
+				webContentTitle = "Web Content Title 1");
+		}
+	}
+
+}

@@ -1,0 +1,24 @@
+{
+	"cssClasses": [
+	],
+	"gutters": true,
+	"indexed": true,
+	"landscapeMobile": {
+		"styles": {
+		}
+	},
+	"modulesPerRow": 6,
+	"numberOfColumns": 6,
+	"portraitMobile": {
+		"styles": {
+		}
+	},
+	"reverseOrder": false,
+	"styles": {
+	},
+	"tablet": {
+		"styles": {
+		}
+	},
+	"verticalAlignment": "top"
+}

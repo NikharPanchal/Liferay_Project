@@ -1,0 +1,12 @@
+@default = "paste"
+definition {
+
+	function paste {
+		selenium.waitForVisible();
+
+		selenium.mouseOver();
+
+		selenium.paste();
+	}
+
+}

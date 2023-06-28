@@ -1,0 +1,29 @@
+@default = "mouseOver"
+@summary = "Mouse over '${locator1}'"
+definition {
+
+	function javaScriptMouseOver {
+		selenium.javaScriptMouseOver();
+	}
+
+	function mouseOver {
+		selenium.waitForVisible();
+
+		selenium.mouseOver();
+	}
+
+	function mouseOverInvisible {
+		selenium.waitForElementPresent();
+
+		selenium.mouseOver();
+	}
+
+	function mouseOverNotVisible {
+		selenium.waitForElementPresent();
+
+		selenium.mouseOver();
+
+		selenium.waitForVisible();
+	}
+
+}

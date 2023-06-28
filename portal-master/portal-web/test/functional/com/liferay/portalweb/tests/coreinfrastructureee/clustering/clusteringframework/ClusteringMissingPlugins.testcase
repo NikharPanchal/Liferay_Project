@@ -1,0 +1,235 @@
+@component-name = "portal-clustering"
+definition {
+
+	property app.server.bundles.size = "1";
+	property cluster.enabled = "true";
+	property minimum.slave.ram = "24";
+	property portal.release = "true";
+	property portal.upstream = "true";
+	property remote.elasticsearch.enabled = "true";
+	property testray.main.component.name = "Clustering";
+
+	setUp {
+		TestCase.setUpPortalInstance();
+
+		User.firstLoginPG();
+	}
+
+	tearDown {
+		var testPortalInstance = PropsUtil.get("test.portal.instance");
+
+		if ("${testPortalInstance}" == "true") {
+			PortalInstances.tearDownCP();
+		}
+		else {
+			PagesAdmin.tearDownCP();
+
+			BlogsEntry.tearDownCP();
+		}
+	}
+
+	@priority = "4"
+	test CacheReplicationbyCopy {
+		property custom.properties = "ehcache.replicator.properties.test.cache=replicatePutsViaCopy=true";
+		property test.name.skip.portal.instance = "ClusteringMissingPlugins#CacheReplicationbyCopy";
+
+		Clustering.viewClusterStatusInConsole();
+
+		Clustering.deployClusteringModule(nodePort = "8080");
+
+		Clustering.viewTextNotPresentOnSpecificNode(
+			exceptionText = "Could not resolve module: com.liferay.portal.cluster.multiple.sample.web",
+			nodePort = "8080");
+
+		Clustering.runGroovyScript(
+			nodePort = "8080",
+			scriptFile = "groovy-script-portal-cache-put-modules.groovy");
+
+		Clustering.viewTextPresentOnSpecificNode(
+			expectedText = "Put test.key into test.cache",
+			nodePort = "8080");
+
+		Clustering.viewTextNotPresentOnSpecificNode(
+			exceptionText = "Unable to deserialize object",
+			nodePort = "9080");
+
+		Clustering.runGroovyScript(
+			nodePort = "9080",
+			scriptFile = "groovy-script-portal-cache-get.groovy");
+
+		AssertTextEquals(
+			locator1 = "ServerAdministrationScript#OUTPUT_FIELD",
+			value1 = "test.cache is empty");
+
+		Clustering.runGroovyScript(
+			nodePort = "9080",
+			scriptFile = "groovy-script-portal-cache-remove.groovy");
+
+		Clustering.viewTextPresentOnSpecificNode(
+			expectedText = "Removed test.key from test.cache",
+			nodePort = "8080");
+
+		Clustering.viewTextPresentOnSpecificNode(
+			expectedText = "Removed test.key from test.cache",
+			nodePort = "9080");
+
+		Clustering.runGroovyScript(
+			nodePort = "8080",
+			scriptFile = "groovy-script-portal-cache-put-modules.groovy");
+
+		Clustering.viewTextPresentOnSpecificNode(
+			expectedText = "Unable to deserialize object",
+			nodePort = "9080");
+
+		Clustering.deployClusteringModule(nodePort = "9080");
+
+		Clustering.viewTextNotPresentOnSpecificNode(
+			exceptionText = "Could not resolve module: com.liferay.portal.cluster.multiple.sample.web",
+			nodePort = "9080");
+
+		Clustering.runGroovyScript(
+			nodePort = "9080",
+			scriptFile = "groovy-script-portal-cache-get.groovy");
+
+		AssertTextEquals(
+			locator1 = "ServerAdministrationScript#OUTPUT_FIELD",
+			value1 = "test.cache is empty");
+
+		Clustering.runGroovyScript(
+			nodePort = "8080",
+			scriptFile = "groovy-script-portal-cache-remove.groovy");
+
+		Clustering.runGroovyScript(
+			nodePort = "8080",
+			scriptFile = "groovy-script-portal-cache-put-modules.groovy");
+
+		Clustering.viewTextPresentOnSpecificNode(
+			expectedText = "Put test.key into test.cache",
+			nodePort = "9080");
+	}
+
+	@priority = "4"
+	test ScheduleJobOnAllClusterNodes {
+		property test.name.skip.portal.instance = "ClusteringMissingPlugins#ScheduleJobOnAllClusterNodes";
+
+		Clustering.viewClusterStatusInConsole();
+
+		Clustering.enableDebugging(
+			categoryName = "com.liferay.portal.cluster.multiple.sample.web.internal",
+			nodePort = "8080");
+
+		Clustering.runGroovyScript(
+			nodePort = "8080",
+			scriptFile = "groovy-script-master-slave.groovy");
+
+		AssertTextEquals(
+			locator1 = "ServerAdministrationScript#OUTPUT_FIELD",
+			value1 = "This node is master node");
+
+		Clustering.runGroovyScript(
+			nodePort = "9080",
+			scriptFile = "groovy-script-master-slave.groovy");
+
+		AssertTextEquals(
+			locator1 = "ServerAdministrationScript#OUTPUT_FIELD",
+			value1 = "This node is slave node");
+
+		Clustering.deployClusteringModule(nodePort = "9080");
+
+		Clustering.enableDebugging(
+			categoryName = "com.liferay.portal.cluster.multiple.sample.web.internal",
+			nodePort = "9080");
+
+		Pause(locator1 = "10000");
+
+		Clustering.viewTextNotPresentOnSpecificNode(
+			exceptionText = "Received message at",
+			nodePort = "8080");
+
+		Clustering.viewTextNotPresentOnSpecificNode(
+			exceptionText = "Received message at",
+			nodePort = "9080");
+
+		Clustering.deployClusteringModule(nodePort = "8080");
+
+		Clustering.enableDebugging(
+			categoryName = "com.liferay.portal.cluster.multiple.sample.web.internal",
+			nodePort = "8080");
+
+		Pause(locator1 = "10000");
+
+		Clustering.viewTextPresentOnSpecificNode(
+			expectedText = "Received message at",
+			nodePort = "8080");
+
+		Clustering.shutdownSpecificServer(nodePort = "8080");
+
+		Clustering.runGroovyScript(
+			nodePort = "9080",
+			scriptFile = "groovy-script-master-slave.groovy");
+
+		AssertTextEquals(
+			locator1 = "ServerAdministrationScript#OUTPUT_FIELD",
+			value1 = "This node is master node");
+
+		Pause(locator1 = "10000");
+
+		Clustering.viewTextPresentOnSpecificNode(
+			expectedText = "Received message at",
+			nodePort = "9080");
+	}
+
+	@priority = "4"
+	test ScheduleJobOnClusterNode1 {
+		property test.name.skip.portal.instance = "ClusteringMissingPlugins#ScheduleJobOnClusterNode1";
+
+		Clustering.viewClusterStatusInConsole();
+
+		Clustering.enableDebugging(
+			categoryName = "com.liferay.portal.cluster.multiple.sample.web.internal",
+			nodePort = "9080");
+
+		Clustering.deployClusteringModule(nodePort = "8080");
+
+		Clustering.enableDebugging(
+			categoryName = "com.liferay.portal.cluster.multiple.sample.web.internal",
+			nodePort = "8080");
+
+		Pause(locator1 = "10000");
+
+		Clustering.viewTextPresentOnSpecificNode(
+			expectedText = "Received message at",
+			nodePort = "8080");
+
+		Clustering.shutdownSpecificServer(nodePort = "8080");
+
+		Clustering.runGroovyScript(
+			nodePort = "9080",
+			scriptFile = "groovy-script-master-slave.groovy");
+
+		AssertTextEquals(
+			locator1 = "ServerAdministrationScript#OUTPUT_FIELD",
+			value1 = "This node is master node");
+
+		Clustering.viewTextNotPresentOnSpecificNode(
+			exceptionText = "Received message at",
+			nodePort = "9080");
+
+		Clustering.deployClusteringModule(nodePort = "9080");
+
+		Clustering.enableDebugging(
+			categoryName = "com.liferay.portal.cluster.multiple.sample.web.internal",
+			nodePort = "9080");
+
+		Pause(locator1 = "10000");
+
+		Clustering.viewTextPresentOnSpecificNode(
+			expectedText = "Scheduler job com.liferay.portal.cluster.multiple.sample.web.internal.messaging.ClusterSampleMessageListener.com.liferay.portal.cluster.multiple.sample.web.internal.messaging.ClusterSampleMessageListener already exists",
+			nodePort = "9080");
+
+		Clustering.viewTextPresentOnSpecificNode(
+			expectedText = "Received message at",
+			nodePort = "9080");
+	}
+
+}

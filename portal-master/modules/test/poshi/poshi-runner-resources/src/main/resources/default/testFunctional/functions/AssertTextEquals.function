@@ -1,0 +1,55 @@
+@default = "assertTextEquals"
+@summary = "Assert that '${locator1}' equals the value '${value1}'"
+definition {
+
+	@summary = "Assert that '${locator1}' contains the value '${value1}'"
+	function assertPartialText {
+		selenium.waitForVisible();
+
+		selenium.waitForPartialTextCaseInsensitive();
+
+		selenium.assertPartialTextCaseInsensitive();
+	}
+
+	function assertPartialTextAceEditor {
+		selenium.waitForVisible();
+
+		selenium.waitForPartialTextAceEditor();
+
+		selenium.assertPartialTextAceEditor();
+	}
+
+	function assertText {
+		selenium.waitForVisible();
+
+		selenium.waitForTextCaseInsensitive();
+
+		selenium.assertTextCaseInsensitive();
+	}
+
+	function assertTextCaseSensitive {
+		selenium.waitForVisible();
+
+		selenium.waitForText();
+
+		selenium.assertText();
+	}
+
+	function assertTextEquals {
+		if (contains("${locator1}", "/input")) {
+			AssertTextEquals.assertValue();
+		}
+		else {
+			AssertTextEquals.assertText();
+		}
+	}
+
+	function assertValue {
+		selenium.waitForVisible();
+
+		selenium.waitForValue();
+
+		selenium.assertValue();
+	}
+
+}

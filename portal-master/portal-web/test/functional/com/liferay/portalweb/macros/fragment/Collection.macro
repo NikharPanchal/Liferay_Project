@@ -1,0 +1,49 @@
+definition {
+
+	macro deleteCollection {
+		Navigator.gotoNavNested(navNested = "${collectionName}");
+
+		LexiconEntry.gotoEllipsisMenuItem(menuItem = "Delete");
+
+		AssertTextEquals(
+			locator1 = "Modal#BODY",
+			value1 = "Deleting a fragment set is an action impossible to revert. All the fragments in the set will be removed and it will not be possible to recover them.");
+
+		Click(
+			key_text = "Delete",
+			locator1 = "Modal#MODAL_FOOTER_BUTTON");
+	}
+
+	macro editCollection {
+		PortletEntry.inputName(name = "${collectionName}");
+
+		if (isSet(collectionDescription)) {
+			PortletEntry.inputDescription(description = "${collectionDescription}");
+		}
+	}
+
+	macro renameCollection {
+		Navigator.gotoNavNested(navNested = "${collectionName}");
+
+		LexiconEntry.gotoEllipsisMenuItem(menuItem = "Edit");
+
+		Collection.editCollection(
+			collectionDescription = "${collectionDescription}",
+			collectionName = "${collectionNameEdit}");
+
+		PortletEntry.save();
+	}
+
+	macro viewNotPresent {
+		AssertElementNotPresent(
+			key_navNested = "${collectionName}",
+			locator1 = "NavNested#NAV_NESTED_LINK");
+	}
+
+	macro viewPresent {
+		AssertElementPresent(
+			key_navNested = "${collectionName}",
+			locator1 = "NavNested#NAV_NESTED_LINK");
+	}
+
+}

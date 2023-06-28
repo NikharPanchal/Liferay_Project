@@ -1,0 +1,16 @@
+task runGradleTest
+
+gradle.liferayWorkspace {
+	bundleUrl = uri("bundle.zip")
+	product = "portal-7.4-ga8"
+}
+
+runGradleTest {
+	dependsOn initBundle
+
+	doLast {
+		File bundleFile = file("cacheDir/bundle.zip")
+
+		assert bundleFile.exists()
+	}
+}

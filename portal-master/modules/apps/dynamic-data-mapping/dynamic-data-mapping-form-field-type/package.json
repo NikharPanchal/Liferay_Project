@@ -1,0 +1,31 @@
+{
+	"dependencies": {
+		"axios": "0.24.0",
+		"leaflet": "1.7.1",
+		"moment": "^2.22.2",
+		"text-mask-addons": "^3.7.1",
+		"text-mask-core": "^5.1.2"
+	},
+	"jest": {
+		"setupFiles": [
+			"<rootDir>/jest-setup.config.js"
+		],
+		"snapshotSerializers": [
+			"metal-jest-serializer"
+		],
+		"testPathIgnorePatterns": [
+			"Tooltip",
+			"withContextMock"
+		]
+	},
+	"main": "index.js",
+	"name": "dynamic-data-mapping-form-field-type",
+	"private": true,
+	"scripts": {
+		"build": "liferay-npm-scripts build",
+		"checkFormat": "liferay-npm-scripts check",
+		"format": "liferay-npm-scripts fix",
+		"test": "liferay-npm-scripts test"
+	},
+	"version": "6.0.102"
+}

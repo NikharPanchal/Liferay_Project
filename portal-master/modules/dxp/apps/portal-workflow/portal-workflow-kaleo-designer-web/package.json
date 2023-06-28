@@ -1,0 +1,28 @@
+{
+	"dependencies": {
+		"dagre": "0.8.2",
+		"moment": "2.24.0",
+		"react-flow-renderer": "9.7.0",
+		"uuid": "^3.3.2"
+	},
+	"jest": {
+		"setupFiles": [
+			"<rootDir>/test/mock/mockResizeObserver.js"
+		],
+		"setupFilesAfterEnv": [
+			"<rootDir>/test/setup.js"
+		],
+		"testPathIgnorePatterns": [
+			"<rootDir>/test/setup.js",
+			"<rootDir>/test/mock"
+		]
+	},
+	"name": "portal-workflow-kaleo-designer-web",
+	"scripts": {
+		"build": "liferay-npm-scripts build",
+		"checkFormat": "liferay-npm-scripts check",
+		"format": "liferay-npm-scripts fix",
+		"test": "liferay-npm-scripts test"
+	},
+	"version": "5.0.64"
+}

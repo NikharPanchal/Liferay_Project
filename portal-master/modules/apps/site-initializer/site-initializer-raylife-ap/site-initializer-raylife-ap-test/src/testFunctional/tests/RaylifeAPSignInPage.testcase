@@ -1,0 +1,87 @@
+@component-name = "portal-solutions"
+definition {
+
+	property osgi.modules.includes = "site-initializer-raylife-ap";
+	property portal.release = "false";
+	property portal.upstream = "true";
+	property release.feature.flags.disable.DISABLE_PRIVATE_LAYOUTS = "true";
+	property testray.main.component.name = "Site Initializer Raylife AP";
+
+	setUp {
+		TestCase.setUpPortalInstance();
+
+		User.firstLoginPG();
+
+		RaylifeAP.createRaylifeAPSite(siteName = "Raylife AP");
+
+		User.logoutPG();
+	}
+
+	tearDown {
+		var testPortalInstance = PropsUtil.get("test.portal.instance");
+
+		RaylifeAP.tearDownCP();
+
+		if ("${testPortalInstance}" == "true") {
+			PortalInstances.tearDownCP();
+		}
+		else {
+			User.logoutPG();
+		}
+	}
+
+	@description = "LPS-151795 - Verify if user can enter a valid email address"
+	@priority = "5"
+	test CanSignIn {
+		Navigator.openSpecificURL(url = "/web/raylife-ap");
+
+		AssertElementPresent(locator1 = "RaylifeAPSignIn#LOGIN_PAGE");
+
+		RaylifeAPSignIn.signInRaylifeAP();
+
+		AssertElementPresent(locator1 = "RaylifeAP#RAYLIFE_LOGO");
+	}
+
+	@description = "LPS-151792 - Verify if message 'Please enter a valid email address.' appers when email is not valid"
+	@priority = "5"
+	test CanViewMessageEmailNotValid {
+		Navigator.openSpecificURL(url = "/web/raylife-ap");
+
+		RaylifeAPSignIn.signInRaylifeAP(
+			emailAddress = "test",
+			password = "test");
+
+		AssertElementPresent(locator1 = "RaylifeAPSignIn#EMAIL_INVALID_MESSAGE");
+
+		User.firstLoginPG();
+	}
+
+	@description = "LPS-151790 - Check that the message 'This field is required' appears when the e-mail field is required"
+	@priority = "5"
+	test CanViewMessageFieldEmailRequired {
+		Navigator.openSpecificURL(url = "/web/raylife-ap");
+
+		RaylifeAPSignIn.signInRaylifeAP(
+			emailAddress = "",
+			password = "test");
+
+		AssertElementPresent(locator1 = "RaylifeAPSignIn#FIELD_REQUIRED_MESSAGE");
+
+		User.firstLoginPG();
+	}
+
+	@description = "LPS-151791 - Check that the message 'This field is required' appears when the password field is required"
+	@priority = "5"
+	test CanViewMessageFieldPasswordRequired {
+		Navigator.openSpecificURL(url = "/web/raylife-ap");
+
+		RaylifeAPSignIn.signInRaylifeAP(
+			emailAddress = "test@liferay.com",
+			password = "");
+
+		AssertElementPresent(locator1 = "RaylifeAPSignIn#FIELD_REQUIRED_MESSAGE");
+
+		User.firstLoginPG();
+	}
+
+}

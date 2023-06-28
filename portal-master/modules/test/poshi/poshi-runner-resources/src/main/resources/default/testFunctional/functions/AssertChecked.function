@@ -1,0 +1,16 @@
+@default = "assertChecked"
+definition {
+
+	function assertChecked {
+		selenium.waitForVisible();
+
+		selenium.assertChecked();
+	}
+
+	function assertCheckedNotVisible {
+		selenium.waitForElementPresent();
+
+		selenium.assertChecked();
+	}
+
+}

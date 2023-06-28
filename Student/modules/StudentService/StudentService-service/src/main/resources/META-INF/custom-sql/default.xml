@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<custom-sql>
+	<sql id="getStudentList">
+		<![CDATA[
+			SELECT * FROM liferaynew.student_table;
+		]]>
+	</sql>
+</custom-sql>

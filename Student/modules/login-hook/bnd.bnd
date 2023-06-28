@@ -1,0 +1,13 @@
+Bundle-Name: login-hook
+Bundle-SymbolicName: login.hook
+Bundle-Version: 1.0.0
+Fragment-Host: com.liferay.login.web.api;bundle-version="2.0.4"
+-consumer-policy: ${replacestring;${range;[==,==]};.*,(.*)];$1}
+-jsp: *.jsp,*.jspf,*.jspx
+-metatype: *
+-plugin.jsp: com.liferay.ant.bnd.jsp.JspAnalyzerPlugin
+-plugin.metatype: com.liferay.ant.bnd.metatype.MetatypePlugin
+-plugin.resourcebundle: com.liferay.ant.bnd.resource.bundle.ResourceBundleLoaderAnalyzerPlugin
+-plugin.sass: com.liferay.ant.bnd.sass.SassAnalyzerPlugin
+-provider-policy: ${replacestring;${range;[==,==]};.*,(.*)];$1}
+-sass: *

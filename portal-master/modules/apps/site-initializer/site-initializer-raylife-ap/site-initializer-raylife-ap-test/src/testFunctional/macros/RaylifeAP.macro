@@ -1,0 +1,37 @@
+definition {
+
+	macro createRaylifeAPSite {
+		Site.openSitesAdmin();
+
+		LexiconEntry.gotoAdd();
+
+		LexiconCard.clickCard(card = "Raylife AP");
+
+		SelectFrame(
+			key_title = "Add Site",
+			locator1 = "IFrame#MODAL_ANY");
+
+		PortletEntry.inputName(name = "${siteName}");
+
+		Click(locator1 = "Button#ADD");
+
+		Alert.viewSuccessMessage();
+
+		Refresh();
+	}
+
+	macro tearDownCP {
+		Site.openSitesAdmin();
+
+		PortletEntry.selectAll();
+
+		Click(locator1 = "Icon#SITES_VERTICAL_ELLIPSIS");
+
+		MenuItem.clickNoError(menuItem = "Delete");
+
+		Click(locator1 = "Button#MODAL_DELETE");
+
+		Alert.viewSuccessMessage();
+	}
+
+}

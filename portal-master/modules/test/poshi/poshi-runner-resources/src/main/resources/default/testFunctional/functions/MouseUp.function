@@ -1,0 +1,14 @@
+@default = "mouseUp"
+definition {
+
+	function mouseUp {
+		selenium.mouseUp();
+	}
+
+	function mouseUpAt {
+		selenium.waitForVisible();
+
+		selenium.mouseUpAt("${locator1}", "${value1}");
+	}
+
+}

@@ -1,0 +1,40 @@
+@default = "keyPress"
+definition {
+
+	function keyDown {
+		selenium.mouseOver();
+
+		selenium.keyDown();
+	}
+
+	function keyPress {
+		selenium.mouseOver();
+
+		selenium.keyPress();
+	}
+
+	function keyPressCKEditorWaitForCKEditor {
+		selenium.waitForVisible("//a[contains(@class,'cke_button__source') and contains(@class,'cke_button_off')]");
+
+		selenium.pause("1000");
+
+		selenium.waitForEditable();
+
+		selenium.mouseOver();
+
+		selenium.keyPress();
+	}
+
+	function keyPressNoError {
+		selenium.mouseOver();
+
+		selenium.keyPress();
+	}
+
+	function keyUp {
+		selenium.mouseOver();
+
+		selenium.keyUp();
+	}
+
+}

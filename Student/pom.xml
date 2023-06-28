@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>student</groupId>
   <artifactId>Student</artifactId>
@@ -10,6 +9,8 @@
   <modules>
     <module>modules</module>
     <module>themes</module>
+    <module>login-fragment</module>
+    <module>login-fragment-demo</module>
   </modules>
   <properties>
     <liferay.workspace.bundle.url>https://releases-cdn.liferay.com/portal/7.4.3.32-ga32/liferay-ce-portal-tomcat-7.4.3.32-ga32-20220704200951543.tar.gz</liferay.workspace.bundle.url>

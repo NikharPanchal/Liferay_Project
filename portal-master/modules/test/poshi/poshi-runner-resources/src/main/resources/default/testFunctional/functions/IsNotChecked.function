@@ -1,0 +1,18 @@
+@default = "isNotChecked"
+definition {
+
+	function isNotChecked {
+		selenium.waitForElementPresent();
+
+		selenium.waitForVisible();
+
+		selenium.isNotChecked();
+	}
+
+	function isNotCheckedNotVisible {
+		selenium.waitForElementPresent();
+
+		selenium.isNotChecked();
+	}
+
+}

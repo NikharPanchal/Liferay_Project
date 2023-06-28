@@ -1,0 +1,83 @@
+definition {
+
+	var userEmailAddress = "test@liferay.com";
+	var userPassword = "test";
+	var userPasswordReminderAnswer = "test";
+
+	macro _signIn {
+		if (isSet(virtualHostsURL)) {
+			Navigator.openSpecificURL(url = "${virtualHostsURL}/web/guest?SM_USER=${userEmailAddress}");
+		}
+		else {
+			var baseURL = PropsUtil.get("portal.url");
+
+			Navigator.openSpecificURL(url = "${baseURL}/web/guest?SM_USER=${userEmailAddress}");
+		}
+
+		if (isSet(licenseExpired)) {
+			Navigator.openURL();
+		}
+		else {
+			AssertElementPresent(locator1 = "UserBar#USER_AVATAR_IMAGE");
+		}
+
+		WaitForLiferayEvent.initializeLiferayEventLog();
+	}
+
+	@summary = "Agree to Liferay Portal Terms of Use"
+	macro agreeToTermsOfUse {
+		AssertClick(
+			locator1 = "Button#I_AGREE",
+			value1 = "I Agree");
+
+		AssertElementNotPresent(locator1 = "Button#I_AGREE");
+	}
+
+	@summary = "Enter '${userPasswordReminderAnswer}' as password reminder"
+	macro setPasswordReminder {
+		Type(
+			locator1 = "TextInput#ANSWER",
+			value1 = "${userPasswordReminderAnswer}");
+
+		Button.clickSave();
+	}
+
+	@summary = "Sign in to Liferay Portal as '${userEmailAddress}' using the password '${userPassword}'"
+	macro signIn {
+		SignIn._signIn(
+			userEmailAddress = "${userEmailAddress}",
+			userPassword = "${userPassword}");
+	}
+
+	macro signInPortalInstanceSetUp {
+		var portalURL = PropsUtil.get("portal.url");
+
+		var portalURL = StringUtil.replace("${portalURL}", "http://", "");
+
+		var portalURL = StringUtil.replace("${portalURL}", ":8080", "");
+
+		HeadlessPortalInstanceAPI.addPortalInstance(
+			authenticationMethod = "${authenticationMethod}",
+			domain = "liferay.com",
+			portalInstanceId = "${portalURL}",
+			virtualHost = "${portalURL}");
+	}
+
+	macro signInSpecificURL {
+		SignIn._signIn(
+			userEmailAddress = "${userEmailAddress}",
+			userPassword = "${userPassword}",
+			virtualHostsURL = "${url}");
+	}
+
+	@summary = "Sign in to Liferay Portal as '${userEmailAddress}' using the password '${userPassword}'"
+	macro signInTestSetup {
+		JSONUser.agreeToTermsAndAnswerReminderQuery(userEmailAddress = "test@liferay.com");
+
+		SignIn._signIn(
+			licenseExpired = "${licenseExpired}",
+			userEmailAddress = "${userEmailAddress}",
+			userPassword = "${userPassword}");
+	}
+
+}

@@ -1,0 +1,43 @@
+@default = "open"
+@summary = "Open browser to '${locator1}'"
+definition {
+
+	function open {
+		WaitForSPARefresh();
+
+		selenium.selectWindow("null");
+
+		selenium.selectFrame("relative=top");
+
+		selenium.open();
+
+		WaitForLiferayEvent.initializeLiferayEventLog();
+
+		selenium.assertJavaScriptErrors();
+
+		selenium.assertLiferayErrors();
+
+		WaitForSPARefresh();
+	}
+
+	function openInTheNewTab {
+		WaitForSPARefresh();
+
+		RobotType.robotTypeShortcut(locator1 = "Ctrl + t");
+
+		SelectWindow.selectPopUp(locator1 = "null");
+
+		selenium.open();
+	}
+
+	function openNoError {
+		WaitForSPARefresh();
+
+		selenium.selectWindow("null");
+
+		selenium.selectFrame("relative=top");
+
+		selenium.open();
+	}
+
+}

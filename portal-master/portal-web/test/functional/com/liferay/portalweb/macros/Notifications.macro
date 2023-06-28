@@ -1,0 +1,377 @@
+definition {
+
+	macro acceptRequest {
+		var key_requestsTitle = "${requestsTitle}";
+
+		AssertTextEquals(
+			locator1 = "Notifications#NOTIFICATIONS_TITLE",
+			value1 = "${requestsTitle}");
+
+		AssertClick(
+			locator1 = "Button#CONFIRM",
+			value1 = "Confirm");
+	}
+
+	macro clickOnTheNotificationTitle {
+		AssertClick(
+			locator1 = "Notifications#NOTIFICATIONS_TITLE_TEXT",
+			value1 = "${key_notificationsTitle}");
+	}
+
+	macro deleteAllNotifications {
+		Refresh();
+
+		if (IsElementPresent(locator1 = "Notifications#PROFILE_BADGE_COUNT")) {
+			Navigator.gotoNotifications();
+
+			PortletEntry.selectAll();
+
+			ClickNoError(locator1 = "Icon#DELETE");
+
+			Alert.viewSuccessMessage();
+		}
+	}
+
+	macro deleteNotification {
+		var key_contentBody = "${contentBody}";
+
+		Click(locator1 = "Notifications#NOTIFICATIONS_VERTICAL_ELLIPSIS");
+
+		MenuItem.clickNoError(menuItem = "Delete");
+
+		Alert.viewSuccessMessage();
+
+		AssertElementNotPresent(locator1 = "Notifications#NOTIFICATIONS_CONTENT");
+	}
+
+	macro goToFilterValues {
+		Click(locator1 = "Dropdown#FILTER_AND_ORDER");
+
+		MenuItem.click(menuItem = "${filterValues}");
+	}
+
+	macro gotoNotifications {
+		if (IsElementPresent(locator1 = "Notifications#USER_BAR_BADGE_COUNT")) {
+			Click(locator1 = "Notifications#USER_BAR_BADGE_COUNT");
+		}
+
+		if (IsElementPresent(locator1 = "Notifications#PROFILE_BADGE_COUNT")) {
+			Click(locator1 = "Notifications#PROFILE_BADGE_COUNT");
+		}
+
+		if (IsElementPresent(locator1 = "Notifications#MY_ACCOUNT_BADGE_COUNT")) {
+			Click(locator1 = "Notifications#MY_ACCOUNT_BADGE_COUNT");
+		}
+
+		if (IsElementPresent(locator1 = "Notifications#NOTIFICATIONS_BADGE_COUNT")) {
+			Click(locator1 = "Notifications#NOTIFICATIONS_BADGE_COUNT");
+		}
+
+		if (IsElementPresent(locator1 = "Notifications#USER_NAVIGATION_BAR_BADGE_COUNT")) {
+			Click(locator1 = "Notifications#USER_NAVIGATION_BAR_BADGE_COUNT");
+		}
+	}
+
+	macro markAsReadViaManagementBar {
+		if (isSet(selectAll)) {
+			PortletEntry.selectAll();
+		}
+		else {
+			LexiconEntry.selectEntry(key_rowEntry = "${notificationsTitle}");
+		}
+
+		Click(locator1 = "Icon#MARK_AS_READ");
+
+		Alert.viewSuccessMessage();
+	}
+
+	macro markAsUnreadViaManagementBar {
+		if (isSet(selectAll)) {
+			PortletEntry.selectAll();
+		}
+		else {
+			LexiconEntry.selectEntry(key_rowEntry = "${notificationsTitle}");
+		}
+
+		Click(locator1 = "Icon#MARK_AS_UNREAD");
+
+		Alert.viewSuccessMessage();
+	}
+
+	macro navigateToContent {
+		var key_contentBody = "${contentBody}";
+
+		AssertClick.assertPartialTextClickAt(
+			locator1 = "Notifications#NOTIFICATIONS_CONTENT",
+			value1 = "${contentBody}");
+	}
+
+	macro removeNotificationsViaManagementBar {
+		if (isSet(selectAll)) {
+			PortletEntry.selectAll();
+		}
+		else {
+			LexiconEntry.selectEntry(key_rowEntry = "${notificationsTitle}");
+		}
+
+		Click(locator1 = "Icon#DELETE");
+
+		Alert.viewSuccessMessage();
+	}
+
+	macro tearDownUnreadNotifications {
+		Navigator.gotoNotifications();
+
+		var key_contentBody = "${contentBody}";
+
+		if (IsElementPresent(locator1 = "Notifications#NOTIFICATIONS_CONTENT")) {
+			AssertClick(
+				locator1 = "Notifications#MARK_AS_READ",
+				value1 = "Mark as Read");
+		}
+	}
+
+	macro viewBadgeCount {
+		if (IsElementPresent(locator1 = "Notifications#USER_BAR_BADGE_COUNT")) {
+			AssertTextEquals(
+				locator1 = "Notifications#USER_BAR_BADGE_COUNT",
+				value1 = "${notificationCount}");
+		}
+
+		if (IsElementPresent(locator1 = "Notifications#PROFILE_BADGE_COUNT")) {
+			AssertTextEquals(
+				locator1 = "Notifications#PROFILE_BADGE_COUNT",
+				value1 = "${notificationCount}");
+		}
+
+		if (IsElementPresent(locator1 = "Notifications#MY_ACCOUNT_BADGE_COUNT")) {
+			AssertTextEquals(
+				locator1 = "Notifications#MY_ACCOUNT_BADGE_COUNT",
+				value1 = "${notificationCount}");
+		}
+
+		if (IsElementPresent(locator1 = "Notifications#NOTIFICATIONS_BADGE_COUNT")) {
+			if (IsElementPresent.isVisible(locator1 = "Notifications#NOTIFICATIONS_BADGE_COUNT")) {
+				AssertTextEquals(
+					locator1 = "Notifications#NOTIFICATIONS_BADGE_COUNT",
+					value1 = "${notificationCount}");
+			}
+		}
+
+		if (IsElementPresent(locator1 = "Notifications#USER_NAVIGATION_BAR_BADGE_COUNT")) {
+			AssertTextEquals(
+				locator1 = "Notifications#USER_NAVIGATION_BAR_BADGE_COUNT",
+				value1 = "${notificationCount}");
+		}
+	}
+
+	macro viewDefaultContent {
+		AssertTextEquals(
+			locator1 = "Message#EMPTY_INFO",
+			value1 = "You do not have any notifications.");
+	}
+
+	macro viewDeletedContent {
+		AssertTextEquals(
+			locator1 = "Notifications#NOTIFICATIONS_TITLE",
+			value1 = "Notification no longer applies.");
+
+		AssertTextEquals(
+			key_contentBody = "${contentBody}",
+			locator1 = "Notifications#NOTIFICATIONS_CONTENT",
+			value1 = "${contentBody}");
+
+		if (isSet(noOptions)) {
+			AssertElementNotPresent(
+				key_contentBody = "${contentBody}",
+				locator1 = "Notifications#NOTIFICATIONS_VERTICAL_ELLIPSIS");
+		}
+	}
+
+	macro viewExpiredContent {
+		AssertTextEquals(
+			locator1 = "Notifications#NOTIFICATIONS_TITLE",
+			value1 = "${user}: document has expired.");
+
+		AssertTextEquals(
+			key_contentBody = "${contentBody}",
+			locator1 = "Notifications#NOTIFICATIONS_CONTENT",
+			value1 = "${contentBody}");
+	}
+
+	macro viewNewComment {
+		var assetType = StringUtil.lowerCase("${assetType}");
+		var key_contentBody = "${contentBody}";
+
+		if (isSet(fragmentName)) {
+			AssertTextEquals.assertPartialText(
+				locator1 = "Notifications#NOTIFICATIONS_TITLE",
+				value1 = "${user} added a new comment to ${fragmentName}");
+
+			AssertTextEquals.assertPartialText(
+				locator1 = "Notifications#NOTIFICATIONS_TITLE",
+				value1 = "in the &quot;Content Page Name&quot; page.");
+		}
+		else if (isSet(mentioned)) {
+			AssertTextEquals.assertPartialText(
+				locator1 = "Notifications#NOTIFICATIONS_TITLE",
+				value1 = "${user} mentioned you in a comment in a ${assetType}.");
+		}
+		else {
+			AssertTextEquals(
+				locator1 = "Notifications#NOTIFICATIONS_TITLE",
+				value1 = "${user} added a new ${assetType} to ${content}.");
+		}
+
+		AssertTextEquals.assertPartialText(
+			locator1 = "Notifications#NOTIFICATIONS_CONTENT",
+			value1 = "${contentBody}");
+
+		if (isSet(viewEllipsisIcon)) {
+			AssertVisible(locator1 = "Notifications#NOTIFICATIONS_VERTICAL_ELLIPSIS");
+		}
+	}
+
+	macro viewNewContent {
+		var assetType = StringUtil.lowerCase("${assetType}");
+		var key_contentBody = "${contentBody}";
+
+		AssertTextEquals(
+			locator1 = "Notifications#NOTIFICATIONS_TITLE",
+			value1 = "${user} added a new ${assetType}.");
+
+		AssertTextEquals(
+			locator1 = "Notifications#NOTIFICATIONS_CONTENT",
+			value1 = "${contentBody}");
+	}
+
+	macro viewNewSharedContent {
+		var key_contentSharingPermission = "${contentSharingPermission}";
+		var key_contentTitle = "${contentTitle}";
+		var key_ownerName = "${ownerName}";
+
+		if (isSet(specialCharacter)) {
+			AssertTextEquals(
+				locator1 = "Sharing#NOTIFICATIONS_TITLE_SPECIAL",
+				value1 = "${ownerName} has shared ${contentTitle} with you for ${contentSharingPermission}.");
+		}
+		else {
+			AssertTextEquals(
+				locator1 = "Sharing#NOTIFICATIONS_TITLE",
+				value1 = "${ownerName} has shared ${contentTitle} with you for ${contentSharingPermission}.");
+		}
+
+		if (isSet(openNotification)) {
+			AssertClick(
+				locator1 = "Sharing#NOTIFICATIONS_TITLE",
+				value1 = "${ownerName} has shared ${contentTitle} with you for ${contentSharingPermission}.");
+		}
+	}
+
+	macro viewNoNotificationEntry {
+		AssertElementNotPresent(locator1 = "Notifications#USER_BAR_BADGE_COUNT");
+
+		AssertElementNotPresent(locator1 = "Notifications#NOTIFICATIONS_CONTENT_GENERIC");
+
+		AssertElementNotPresent(locator1 = "Notifications#NOTIFICATIONS_TITLE");
+	}
+
+	macro viewNoNotifications {
+		if ("${activePanel}" == "Profile") {
+			AssertElementNotPresent(locator1 = "Notifications#PROFILE_BADGE_COUNT");
+		}
+
+		if ("${activePanel}" == "My Account") {
+			AssertElementNotPresent(locator1 = "Notifications#MY_ACCOUNT_BADGE_COUNT");
+		}
+
+		if ("${activePanel}" == "Notifications") {
+			AssertElementNotPresent(locator1 = "Notifications#NOTIFICATIONS_BADGE_COUNT");
+		}
+	}
+
+	macro viewNoPermissions {
+		Notifications.viewBadgeCount(notificationCount = "${notificationCount}");
+
+		Notifications.gotoNotifications();
+
+		Notifications.navigateToContent(contentBody = "${contentBody}");
+
+		AssertTextEquals(
+			locator1 = "Home#ERROR_MESSAGE_ALERT_ERROR",
+			value1 = "Forbidden");
+	}
+
+	macro viewNoRequest {
+		AssertElementNotPresent(locator1 = "Button#CONFIRM");
+
+		AssertElementNotPresent(locator1 = "Button#IGNORE");
+	}
+
+	macro viewRequest {
+		var key_navLinkOption = "Requests List";
+
+		Click(locator1 = "Notifications#REQUESTS_LIST_TAB");
+
+		AssertTextEquals(
+			locator1 = "Notifications#NOTIFICATIONS_TITLE",
+			value1 = "${requestsTitle}");
+	}
+
+	macro viewReviewContent {
+		AssertTextEquals(
+			locator1 = "Notifications#NOTIFICATIONS_TITLE",
+			value1 = "${user} needs to review the document.");
+
+		AssertTextEquals(
+			key_contentBody = "${contentBody}",
+			locator1 = "Notifications#NOTIFICATIONS_CONTENT",
+			value1 = "${contentBody}");
+	}
+
+	macro viewSpecificNotificationDetails {
+		AssertTextEquals(
+			key_notificationsTitle = "${notificationsTitle}",
+			locator1 = "Notifications#NOTIFICATIONS_TITLE_SPECIFIC",
+			value1 = "${notificationsTitle}.");
+
+		AssertTextEquals(
+			key_notificationsTitle = "${notificationsTitle}",
+			locator1 = "Notifications#NOTIFICATIONS_CONTENT_SPECIFIC",
+			value1 = "${contentBody}");
+	}
+
+	macro viewSuccessfulPublication {
+		var key_contentBody = "${contentBody}";
+		var key_portletName = "${portletName}";
+		var key_publicationType = "${publicationType}";
+
+		AssertTextEquals(
+			locator1 = "Notifications#NOTIFICATIONS_TITLE",
+			value1 = "${portletName} ${publicationType} ${contentBody}");
+	}
+
+	macro viewUpdatedContent {
+		var assetType = StringUtil.lowerCase("${assetType}");
+		var key_contentBody = "${contentBody}";
+
+		AssertTextEquals(
+			locator1 = "Notifications#NOTIFICATIONS_TITLE",
+			value1 = "${user} updated a ${assetType}.");
+
+		AssertTextEquals(
+			locator1 = "Notifications#NOTIFICATIONS_CONTENT",
+			value1 = "${contentBody}");
+	}
+
+	macro waitForNotificationFlexibly {
+		Pause(locator1 = "${waitingTime}");
+
+		while (IsElementNotPresent(locator1 = "Notifications#PROFILE_BADGE_COUNT")) {
+			Pause(locator1 = "${flexibleRefreshingTime}");
+
+			Refresh();
+		}
+	}
+
+}

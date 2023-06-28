@@ -1,0 +1,28 @@
+@default = "doubleClick"
+definition {
+
+	function doubleClick {
+		selenium.waitForVisible();
+
+		selenium.mouseOver();
+
+		selenium.doubleClick();
+	}
+
+	function doubleClickAt {
+		selenium.waitForVisible();
+
+		selenium.mouseOver();
+
+		selenium.doubleClickAt();
+	}
+
+	function javaScriptDoubleClick {
+		selenium.waitForVisible();
+
+		selenium.mouseOver();
+
+		selenium.javaScriptDoubleClick();
+	}
+
+}

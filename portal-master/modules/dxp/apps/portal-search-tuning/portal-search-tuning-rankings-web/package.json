@@ -1,0 +1,26 @@
+{
+	"dependencies": {
+		"lodash.isfunction": "3.0.9",
+		"lodash.times": "^4.3.2"
+	},
+	"jest": {
+		"setupFilesAfterEnv": [
+			"<rootDir>/test/js/setup.es.js"
+		],
+		"testPathIgnorePatterns": [
+			"<rootDir>/test/js/mocks/*",
+			"<rootDir>/test/js/setup.es.js"
+		]
+	},
+	"main": "js/index.es.js",
+	"name": "portal-search-ranking-web",
+	"private": true,
+	"scripts": {
+		"build": "liferay-npm-scripts build",
+		"checkFormat": "liferay-npm-scripts check",
+		"format": "liferay-npm-scripts fix",
+		"storybook": "liferay-npm-scripts storybook",
+		"test": "liferay-npm-scripts test"
+	},
+	"version": "3.0.36"
+}

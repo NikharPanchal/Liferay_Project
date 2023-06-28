@@ -6,7 +6,19 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="about-us"/>
+			<item value="home_url"/>
+			<item value="Remember"/>
+			<item value="Remember Me"/>
+			<item value="Remember ME"/>
+			<item value="rememberMe"/>
+			<item value="Reme"/>
+			<item value="Rembe"/>
+			<item value="Email"/>
+			<item value="Email Address"/>
+			<item value="email"/>
 			<item value="get"/>
 		</list>
 		<list key="replacehistory">

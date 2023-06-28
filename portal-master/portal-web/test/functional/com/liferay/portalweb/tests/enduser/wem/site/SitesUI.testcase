@@ -1,0 +1,242 @@
+@component-name = "portal-wcm"
+definition {
+
+	property portal.release = "true";
+	property portal.upstream = "true";
+	property testray.component.names = "Site Administration";
+	property testray.main.component.name = "Site Administration";
+
+	setUp {
+		TestCase.setUpPortalInstance();
+
+		User.firstLoginPG();
+	}
+
+	tearDown {
+		var testPortalInstance = PropsUtil.get("test.portal.instance");
+
+		if ("${testPortalInstance}" == "true") {
+			PortalInstances.tearDownCP();
+		}
+		else {
+			Site.tearDownCP();
+		}
+	}
+
+	@description = "This is a test for LPS-112992. The user could add a child site in Sites admin."
+	@priority = "5"
+	test AddChildSite {
+		property portal.acceptance = "true";
+		property testray.component.names = "Training";
+
+		task ("Add a site via JSON") {
+			JSONGroup.addGroup(groupName = "Site Name");
+		}
+
+		task ("Add a child site") {
+			ApplicationsMenu.gotoPortlet(
+				category = "Sites",
+				panel = "Control Panel",
+				portlet = "Sites");
+
+			Site.addBlankCP(
+				parentSiteName = "Site Name",
+				siteName = "Child SiteName");
+		}
+
+		task ("View child site added") {
+			ApplicationsMenu.gotoPortlet(
+				category = "Sites",
+				panel = "Control Panel",
+				portlet = "Sites");
+
+			Site.viewChildCP(
+				childSiteName = "Child SiteName",
+				siteName = "Site Name");
+		}
+	}
+
+	@description = "Able to add multiple sites basing on different site template."
+	@priority = "4"
+	@uitest
+	test AddSitesMultiple {
+		task ("Add a blank site") {
+			Site.openSitesAdmin();
+
+			Site.addBlankCP(siteName = "Site1 Name");
+		}
+
+		task ("View blank site added") {
+			Site.openSitesAdmin();
+
+			Site.viewCP(siteName = "Site1 Name");
+		}
+
+		task ("Add a site tempalte and add a site basing on site template") {
+			Site.openSitesAdmin();
+
+			SiteTemplates.addCP(siteTemplateName = "Site Template Name");
+
+			Site.openSitesAdmin();
+
+			Site.addCP(
+				siteName = "Site2 Name",
+				siteTemplateName = "Site Template Name",
+				siteType = "Site Template");
+		}
+
+		task ("View site added") {
+			Site.openSitesAdmin();
+
+			Site.viewCP(siteName = "Site2 Name");
+		}
+
+		task ("Add a site basing on Minium site template") {
+			Site.openSitesAdmin();
+
+			Site.addSiteTemplateCP(
+				siteName = "Site3 Name",
+				siteTemplateName = "Minium");
+		}
+
+		task ("View site added") {
+			Site.openSitesAdmin();
+
+			Site.viewCP(siteName = "Site3 Name");
+		}
+	}
+
+	@description = "This is a test for LPS-149293. The user could cancel the site creation."
+	@priority = "4"
+	test CancelSiteCreation {
+		task ("Navigate to the Sites admin") {
+			Site.openSitesAdmin();
+		}
+
+		task ("Cancel site creation after typing name") {
+			LexiconEntry.gotoAdd();
+
+			LexiconCard.clickCard(card = "Blank");
+
+			SelectFrame(locator1 = "IFrame#MODAL_BODY");
+
+			PortletEntry.inputName(name = "Test Site Name");
+
+			Button.clickCancel();
+		}
+
+		task ("View the new site is not created") {
+			Site.openSitesAdmin();
+
+			LexiconTable.viewTableEntryNotPresent(tableEntry = "Test Site Name");
+		}
+	}
+
+	@description = "Able to delete site."
+	@priority = "5"
+	@uitest
+	test DeleteSite {
+		property portal.acceptance = "true";
+
+		task ("Add a blank site") {
+			Site.openSitesAdmin();
+
+			Site.addBlankCP(siteName = "Site Name");
+		}
+
+		task ("Assert able to delete the site") {
+			Site.openSitesAdmin();
+
+			Site.deleteCP(siteName = "Site Name");
+		}
+	}
+
+	@description = "This is a test for LPS-149293. The site creation process continues even though the user close the modal after submitting form."
+	@priority = "5"
+	test ViewSiteCreatedEvenThoughCloseModalAfterSubmitForm {
+		property portal.acceptance = "true";
+		property portal.release = "false";
+
+		task ("Navigate to the Sites admin") {
+			Site.openSitesAdmin();
+		}
+
+		task ("Add a new site based on Minium") {
+			LexiconEntry.gotoAdd();
+
+			LexiconCard.clickCard(card = "Minium");
+
+			SelectFrame(locator1 = "IFrame#MODAL_BODY");
+
+			PortletEntry.inputName(name = "Test Site Name");
+
+			Button.clickAdd();
+		}
+
+		task ("Close the modal") {
+			IFrame.closeFrame();
+		}
+
+		task ("View the new site created") {
+
+			// Temp solution until LPS-146278 finished
+
+			Pause(locator1 = "10000");
+
+			Site.openSitesAdmin();
+
+			LexiconTable.viewTableEntryTitle(tableEntry = "Test Site Name");
+		}
+	}
+
+	@description = "This is a test for LPS-149293 and LPS-146278. The user could view a message in modal when create a new site."
+	@priority = "5"
+	@uitest
+	test ViewSiteCreationMessage {
+		property portal.acceptance = "true";
+		property portal.release = "false";
+
+		task ("Navigate to the Sites admin") {
+			Site.openSitesAdmin();
+		}
+
+		task ("Add a new site based on Raylife D2C") {
+			LexiconEntry.gotoAdd();
+
+			LexiconCard.clickCard(card = "Raylife D2C");
+
+			SelectFrame(locator1 = "IFrame#MODAL_BODY");
+
+			PortletEntry.inputName(name = "Test Site Name");
+
+			Button.clickAdd();
+		}
+
+		task ("View the Add and Cancel buttons are not shown") {
+			for (var button : list "Add,Cancel") {
+				AssertNotVisible(
+					key_text = "${button}",
+					locator1 = "Button#ANY");
+			}
+		}
+
+		task ("View the name field is not shown") {
+			AssertNotVisible(locator1 = "TextInput#NAME");
+		}
+
+		task ("View site creation message") {
+			AssertTextEquals(
+				locator1 = "Message#SUBTITLE",
+				value1 = "The creation of the site may take some time. Closing the window will not cancel the process.");
+		}
+
+		task ("View the new site is created") {
+			SelectFrameTop();
+
+			Alert.viewSuccessMessageText(successMessage = "Site was successfully added.");
+
+			ControlMenu.viewHeaderTitle(headerTitle = "Site Settings");
+		}
+	}
+
+}

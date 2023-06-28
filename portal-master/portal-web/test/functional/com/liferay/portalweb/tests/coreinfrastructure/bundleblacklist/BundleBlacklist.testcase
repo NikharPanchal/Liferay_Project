@@ -1,0 +1,587 @@
+@component-name = "portal-bundle-blacklist"
+definition {
+
+	property osgi.module.configuration.file.names = "com.liferay.portal.bundle.blacklist.internal.configuration.BundleBlacklistConfiguration.config";
+	property osgi.module.configurations = "blacklistBundleSymbolicNames=[&quot;&quot;]";
+	property portal.release = "true";
+	property portal.upstream = "true";
+	property testray.main.component.name = "Bundle Blacklist";
+
+	setUp {
+		TestCase.setUpPortalInstance();
+
+		User.firstLoginPG();
+	}
+
+	tearDown {
+		var testPortalInstance = PropsUtil.get("test.portal.instance");
+
+		if ("${testPortalInstance}" == "true") {
+			PortalInstances.tearDownCP();
+		}
+	}
+
+	@priority = "5"
+	test BlacklistModuleBundleSymbolicName {
+		property portal.acceptance = "true";
+		property test.name.skip.portal.instance = "BundleBlacklist#BlacklistModuleJar";
+
+		ApplicationsMenu.gotoPortlet(
+			category = "System",
+			panel = "Control Panel",
+			portlet = "Gogo Shell");
+
+		ApplicationsMenu.gotoPortlet(
+			category = "Configuration",
+			panel = "Control Panel",
+			portlet = "System Settings");
+
+		SystemSettings.gotoConfiguration(
+			configurationCategory = "Module Container",
+			configurationName = "Bundle Blacklist",
+			configurationScope = "System Scope");
+
+		BundleBlacklist.blacklistModuleAndComponentConfiguration(
+			label = "Blacklist Bundle Symbolic Names",
+			symbolicName = "com.liferay.gogo.shell.web");
+
+		BundleBlacklist.viewProductMenuBlacklistedModule(
+			category = "System",
+			consoleText = "STOPPED com.liferay.gogo.shell.web",
+			panel = "Control Panel",
+			portlet = "Gogo Shell");
+
+		LexiconEntry.gotoEllipsisMenuItem(menuItem = "Reset Default Values");
+
+		AssertConsoleTextPresent(value1 = "Reinstalling bundle com.liferay.gogo.shell.web");
+
+		Navigator.openURL();
+
+		ApplicationsMenu.gotoPortlet(
+			category = "System",
+			panel = "Control Panel",
+			portlet = "Gogo Shell");
+	}
+
+	@priority = "5"
+	test BlacklistModuleLPKG {
+		property osgi.app.includes = "gogo-shell";
+		property portal.acceptance = "true";
+		property test.name.skip.portal.instance = "BundleBlacklist#BlacklistModuleLPKG";
+
+		ApplicationsMenu.gotoPortlet(
+			category = "System",
+			panel = "Control Panel",
+			portlet = "Gogo Shell");
+
+		ApplicationsMenu.gotoPortlet(
+			category = "Configuration",
+			panel = "Control Panel",
+			portlet = "System Settings");
+
+		SystemSettings.gotoConfiguration(
+			configurationCategory = "Module Container",
+			configurationName = "Bundle Blacklist",
+			configurationScope = "System Scope");
+
+		var testRunEnvironment = PropsUtil.get("test.run.environment");
+
+		if ("${testRunEnvironment}" == "EE") {
+			var symbolicName = "Liferay Foundation - Liferay Gogo Shell - Impl";
+		}
+		else {
+			var symbolicName = "Liferay CE Foundation - Liferay CE Gogo Shell - Impl";
+		}
+
+		BundleBlacklist.blacklistModuleAndComponentConfiguration(
+			label = "Blacklist Bundle Symbolic Names",
+			symbolicName = "${symbolicName}");
+
+		BundleBlacklist.viewProductMenuBlacklistedModule(
+			category = "System",
+			consoleText = "STOPPED ${symbolicName}",
+			panel = "Control Panel",
+			portlet = "Gogo Shell");
+	}
+
+	@priority = "4"
+	test BlacklistModuleWar {
+		property test.name.skip.portal.instance = "BundleBlacklist#BlacklistModuleWar";
+
+		PagesAdmin.viewWidgetPageCurrentTheme(
+			pageName = "Search",
+			themeName = "Classic Theme");
+
+		ApplicationsMenu.gotoPortlet(
+			category = "Configuration",
+			panel = "Control Panel",
+			portlet = "System Settings");
+
+		SystemSettings.gotoConfiguration(
+			configurationCategory = "Module Container",
+			configurationName = "Bundle Blacklist",
+			configurationScope = "System Scope");
+
+		BundleBlacklist.blacklistModuleAndComponentConfiguration(
+			label = "Blacklist Bundle Symbolic Names",
+			symbolicName = "classic-theme");
+
+		AssertConsoleTextPresent(value1 = "STOPPED classic-theme");
+
+		PagesAdmin.openPagesAdmin(siteURLKey = "guest");
+
+		PagesAdmin.gotoPageEllipsisMenuItem(
+			menuItem = "Configure",
+			pageName = "Search");
+
+		Navigator.gotoNavTab(navTab = "Look and Feel");
+
+		AssertTextNotPresent(value1 = "Classic Theme");
+	}
+
+	@priority = "3"
+	test CanEnableBlacklistedModuleJarAfterRestart {
+		property osgi.module.configurations = "blacklistBundleSymbolicNames=[&quot;com.liferay.gogo.shell.web&quot;]";
+		property test.name.skip.portal.instance = "BundleBlacklist#CanEnableBlacklistedModuleJarAfterRestart";
+
+		BundleBlacklist.viewProductMenuBlacklistedModule(
+			category = "System",
+			consoleText = "Stopping blacklisted bundle com.liferay.gogo.shell.web",
+			panel = "Control Panel",
+			portlet = "Gogo Shell");
+
+		ApplicationsMenu.gotoPortlet(
+			category = "Configuration",
+			panel = "Control Panel",
+			portlet = "System Settings");
+
+		SystemSettings.gotoConfiguration(
+			configurationCategory = "Module Container",
+			configurationName = "Bundle Blacklist",
+			configurationScope = "System Scope");
+
+		BundleBlacklist.blacklistModuleAndComponentConfiguration(
+			label = "Blacklist Bundle Symbolic Names",
+			symbolicName = " ");
+
+		Portlet.shutdownServer();
+
+		Portlet.startServer(keepOsGiState = "true");
+
+		AssertConsoleTextPresent(value1 = "STARTED com.liferay.gogo.shell.web");
+
+		Navigator.openURL();
+
+		ApplicationsMenu.gotoPortlet(
+			category = "System",
+			panel = "Control Panel",
+			portlet = "Gogo Shell");
+	}
+
+	@priority = "3"
+	test CanEnableBlacklistedModuleLPKGAfterRestart {
+		property osgi.app.includes = "gogo-shell";
+		property test.name.skip.portal.instance = "BundleBlacklist#CanEnableBlacklistedModuleLPKGAfterRestart";
+
+		var testRunEnvironment = PropsUtil.get("test.run.environment");
+
+		if ("${testRunEnvironment}" == "EE") {
+			var symbolicName = "Liferay Foundation - Liferay Gogo Shell - Impl";
+		}
+		else {
+			var symbolicName = "Liferay CE Foundation - Liferay CE Gogo Shell - Impl";
+		}
+
+		OSGiConfig.deployOSGiConfigFile(
+			osgiConfigFileName = "com.liferay.portal.bundle.blacklist.internal.configuration.BundleBlacklistConfiguration.config",
+			osgiConfigs = "blacklistBundleSymbolicNames=[&quot;${symbolicName}&quot; ]");
+
+		Pause(locator1 = "10000");
+
+		BundleBlacklist.viewProductMenuBlacklistedModule(
+			category = "System",
+			consoleText = "STOPPED ${symbolicName}",
+			panel = "Control Panel",
+			portlet = "Gogo Shell");
+
+		ApplicationsMenu.gotoPortlet(
+			category = "Configuration",
+			panel = "Control Panel",
+			portlet = "System Settings");
+
+		SystemSettings.gotoConfiguration(
+			configurationCategory = "Module Container",
+			configurationName = "Bundle Blacklist",
+			configurationScope = "System Scope");
+
+		BundleBlacklist.blacklistModuleAndComponentConfiguration(
+			label = "Blacklist Bundle Symbolic Names",
+			symbolicName = " ");
+
+		Portlet.shutdownServer();
+
+		Portlet.startServer(keepOsGiState = "true");
+
+		AssertConsoleTextPresent(value1 = "STARTED ${symbolicName}");
+
+		Navigator.openURL();
+
+		ApplicationsMenu.gotoPortlet(
+			category = "System",
+			panel = "Control Panel",
+			portlet = "Gogo Shell");
+	}
+
+	@priority = "3"
+	test CanEnableBlacklistedModuleWarAfterRestart {
+		property osgi.module.configurations = "blacklistBundleSymbolicNames=[&quot;minium-theme&quot;]";
+		property test.name.skip.portal.instance = "BundleBlacklist#CanEnableBlacklistedModuleWarAfterRestart";
+
+		AssertConsoleTextPresent(value1 = "Stopping blacklisted bundle minium-theme");
+
+		ApplicationsMenu.gotoPortlet(
+			category = "Configuration",
+			panel = "Control Panel",
+			portlet = "System Settings");
+
+		SystemSettings.gotoConfiguration(
+			configurationCategory = "Module Container",
+			configurationName = "Bundle Blacklist",
+			configurationScope = "System Scope");
+
+		BundleBlacklist.blacklistModuleAndComponentConfiguration(
+			label = "Blacklist Bundle Symbolic Names",
+			symbolicName = " ");
+
+		Portlet.shutdownServer();
+
+		Portlet.startServer(keepOsGiState = "true");
+
+		AssertConsoleTextPresent(value1 = "STARTED minium-theme");
+
+		PagesAdmin.openPagesAdmin(siteURLKey = "guest");
+
+		PagesAdmin.gotoPageEllipsisMenuItem(
+			menuItem = "Configure",
+			pageName = "Search");
+
+		Navigator.gotoNavTab(navTab = "Look and Feel");
+
+		Theme.configureLookAndFeelSpecificLook();
+
+		Click(
+			key_text = "Change Current Theme",
+			locator1 = "Button#ANY");
+
+		SelectFrame(locator1 = "IFrame#MODAL_BODY");
+
+		AssertElementPresent(
+			key_card = "Minium",
+			locator1 = "Card#CARD_TITLE",
+			value1 = "Minium");
+	}
+
+	@priority = "3"
+	test CanRemoveBlacklistedModuleLPKGViaUI {
+		property osgi.app.includes = "gogo-shell";
+		property test.name.skip.portal.instance = "BundleBlacklist#CanRemoveBlacklistedModuleLPKGViaUI";
+
+		var testRunEnvironment = PropsUtil.get("test.run.environment");
+
+		if ("${testRunEnvironment}" == "EE") {
+			var symbolicName = "Liferay Foundation - Liferay Gogo Shell - Impl";
+		}
+		else {
+			var symbolicName = "Liferay CE Foundation - Liferay CE Gogo Shell - Impl";
+		}
+
+		OSGiConfig.deployOSGiConfigFile(
+			osgiConfigFileName = "com.liferay.portal.bundle.blacklist.internal.configuration.BundleBlacklistConfiguration.config",
+			osgiConfigs = "blacklistBundleSymbolicNames=[&quot;${symbolicName}&quot; ]");
+
+		Pause(locator1 = "10000");
+
+		BundleBlacklist.viewProductMenuBlacklistedModule(
+			category = "System",
+			consoleText = "STOPPED ${symbolicName}",
+			panel = "Control Panel",
+			portlet = "Gogo Shell");
+
+		ApplicationsMenu.gotoPortlet(
+			category = "Configuration",
+			panel = "Control Panel",
+			portlet = "System Settings");
+
+		SystemSettings.gotoConfiguration(
+			configurationCategory = "Module Container",
+			configurationName = "Bundle Blacklist",
+			configurationScope = "System Scope");
+
+		BundleBlacklist.blacklistModuleAndComponentConfiguration(
+			label = "Blacklist Bundle Symbolic Names",
+			symbolicName = " ");
+
+		var testRunEnvironment = PropsUtil.get("test.run.environment");
+
+		AssertConsoleTextPresent(value1 = "STARTED ${symbolicName}");
+	}
+
+	@priority = "3"
+	test CanRemoveBlacklistedModuleWarViaUI {
+		property osgi.module.configurations = "blacklistBundleSymbolicNames=[&quot;minium-theme&quot;]";
+		property test.name.skip.portal.instance = "BundleBlacklist#CanRemoveBlacklistedModuleWarViaUI";
+
+		AssertConsoleTextPresent(value1 = "Stopping blacklisted bundle minium-theme");
+
+		PagesAdmin.openPagesAdmin(siteURLKey = "guest");
+
+		PagesAdmin.gotoPageEllipsisMenuItem(
+			menuItem = "Configure",
+			pageName = "Search");
+
+		Navigator.gotoNavTab(navTab = "Look and Feel");
+
+		Theme.configureLookAndFeelSpecificLook();
+
+		Click(
+			key_text = "Change Current Theme",
+			locator1 = "Button#ANY");
+
+		SelectFrame(locator1 = "IFrame#MODAL_BODY");
+
+		AssertElementNotPresent(
+			key_card = "Minium",
+			locator1 = "Card#CARD_TITLE",
+			value1 = "Minium");
+
+		Navigator.openURL();
+
+		ApplicationsMenu.gotoPortlet(
+			category = "Configuration",
+			panel = "Control Panel",
+			portlet = "System Settings");
+
+		SystemSettings.gotoConfiguration(
+			configurationCategory = "Module Container",
+			configurationName = "Bundle Blacklist",
+			configurationScope = "System Scope");
+
+		BundleBlacklist.blacklistModuleAndComponentConfiguration(
+			label = "Blacklist Bundle Symbolic Names",
+			symbolicName = " ");
+
+		AssertConsoleTextPresent(value1 = "Reinstalling bundle minium-theme");
+
+		PagesAdmin.openPagesAdmin(siteURLKey = "guest");
+
+		PagesAdmin.gotoPageEllipsisMenuItem(
+			menuItem = "Configure",
+			pageName = "Search");
+
+		Navigator.gotoNavTab(navTab = "Look and Feel");
+
+		Theme.configureLookAndFeelSpecificLook();
+
+		Click(
+			key_text = "Change Current Theme",
+			locator1 = "Button#ANY");
+
+		SelectFrame(locator1 = "IFrame#MODAL_BODY");
+
+		AssertElementPresent(
+			key_card = "Minium",
+			locator1 = "Card#CARD_TITLE",
+			value1 = "Minium");
+	}
+
+	@priority = "3"
+	test EnableBlacklistedModuleAfterShutdown {
+		property osgi.module.configurations = "blacklistBundleSymbolicNames=[&quot;com.liferay.gogo.shell.web&quot;]";
+		property test.name.skip.portal.instance = "BundleBlacklist#EnableBlacklistedModuleAfterShutdown";
+
+		BundleBlacklist.viewProductMenuBlacklistedModule(
+			category = "System",
+			consoleText = "Stopping blacklisted bundle com.liferay.gogo.shell.web",
+			panel = "Control Panel",
+			portlet = "Gogo Shell");
+
+		Portlet.shutdownServer();
+
+		OSGiConfig.deleteOSGiConfigFile(osgiConfigFileName = "com.liferay.portal.bundle.blacklist.internal.configuration.BundleBlacklistConfiguration.config");
+
+		Portlet.startServer(
+			deleteLiferayHome = "false",
+			keepOsGiState = "true");
+
+		AssertConsoleTextPresent(value1 = "STARTED com.liferay.gogo.shell.web");
+
+		Navigator.openURL();
+
+		ApplicationsMenu.gotoPortlet(
+			category = "System",
+			panel = "Control Panel",
+			portlet = "Gogo Shell");
+	}
+
+	@priority = "5"
+	test ExportBundleBlacklistConfig {
+		property test.name.skip.portal.instance = "BundleBlacklist#ExportBundleBlacklistConfig";
+
+		ApplicationsMenu.gotoPortlet(
+			category = "Configuration",
+			panel = "Control Panel",
+			portlet = "System Settings");
+
+		SystemSettings.gotoConfiguration(
+			configurationCategory = "Module Container",
+			configurationName = "Bundle Blacklist",
+			configurationScope = "System Scope");
+
+		BundleBlacklist.blacklistModuleAndComponentConfiguration(
+			label = "Blacklist Bundle Symbolic Names",
+			symbolicName = "com.liferay.gogo.shell.web");
+
+		SystemSettings.exportConfiguration();
+
+		var tempFileDirectory = selenium.getOutputDirName();
+
+		OSGiConfig.copyOSGiConfigFile(
+			osgiConfigFileBaseDir = "${tempFileDirectory}",
+			osgiConfigFileName = "com.liferay.portal.bundle.blacklist.internal.configuration.BundleBlacklistConfiguration.config");
+
+		AssertConsoleTextNotPresent(value1 = "Reinstalling bundle com.liferay.gogo.shell.web");
+	}
+
+	@priority = "3"
+	test RestartCanNotEnableBlacklistedModuleJarViaUI {
+		property test.name.skip.portal.instance = "BundleBlacklist#RestartCanNotEnableBlacklistedModuleJarViaUI";
+
+		ApplicationsMenu.gotoPortlet(
+			category = "Configuration",
+			panel = "Control Panel",
+			portlet = "System Settings");
+
+		SystemSettings.gotoConfiguration(
+			configurationCategory = "Module Container",
+			configurationName = "Bundle Blacklist",
+			configurationScope = "System Scope");
+
+		BundleBlacklist.blacklistModuleAndComponentConfiguration(
+			label = "Blacklist Bundle Symbolic Names",
+			symbolicName = "com.liferay.gogo.shell.web");
+
+		BundleBlacklist.viewProductMenuBlacklistedModule(
+			category = "System",
+			consoleText = "STOPPED com.liferay.gogo.shell.web",
+			panel = "Control Panel",
+			portlet = "Gogo Shell");
+
+		Portlet.shutdownServer();
+
+		Portlet.startServer(keepOsGiState = "true");
+
+		Navigator.openURL();
+
+		BundleBlacklist.viewProductMenuBlacklistedModule(
+			category = "System",
+			consoleText = "Stopping blacklisted bundle com.liferay.gogo.shell.web",
+			panel = "Control Panel",
+			portlet = "Gogo Shell");
+
+		AssertConsoleTextNotPresent(value1 = "Reinstalling bundle com.liferay.gogo.shell.web");
+	}
+
+	@priority = "3"
+	test RestartCanNotEnableBlacklistedModuleLPKGViaUI {
+		property osgi.app.includes = "gogo-shell";
+		property test.name.skip.portal.instance = "BundleBlacklist#RestartCanNotEnableBlacklistedModuleLPKGViaUI";
+
+		ApplicationsMenu.gotoPortlet(
+			category = "Configuration",
+			panel = "Control Panel",
+			portlet = "System Settings");
+
+		SystemSettings.gotoConfiguration(
+			configurationCategory = "Module Container",
+			configurationName = "Bundle Blacklist",
+			configurationScope = "System Scope");
+
+		var testRunEnvironment = PropsUtil.get("test.run.environment");
+
+		if ("${testRunEnvironment}" == "EE") {
+			var symbolicName = "Liferay Foundation - Liferay Gogo Shell - Impl";
+		}
+		else {
+			var symbolicName = "Liferay CE Foundation - Liferay CE Gogo Shell - Impl";
+		}
+
+		BundleBlacklist.blacklistModuleAndComponentConfiguration(
+			label = "Blacklist Bundle Symbolic Names",
+			symbolicName = "${symbolicName}");
+
+		BundleBlacklist.viewProductMenuBlacklistedModule(
+			category = "System",
+			consoleText = "STOPPED ${symbolicName}",
+			panel = "Control Panel",
+			portlet = "Gogo Shell");
+
+		Portlet.shutdownServer();
+
+		Portlet.startServer(keepOsGiState = "true");
+
+		Navigator.openURL();
+
+		BundleBlacklist.viewProductMenuBlacklistedModule(
+			category = "System",
+			consoleText = "Stopping blacklisted bundle ${symbolicName}",
+			panel = "Control Panel",
+			portlet = "Gogo Shell");
+	}
+
+	@priority = "3"
+	test RestartCanNotEnableBlacklistedModuleWarViaUI {
+		property test.name.skip.portal.instance = "BundleBlacklist#RestartCanNotEnableBlacklistedModuleWarViaUI";
+
+		ApplicationsMenu.gotoPortlet(
+			category = "Configuration",
+			panel = "Control Panel",
+			portlet = "System Settings");
+
+		SystemSettings.gotoConfiguration(
+			configurationCategory = "Module Container",
+			configurationName = "Bundle Blacklist",
+			configurationScope = "System Scope");
+
+		BundleBlacklist.blacklistModuleAndComponentConfiguration(
+			label = "Blacklist Bundle Symbolic Names",
+			symbolicName = "minium-theme");
+
+		AssertConsoleTextPresent(value1 = "STOPPED minium-theme");
+
+		Portlet.shutdownServer();
+
+		Portlet.startServer(keepOsGiState = "true");
+
+		PagesAdmin.openPagesAdmin(siteURLKey = "guest");
+
+		PagesAdmin.gotoPageEllipsisMenuItem(
+			menuItem = "Configure",
+			pageName = "Search");
+
+		Navigator.gotoNavTab(navTab = "Look and Feel");
+
+		Theme.configureLookAndFeelSpecificLook();
+
+		Click(
+			key_text = "Change Current Theme",
+			locator1 = "Button#ANY");
+
+		SelectFrame(locator1 = "IFrame#MODAL_BODY");
+
+		AssertElementNotPresent(
+			key_card = "Minium",
+			locator1 = "Card#CARD_TITLE",
+			value1 = "Minium");
+	}
+
+}

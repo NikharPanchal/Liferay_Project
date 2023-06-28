@@ -1,0 +1,14 @@
+{
+	"dependencies": {
+		"image-promise": "^5.0.1"
+	},
+	"name": "document-library-preview-document",
+	"private": true,
+	"scripts": {
+		"build": "liferay-npm-scripts build",
+		"checkFormat": "liferay-npm-scripts check",
+		"format": "liferay-npm-scripts fix",
+		"test": "liferay-npm-scripts test"
+	},
+	"version": "3.0.14"
+}
